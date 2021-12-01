@@ -1,19 +1,78 @@
+header {
+  background-color: #212121;
+  width: 100%;
+}
+
 body {
   font-family: "Crimson Pro", serif;
   font-family: "Outfit", sans-serif;
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     to right top,
     #051937,
     #004d7a,
     #008793,
     #00bf72,
     #a8eb12
+  ); */
+
+  background-image: linear-gradient(
+    to right top,
+    #d16ba5,
+    #c777b9,
+    #ba83ca,
+    #aa8fd8,
+    #9a9ae1,
+    #8aa7ec,
+    #79b3f4,
+    #69bff8,
+    #52cffe,
+    #41dfff,
+    #46eefa,
+    #5ffbf1
   );
   min-height: 100vh;
+
+  display: grid;
+  place-items: center;
+  margin: 0%;
+  padding: 0%;
+}
+
+footer {
+  min-width: 100%;
+  background-color: #212121;
+  min-height: 10vh;
+  color: #b9b9b9;
+  font-size: 1rem;
+  margin: auto;
+  display: flex;
+  justify-content: center;
 }
 
 .about-me {
   display: flex;
   justify-content: center;
   font-size: 5rem;
+}
+
+.area-of-interest {
+  font-size: 1.5rem;
+  display: grid;
+  gap: 1.5 rem;
+
+  grid-template-columns: repeat(--var, 3);
+}
+
+.span-3-col {
+  grid-column: span 3;
+}
+
+.sub {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  border: 2px solid #f72119;
+  border-radius: 0.5rem;
+  box-shadow: 0.1rem 0.5rem 1rem cyan;
 }
