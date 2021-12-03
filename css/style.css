@@ -1,0 +1,67 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --fw-reg: 300;
+  --fw-bold: 900;
+
+  --color-background: linear-gradient(
+    90deg,
+    rgba(173, 171, 195, 1) 0%,
+    rgba(226, 226, 240, 1) 35%,
+    rgba(232, 233, 233, 1) 100%
+  );
+  --color-dark: #303030;
+  --color-accent: #16e0bd;
+
+  --fs-h1: 3rem;
+  --fs-h2: 2.25rem;
+  --fs-h3: 1.25rem;
+  --fs-body: 1rem;
+}
+
+@media (min-width: 800px) {
+  :root {
+    --fs-h1: 4.5rem;
+    --fs-h2: 3.75rem;
+    --fs-h3: 1.5 rem;
+    --fs-body: 1.1rem;
+  }
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-dark);
+  margin: 0;
+  line-height: 1.5;
+
+  font-family: "Crimson Pro", serif;
+  font-family: "Outfit", sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  margin: 0;
+}
+
+h1 {
+  font-size: var(--fs-h1);
+}
+
+h2 {
+  font-size: var(--fs-h2);
+}
+
+h3 {
+  font-size: var(--fs-h3);
+}
