@@ -7,6 +7,8 @@
 header {
   width: 100%;
   height: 12vh;
+  position: fixed;
+  top: 0%;
   display: flex;
   justify-content: center;
 }
@@ -55,7 +57,7 @@ body {
   max-height: 100vh;
 }
 
-.about-me {
+.home {
   margin: 10% 12%;
   display: flex;
   justify-items: center;
@@ -119,4 +121,10 @@ footer {
 .contact-container {
   margin: auto;
   align-items: center;
+}
+
+.about,
+.contact,
+.home-page {
+  min-height: 100vh;
 }

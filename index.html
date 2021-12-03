@@ -4,52 +4,115 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ow hey its me</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Outfit:wght@200&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="glitch-text.css" />
+  
   </head>
   <body>
+
+    <!-- header  -->
     <header>
       <nav>
         <div class="navbar-container">
           <!-- <a class="logo" href="index.html"> <img src="./icons/home.svg" alt="home" /> Home</a> -->
-          <a href="index.html">Home</a>
-          <a href="about.html">About Me</a>
+          <a href="#home">Home</a>
+          <a href="#about">About Me</a>
           <a href="https://github.com/abantoo?tab=repositories">Projects</a>
           <!-- <a class="contact" href="contact.html">
                   <img src="./icons/contact_page.svg" alt="contact"
                 />Contact</a> -->
-          <a href="contact.html">Contact</a>
+          <a href="#contact">Contact</a>
         </div>
       </nav>
     </header>
-    <div class="about-me">
-      <div class="intro1">
-        Hi,<br />
-        I'm Abanto <br />
-        <p>
-          I am currently a student of North South University. <br />
-          The guy on the picture is obviously not me. He is
-          <a href="https://en.wikipedia.org/wiki/Thanos">Thanos</a>, and he was
-          right.
-        </p>
-      </div>
 
-      <div class="intro2">
-        <img
-          class="profile-img"
-          src="./images/69858020_1518268088325699_8269558795114381312_n.jpg"
-          alt=""
-        />
-      </div>
-    </div>
+    <!-- about me -->
 
-    <footer>and thats the bottom line</footer>
+    <section class="home-page" id="home">
+      <div class="home">
+        <div class="intro1">
+          Hi,<br />
+          I'm Abanto <br />
+          <p>
+            I am currently a student of North South University. <br />
+            The guy on the picture is obviously not me. He is
+            <a href="https://en.wikipedia.org/wiki/Thanos">Thanos</a>, and he
+            was right.
+          </p>
+        </div>
+
+        <div class="intro2">
+          <img
+            class="profile-img"
+            src="./images/69858020_1518268088325699_8269558795114381312_n.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+
+
+    <!-- about me -->
+
+    <section class="about" id="about">
+    
+        <h2 class="span-3-col">My area of internests are: </h2>
+        <div class="interests">
+          <div class="interest">
+            <h3 class="sub">Web development</h2>
+              <p></p>
+            
+          </div>
+
+          <div class="interest">
+            <h3 class="sub">Game development</h3>
+            <p></p>
+
+          </div>
+
+          <div class="interest">
+            <h3 class="sub">Machine learning</h3>
+            <p></p>
+
+          </div>
+
+        </div>
+        
+    </section>
+
+    <!-- contact -->
+    <section class="contact" id="contact">
+      <div class="contact-container">
+        
+        
+        
+        <!-- <a href="https://discord.com">
+        <div>
+          <img class="contact-img" src="./icons/discord.svg" alt="discord"
+      />
+        </div>
+        </a> -->
+      </div>
+    </section>
+
+    <!-- footer -->
+
+    <footer>
+      <a href="abantonaimur@gmail.com" class="footer__link">here</a> 
+      <h1>and thats the bottom line</h1>
+
+      <ul class="social-list">
+        <li class="social-list-item"> <a href="" class="social-list__link">facebook</a></li>
+        <li class="social-list-item"><a href="" class="social-list__link">instagram</a></li>
+        <li class="social-list-item"><a href="https://github.com/abantoo" class="social-list__link">github</a></li>
+
+      </ul>
+    </footer>
   </body>
 </html>
