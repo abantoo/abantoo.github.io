@@ -41,6 +41,9 @@ body {
   font-family: "Crimson Pro", serif;
   font-family: "Outfit", sans-serif;
 }
+section {
+  padding: 5em 2em;
+}
 
 img {
   display: block;
@@ -64,4 +67,86 @@ h2 {
 
 h3 {
   font-size: var(--fs-h3);
+}
+
+strong {
+  font-weight: var(--fw-bold);
+}
+
+/* nav */
+
+nav {
+  position: fixed;
+  background: var(--color-dark);
+  color: var(--color-background);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+
+  transform: translateX(0%);
+  transition: transform 250ms cubic-bezier(0.5, 0, 0.5, 1);
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+
+.nav-link {
+  color: inherit;
+}
+
+.section-title {
+}
+
+.section-title-intro {
+  font-weight: var(--fw-reg);
+}
+
+.section-title-intro {
+  display: block;
+}
+
+.section-subtilte {
+  margin: 0;
+  font-size: var(--fs--h3);
+}
+
+.section-subtitle-intro {
+  background: var(--color-accent);
+  margin-bottom: 1em;
+}
+
+.home {
+  position: relative;
+}
+
+.profile-img {
+  border-radius: 50%;
+}
+
+@media (min-width: 600px) {
+  .home {
+    display: grid;
+    grid-column-gap: 1em;
+    grid-template-areas: "img title" "img subtitle";
+
+    grid-template-columns: min-content max-content;
+  }
+
+  .profile-img {
+    grid-area: img;
+    min-width: 250px;
+  }
+
+  .section-subtitle-intro {
+    align-self: start;
+    grid-column: -1/1;
+    grid-row: 2;
+    text-align: right;
+  }
 }
