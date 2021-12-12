@@ -1,8 +1,8 @@
 "use strict";
 
-const feedback = document.querySelector(".feedback-btn");
 const exportIt = document.querySelector(".exportIt");
-let message = "hola";
+
+//related to csv download, need to explore this code
 
 function download_csv(csv, filename) {
   var csvFile;
@@ -47,11 +47,9 @@ function export_table_to_csv(html, filename) {
   download_csv(csv.join("\n"), filename);
 }
 
-feedback.addEventListener("click", () => {
-  console.log(document.querySelector("#message").value);
-});
-
 exportIt.addEventListener("click", () => {
   var html = document.querySelector("table").outerHTML;
   export_table_to_csv(html, "table.csv");
 });
+
+//add message and email address to the table
