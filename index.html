@@ -12,22 +12,15 @@
       href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Outfit:wght@200&display=swap"
       rel="stylesheet"
     />
+    
+    <link rel="stylesheet" href="./css/iframe.css">
   
   </head>
   <body>
 
     <!-- header  -->
-    <header>
-      <nav class=".nav">
-        
-        <ul class="nav-list">
-          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://github.com/abantoo?tab=repositories">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+    <iframe src="./views/header.html" frameborder="0" seamless></iframe>
+    
 
     <!-- introoo -->
 
@@ -50,31 +43,10 @@
 
     <!-- about me -->
 
-    <section class="about" id="about">
+    <iframe class="iframe-about-me" src="./views/aboutMe.html" frameborder="0"  seamless="seamless" ></iframe>
+
+
     
-        <h2 class="aoi">My area of internests are: </h2>
-        <div class="interests">
-          <div class="interest">
-            <h3 class="sub">Web development</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat hic, eius eum ipsum ratione cumque, culpa quae aliquam reiciendis eligendi vero aspernatur nostrum quisquam porro accusantium odio dolorem sint perferendis!</p>
-            
-          </div>
-
-          <div class="interest">
-            <h3 class="sub">Game development</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio, vero eligendi quas dolor quasi necessitatibus. Dignissimos quo dolores iusto unde veritatis voluptates exercitationem. Soluta voluptatum sequi explicabo quam, commodi aperiam!</p>
-
-          </div>
-
-          <div class="interest">
-            <h3 class="sub">Machine learning</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero suscipit odit, non nulla iste molestiae mollitia doloremque unde. Similique repellat nam incidunt eaque saepe totam esse quas molestiae ad mollitia.</p>
-
-          </div>
-
-        </div>
-        
-    </section>
 
     <!-- others -->
 
@@ -140,23 +112,13 @@
 
   <!-- footer -->
 
+  <iframe class="iframe-footer" src="./views/footer.html" frameborder="0" scrolling = "no"></iframe>
+
+
+
   
 
-    <footer id="contact">
-      
-      <input class="feedback email" type="text" id="email" name="email" placeholder="yourmail@mail.com"><br>
-      <input class="feedback message" type="text" id="message" name="message" placeholder="Your Feedback"><br><br>
-      <button type="submit" class="feedback-btn">Feedback</button>
-      
-       
-
-      <ul class="socials">
-        <li class="social-item"> <a href="" class="social-link">facebook</a></li>
-        <li class="social-item"><a href="" class="social-link">instagram</a></li>
-        <li class="social-item"><a href="https://github.com/abantoo" class="social-link">github</a></li>
-
-      </ul>
-    </footer>
+    
 
     <script src="./scripts/table.js"></script>
 

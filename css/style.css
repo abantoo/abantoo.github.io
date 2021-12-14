@@ -84,9 +84,22 @@ header {
   overflow: hidden;
 }
 
+.nav-list {
+  list-style: none;
+  justify-content: center;
+}
+
+.nav-link {
+  text-decoration: none;
+  list-style: none;
+}
+
+.nav-link:hover {
+  color: var(--color-accent);
+}
+
 @media (min-width: 800px) {
   .nav-list {
-    list-style: none;
     display: flex;
     justify-items: center;
   }
@@ -96,7 +109,6 @@ header {
     margin: 2rem 2rem;
     font-weight: var(--fw-bold);
     font-size: var(--fs-h3);
-    text-decoration: none;
   }
 
   .nav-link:hover {
@@ -232,6 +244,14 @@ footer a {
   box-shadow: 2px solid var(--color-accent);
 }
 
+#all-feedbacks {
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 /* button stuffs */
 
 .feedback,
@@ -268,17 +288,13 @@ footer a {
 
 .exportIt {
   text-align: center;
-  margin-top: 2rem;
+  margin: auto;
 }
 
 /* table stuffs */
 
 .h2-feedback {
   margin-bottom: 20px;
-}
-
-#all-feedbacks {
-  text-align: center;
 }
 
 #myTable {

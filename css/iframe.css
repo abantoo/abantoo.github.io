@@ -1,0 +1,12 @@
+iframe {
+  width: 100%;
+}
+
+.iframe-about-me {
+  height: 600px;
+}
+
+.iframe-footer {
+  height: 300px;
+  bottom: 0;
+}
