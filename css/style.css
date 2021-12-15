@@ -254,43 +254,6 @@ footer a {
 
 /* button stuffs */
 
-.feedback,
-.feedback-btn,
-.exportIt {
-  width: 350px;
-  border: none;
-  padding: 14px;
-  border-radius: 3px;
-}
-
-.feedback-btn,
-.exportIt {
-  background-image: linear-gradient(to right, #89caff, #6589ff);
-  /* display: block; */
-  color: var(--color-light);
-  font-size: 1rem;
-  cursor: pointer;
-  box-shadow: 0 5px 20px #89caff94;
-  transition: box-shadow 0.3s ease-in-out;
-}
-
-.feedback-btn:hover,
-.exportIt:hover {
-  box-shadow: none;
-  background-image: linear-gradient(
-    90deg,
-    rgba(213, 69, 69, 0.10127801120448177) 0%,
-    rgba(213, 0, 0, 1) 100%
-  );
-
-  color: var(--color-dark);
-}
-
-.exportIt {
-  text-align: center;
-  margin: auto;
-}
-
 /* table stuffs */
 
 .h2-feedback {
@@ -333,4 +296,3 @@ tbody tr.active-row {
   font-weight: bold;
   color: #009879;
 }
-
