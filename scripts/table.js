@@ -1,9 +1,8 @@
 "use strict";
-const feedback = document.querySelector(".feedback-btn");
 
 var i = 1;
 
-feedback.addEventListener("click", () => {
+document.querySelector(".feedback-btn").addEventListener("click", () => {
   var tbl = document.getElementById("myTable");
   var row = tbl.insertRow(i);
   var cell1 = row.insertCell(0);
