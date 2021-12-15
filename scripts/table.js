@@ -12,7 +12,7 @@ const validateEmail = (email) => {
 
 document.querySelector(".feedback-btn").addEventListener("click", () => {
   if (!validateEmail(document.querySelector("#email").value)) {
-    alert("not correct email format");
+    alert("not a valid email format");
   } else {
     var tbl = document.getElementById("myTable");
     var row = tbl.insertRow(i);
