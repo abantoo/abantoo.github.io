@@ -12,117 +12,60 @@
       href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Outfit:wght@200&display=swap"
       rel="stylesheet"
     />
-    
-    <link rel="stylesheet" href="./css/iframe.css">
-  
+
+    <link rel="stylesheet" href="./css/iframe.css" />
   </head>
   <body>
-
     <!-- header  -->
-    <iframe src="./views/header.html" frameborder="0" seamless></iframe>
-    
+
+    <iframe
+      class="iframe-header"
+      src="./views/header.html"
+      frameborder="0"
+    ></iframe>
 
     <!-- introoo -->
 
-    <section class="home" id="home">
-      
-        <h1 class = "h1-home h1-home-intro">Hi <br>I'm <strong>Abanto</strong> </h1>
-        <p class="p-home p-home-intro">
-          I am currently a student of North South University. <br />
-          The guy on the picture is obviously not me. He is
-          <a href="https://en.wikipedia.org/wiki/Thanos">Thanos</a>, and he
-          was right.
-        </p>
-        <img
-          class="profile-img"
-          src="./images/69858020_1518268088325699_8269558795114381312_n.jpg"
-          alt=""
-        />
-    </section>
-
+    <iframe
+      class="iframe-intro iframe-gen-height"
+      src="./views/intro.html"
+      frameborder="0"
+    ></iframe>
 
     <!-- about me -->
 
-    <iframe class="iframe-about-me" src="./views/aboutMe.html" frameborder="0"  seamless="seamless" ></iframe>
-
-
-    
+    <iframe
+      class="iframe-about-me iframe-gen-height"
+      src="./views/aboutMe.html"
+      frameborder="0"
+    ></iframe>
 
     <!-- others -->
 
-    <section class="other" id="other">
-    
-      <h2 class="other-activity">Other activities </h2>
-      <div class="activities">
-        <div class="activity">
-          <h3 class="sub">Drawing</h2>
-            <p>I love drawing sketches, cartoons, random stuffs around etc.</p>
-          
-        </div>
+    <iframe
+      class="iframe-others iframe-gen-height"
+      src="./views/others.html"
+      frameborder="0"
+    ></iframe>
 
-        <div class="activity">
-          <h3 class="sub">Sports</h3>
-          <p>I usually play some indoor and outdoor games like table tennis, cricket, football. I am also a big fan of Esports.</p>
+    <!-- feedbacks -->
+    <iframe
+      class="iframe-feedbacks iframe-gen-height"
+      id="iframe-feedbacks"
+      src="./views/feedback.html"
+      frameborder="0"
+    ></iframe>
 
-        </div>
+    <!-- footer -->
 
-        <div class="activity">
-          <h3 class="sub">Reading books</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae explicabo nobis cumque ullam magnam magni consequuntur soluta ducimus numquam exercitationem, error voluptates eius accusamus quaerat sapiente incidunt libero officiis expedita.
-          </p>
+    <iframe
+      class="iframe-footer"
+      id="iframe-footer"
+      scrolling="no"
+      src="./views/footer.html"
+      frameborder="0"
+    ></iframe>
 
-        </div>
-
-      </div>
-      
-  </section>
-
-
-  <!-- feedbacks -->
-
-
-  <section id="all-feedbacks">
-
-    <h2 class = "h2-feedback">Feedbacks</h2>
-
-    <table id="myTable">  
-      <thead>
-        <tr>
-            <th>Email</th>
-            <th>Feedback</th>
-        </tr>
-    </thead>   
-
-    <tbody>
-      <tr>
-          
-      </tr>
-      <tr class="active-row">
-        
-      </tr>
-    </tbody>
-    </table>
-
-    <button class="exportIt">Export Feedback</button>
-
-    
-    
-
-  </section>
-
-  <!-- footer -->
-
-  <iframe class="iframe-footer" src="./views/footer.html" frameborder="0" scrolling = "no"></iframe>
-
-
-
-  
-
-    
-
-    <script src="./scripts/table.js"></script>
-
-    <script src="./scripts/export.js"></script>
-    
+    <!-- scripts -->
   </body>
 </html>
