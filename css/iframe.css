@@ -2,11 +2,11 @@ iframe {
   width: 100%;
 }
 
-.iframe-about-me {
+.iframe-gen-height {
   height: 600px;
 }
 
 .iframe-footer {
-  height: 300px;
+  height: 270px;
   bottom: 0;
 }
