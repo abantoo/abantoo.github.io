@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Footer</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/buttons.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Outfit:wght@200&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- adds feedbacks from footer -->
+    <section id="all-feedbacks">
+      <h2 class="h2-feedback">Feedbacks</h2>
+      <div id="table-div">
+        <table id="myTable">
+          <thead>
+            <tr>
+              <th>Email</th>
+              <th>Feedback</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr></tr>
+            <tr class="active-row"></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <button class="exportIt" id="exportAs">Export Options</button>
+      <div id="export-options" class="export-options">
+        <button class="exportIt exportCSV" id="expCSV">Save as CSV</button>
+        <button class="exportIt exportPDF" id="expPDF">Save as PDF</button>
+      </div>
+    </section>
+
+    <footer id="contact">
+      <!-- email address -->
+
+      <input
+        class="feedback"
+        type="email"
+        name="email"
+        id="email"
+        placeholder="yourmail@mail.com"
+      />
+
+      <br />
+
+      <!-- feedback -->
+      <input
+        class="feedback"
+        type="text"
+        name="message"
+        id="message"
+        placeholder="Your Feedback"
+      />
+
+      <br />
+
+      <!-- submit -->
+      <button type="submit" class="feedback-btn">Feedback</button>
+
+      <!-- social lists -->
+
+      <ul class="socials">
+        <!-- social links -->
+
+        <li class="social-item"><a href="" class="social-link">facebook</a></li>
+        <li class="social-item">
+          <a href="" class="social-link">instagram</a>
+        </li>
+        <li class="social-item">
+          <a href="https://github.com/abantoo" class="social-link">github</a>
+        </li>
+      </ul>
+    </footer>
+
+    <script src="../scripts/table.js"></script>
+    <script src="../scripts/export.js"></script>
+    <script src="../scripts/exportAsCSV.js"></script>
+    <script src="../scripts/exportAsPDF.js"></script>
+  </body>
+</html>

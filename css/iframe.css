@@ -1,0 +1,12 @@
+iframe {
+  width: 100%;
+}
+
+.iframe-gen-height {
+  height: 600px;
+}
+
+.iframe-footer {
+  height: 650px;
+  bottom: 0;
+}
