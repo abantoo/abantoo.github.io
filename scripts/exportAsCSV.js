@@ -1,5 +1,3 @@
-//related to csv download, need to explore this code
-
 const exportIt = document.querySelector(".exportCSV");
 
 function download_csv(csv, filename) {
@@ -47,7 +45,5 @@ function export_table_to_csv(html, filename) {
 
 exportIt.addEventListener("click", () => {
   var html = document.querySelector("table").outerHTML;
-  export_table_to_csv(html, "table.csv");
+  export_table_to_csv(html, "feedback.csv");
 });
-
-//add message and email address to the table
