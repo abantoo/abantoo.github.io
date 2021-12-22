@@ -1,0 +1,24 @@
+.card {
+  /* Change background color */
+  /* background-color: white; */
+  background-color: transparent;
+
+  /* Add border */
+  border: thin solid #bacdd8;
+
+  /* Add space between the border and the content */
+  padding: 8px;
+
+  border-radius: 12px;
+
+  width: 25%;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.white-card {
+  background-color: white;
+}
