@@ -34,10 +34,12 @@
   }
 }
 
+html,
 body {
   background: var(--color-background);
   color: var(--color-dark);
   margin: 0;
+  padding: 0;
   line-height: 1.5;
 
   font-family: "Crimson Pro", serif;
@@ -219,14 +221,6 @@ footer a {
   text-decoration: none;
 }
 
-.footer-link:hover,
-.social-link:hover {
-  opacity: 0.5;
-  font-size: 1.25em;
-  font-weight: var(--fw-bold);
-  padding: 0.5em;
-}
-
 .socials {
   list-style: none;
   display: flex;
@@ -236,7 +230,11 @@ footer a {
 }
 
 .social-item {
-  margin: 0 0.5em;
+  margin-right: 2.5em;
+}
+
+.social-link:hover {
+  box-shadow: 0 8px 16px 0 limegreen;
 }
 
 .feedback {
