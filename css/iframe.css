@@ -3,7 +3,7 @@ iframe {
 }
 
 .iframe-gen-height {
-  height: 600px;
+  height: 100vh;
 }
 
 .iframe-footer {

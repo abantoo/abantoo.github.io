@@ -14,20 +14,13 @@
   color: var(--color-light);
   font-size: 1rem;
   cursor: pointer;
-  box-shadow: 0 5px 20px #89caff94;
-  transition: box-shadow 0.3s ease-in-out;
 }
 
 .feedback-btn:hover,
 .exportIt:hover {
   box-shadow: none;
-  background-image: linear-gradient(
-    90deg,
-    rgba(213, 69, 69, 0.10127801120448177) 0%,
-    rgba(213, 0, 0, 1) 100%
-  );
-
-  color: var(--color-dark);
+  box-shadow: 0 5px 20px #89caff94;
+  transition: box-shadow 0.3s ease-in-out;
 }
 
 .exportIt {
@@ -53,4 +46,16 @@
 
 #contact {
   padding-top: 40px;
+}
+
+.fa-github,
+.fa-facebook-official,
+.fa-instagram {
+  cursor: pointer;
+}
+
+.fa-github:hover,
+.fa-facebook-official:hover,
+.fa-instagram:hover {
+  color: gold;
 }

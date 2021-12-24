@@ -21,7 +21,7 @@
 
   --fs-h1: 3rem;
   --fs-h2: 2.25rem;
-  --fs-h3: 1.25rem;
+  --fs-h3: 1.5rem;
   --fs-body: 1rem;
 }
 
@@ -29,7 +29,7 @@
   :root {
     --fs-h1: 4.5rem;
     --fs-h2: 3.75rem;
-    --fs-h3: 1.5 rem;
+    --fs-h3: 1.35rem;
     --fs-body: 1.1rem;
   }
 }
@@ -81,9 +81,13 @@ strong {
 
 header {
   display: flex;
-  justify-content: center;
+  justify-content: right;
   padding: 1em;
   overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: black;
 }
 
 .nav-list {
@@ -94,10 +98,6 @@ header {
 .nav-link {
   text-decoration: none;
   list-style: none;
-}
-
-.nav-link:hover {
-  color: var(--color-accent);
 }
 
 @media (min-width: 800px) {
@@ -114,15 +114,16 @@ header {
   }
 
   .nav-link:hover {
-    color: var(--color-accent);
-    font-size: 1.5rem;
     font-weight: var(--fw-bold);
+    text-decoration: gold underline;
+    text-underline-offset: 0.3em;
   }
 }
 /* intro  */
 
 .home {
   overflow: hidden;
+  margin-top: 20em;
 }
 
 .h1-home-intro {
@@ -185,6 +186,10 @@ header {
   text-align: center;
 }
 
+.sub {
+  text-decoration: underline;
+  text-underline-offset: 0.3em;
+}
 /* other */
 
 .other {
@@ -210,7 +215,8 @@ header {
 /* footer */
 
 footer {
-  background: #263238;
+  /* background: #263238; */
+  background: rgba(173, 171, 195, 1);
   color: var(--color-light);
   text-align: center;
   padding: 2.3em 0;
@@ -231,10 +237,6 @@ footer a {
 
 .social-item {
   margin-right: 2.5em;
-}
-
-.social-link:hover {
-  box-shadow: 0 8px 16px 0 limegreen;
 }
 
 .feedback {
