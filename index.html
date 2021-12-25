@@ -6,27 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="./css/buttons.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Outfit:wght@200&display=swap"
       rel="stylesheet"
     />
-
-    <link rel="stylesheet" href="./css/iframe.css" />
   </head>
   <body>
-    <!-- header  -->
+    <!-- header -->
 
-    <iframe
-      class="iframe-header"
-      src="./views/header.html"
-      frameborder="0"
-    ></iframe>
+    <header>
+      <nav class=".nav">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a class="nav-link hover-underline-animation" href="#intro-index"
+              >Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link hover-underline-animation" href="#about-index"
+              >About Me</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link hover-underline-animation"
+              href="https://github.com/abantoo?tab=repositories"
+              >Projects</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link hover-underline-animation" href="#contact"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
 
     <!-- introoo -->
 
     <iframe
+      id="intro-index"
       class="iframe-intro iframe-gen-height"
       src="./views/intro.html"
       frameborder="0"
@@ -35,6 +61,7 @@
     <!-- about me -->
 
     <iframe
+      id="about-index"
       class="iframe-about-me iframe-gen-height"
       src="./views/aboutMe.html"
       frameborder="0"
@@ -43,20 +70,103 @@
     <!-- others -->
 
     <iframe
+      id="others-index"
       class="iframe-others iframe-gen-height"
       src="./views/others.html"
       frameborder="0"
     ></iframe>
 
     <!-- footer with feedback -->
+    <!-- adds feedbacks from footer -->
+    <section id="all-feedbacks">
+      <h2 class="h2-feedback">Feedbacks</h2>
+      <div class="WEW" id="table-div">
+        <table id="myTable">
+          <thead>
+            <tr>
+              <th>Email</th>
+              <th>Feedback</th>
+            </tr>
+          </thead>
 
-    <iframe
-      class="iframe-footer"
-      id="iframe-footer"
-      scrolling="no"
-      src="./views/footer.html"
-      frameborder="0"
-    ></iframe>
+          <tbody>
+            <tr></tr>
+            <tr class="active-row"></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <button class="exportIt" id="exportAs">Export Options</button>
+      <div id="export-options" class="export-options">
+        <button class="exportIt exportCSV" id="expCSV">Save as CSV</button>
+        <button class="exportIt exportPDF" id="expPDF">Save as PDF</button>
+      </div>
+    </section>
+
+    <footer id="contact">
+      <!-- feedback part  -->
+      <div class="feedback-div">
+        <!-- email address -->
+
+        <input
+          class="feedback item1"
+          type="email"
+          name="email"
+          id="email"
+          placeholder="yourmail@mail.com"
+        />
+
+        <br />
+
+        <!-- textarea -->
+
+        <textarea
+          class="feedback item2"
+          name="message"
+          id="message"
+          cols="30"
+          rows="10"
+        ></textarea>
+
+        <!-- feedback -->
+
+        <br />
+
+        <!-- submit -->
+        <button type="submit item3" class="feedback-btn">Send Feedback</button>
+
+        <!-- feedback part ends here -->
+      </div>
+
+      <!-- social lists -->
+
+      <ul class="socials">
+        <!-- social links -->
+        <li class="social-item hover-underline-animation">
+          <i class="fa fa-facebook-official" style="font-size: 24px"
+            ><a
+              href="https://www.facebook.com/owheyitsme"
+              class="social-link"
+            ></a
+          ></i>
+        </li>
+        <li class="social-item hover-underline-animation">
+          <i class="fa fa-instagram" style="font-size: 24px">
+            <a href="" class=""></a
+          ></i>
+        </li>
+        <li class="social-item hover-underline-animation">
+          <i class="fa fa-github" style="font-size: 24px"
+            ><a href="https://github.com/abantoo"></a
+          ></i>
+        </li>
+      </ul>
+    </footer>
+
+    <script src="../scripts/table.js"></script>
+    <script src="../scripts/export.js"></script>
+    <script src="../scripts/exportAsCSV.js"></script>
+    <script src="../scripts/exportAsPDF.js"></script>
 
     <!-- scripts -->
   </body>

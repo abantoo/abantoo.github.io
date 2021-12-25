@@ -13,6 +13,8 @@ const validateEmail = (email) => {
 document.querySelector(".feedback-btn").addEventListener("click", () => {
   if (!validateEmail(document.querySelector("#email").value)) {
     alert("not a valid email format");
+  } else if (document.querySelector("#message").value === "") {
+    alert("Write something");
   } else {
     var tbl = document.getElementById("myTable");
     var row = tbl.insertRow(i);

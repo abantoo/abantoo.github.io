@@ -21,7 +21,7 @@
 
   --fs-h1: 3rem;
   --fs-h2: 2.25rem;
-  --fs-h3: 1.25rem;
+  --fs-h3: 1.5rem;
   --fs-body: 1rem;
 }
 
@@ -29,15 +29,17 @@
   :root {
     --fs-h1: 4.5rem;
     --fs-h2: 3.75rem;
-    --fs-h3: 1.5 rem;
+    --fs-h3: 1.25rem;
     --fs-body: 1.1rem;
   }
 }
 
+html,
 body {
   background: var(--color-background);
   color: var(--color-dark);
   margin: 0;
+  padding: 0;
   line-height: 1.5;
 
   font-family: "Crimson Pro", serif;
@@ -80,8 +82,30 @@ strong {
 header {
   display: flex;
   justify-content: center;
-  padding: 1em;
   overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: black;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+iframe {
+  width: 100%;
+}
+
+.iframe-gen-height {
+  height: 100vh;
+}
+
+.iframe-footer {
+  height: 650px;
+  bottom: 0px;
+}
+
+body {
+  margin-bottom: 0px;
 }
 
 .nav-list {
@@ -94,10 +118,6 @@ header {
   list-style: none;
 }
 
-.nav-link:hover {
-  color: var(--color-accent);
-}
-
 @media (min-width: 800px) {
   .nav-list {
     display: flex;
@@ -105,22 +125,23 @@ header {
   }
 
   .nav-link {
-    color: var(--color-dark);
+    color: white;
     margin: 2rem 2rem;
-    font-weight: var(--fw-bold);
+    font-weight: var(--fw-reg);
     font-size: var(--fs-h3);
   }
 
-  .nav-link:hover {
-    color: var(--color-accent);
-    font-size: 1.5rem;
+  /* .nav-link:hover {
     font-weight: var(--fw-bold);
-  }
+    text-decoration: gold underline;
+    text-underline-offset: 0.3em;
+  } */
 }
 /* intro  */
 
 .home {
   overflow: hidden;
+  margin-top: 20em;
 }
 
 .h1-home-intro {
@@ -135,11 +156,6 @@ header {
 
 .p-home-intro {
   margin-bottom: 1em;
-}
-
-.home {
-  position: relative;
-  margin: 5em 5em;
 }
 
 .home a {
@@ -160,6 +176,7 @@ header {
   .home {
     display: grid;
     width: min-content;
+    padding-top: 20em;
     margin: 0 auto;
     grid-column-gap: 1em;
     grid-template-areas: "img title" "img subtitle";
@@ -183,6 +200,10 @@ header {
   text-align: center;
 }
 
+.sub {
+  text-decoration: underline;
+  text-underline-offset: 0.3em;
+}
 /* other */
 
 .other {
@@ -208,7 +229,8 @@ header {
 /* footer */
 
 footer {
-  background: #263238;
+  /* background: #263238; */
+  background: #05001c;
   color: var(--color-light);
   text-align: center;
   padding: 2.3em 0;
@@ -219,24 +241,15 @@ footer a {
   text-decoration: none;
 }
 
-.footer-link:hover,
-.social-link:hover {
-  opacity: 0.5;
-  font-size: 1.25em;
-  font-weight: var(--fw-bold);
-  padding: 0.5em;
-}
-
 .socials {
   list-style: none;
   display: flex;
   justify-content: center;
   margin: 2em 0 0;
-  padding: 0;
 }
 
-.social-item {
-  margin: 0 0.5em;
+.socials li {
+  padding: 9px;
 }
 
 .feedback {

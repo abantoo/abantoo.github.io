@@ -1,39 +1,8 @@
-.feedback,
-.feedback-btn,
-.exportIt {
+.feedback {
   width: 350px;
   border: none;
   padding: 14px;
   border-radius: 3px;
-}
-
-.feedback-btn,
-.exportIt {
-  background-image: linear-gradient(to right, #89caff, #6589ff);
-  /* display: block; */
-  color: var(--color-light);
-  font-size: 1rem;
-  cursor: pointer;
-  box-shadow: 0 5px 20px #89caff94;
-  transition: box-shadow 0.3s ease-in-out;
-}
-
-.feedback-btn:hover,
-.exportIt:hover {
-  box-shadow: none;
-  background-image: linear-gradient(
-    90deg,
-    rgba(213, 69, 69, 0.10127801120448177) 0%,
-    rgba(213, 0, 0, 1) 100%
-  );
-
-  color: var(--color-dark);
-}
-
-.exportIt {
-  text-align: center;
-  margin: auto;
-  margin-top: 10px;
 }
 
 .export-options {
@@ -49,4 +18,94 @@
 #expPDF,
 #expCSV {
   width: 150px;
+}
+
+#contact {
+  padding-top: 40px;
+}
+
+.fa-github,
+.fa-facebook-official,
+.fa-instagram {
+  cursor: pointer;
+}
+
+.fa-facebook-official:hover {
+  color: #3c5898;
+}
+
+.fa-github:hover {
+  color: #616161;
+}
+.fa-instagram:hover {
+  color: #6a1b9a;
+}
+
+.hover-underline-animation {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+}
+
+.hover-underline-animation:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.hover-underline-animation:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+.exportIt {
+  margin: 30px auto;
+}
+
+.feedback-btn,
+.exportIt {
+  width: 350px;
+  background: transparent;
+  cursor: pointer;
+  text-decoration: none;
+  color: grey;
+  font-family: sans-serif;
+  font-size: 1.2rem;
+  border: 2px solid #04aa6d;
+  border-radius: 5px;
+  padding: 10px 30px;
+  position: relative;
+  transition: all 1s;
+  overflow: hidden;
+}
+
+.feedback-btn:before,
+.exportIt::before {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.feedback-btn:hover:before,
+.exportIt:hover:before {
+  transform: translateX(0);
+}
+
+.feedback-btn:hover:hover,
+.exportIt:hover:hover {
+  background-color: #04aa6d;
+  color: white;
 }
