@@ -12,14 +12,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Outfit:wght@200&display=swap"
       rel="stylesheet"
     />
-
-    <link rel="stylesheet" href="./css/iframe.css" />
   </head>
   <body>
     <!-- header -->
@@ -28,20 +24,26 @@
       <nav class=".nav">
         <ul class="nav-list">
           <li class="nav-item">
-            <a class="nav-link" href="#intro-index">Home</a>
+            <a class="nav-link hover-underline-animation" href="#intro-index"
+              >Home</a
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#about-index">About Me</a>
+            <a class="nav-link hover-underline-animation" href="#about-index"
+              >About Me</a
+            >
           </li>
           <li class="nav-item">
             <a
-              class="nav-link"
+              class="nav-link hover-underline-animation"
               href="https://github.com/abantoo?tab=repositories"
               >Projects</a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
+            <a class="nav-link hover-underline-animation" href="#contact"
+              >Contact</a
+            >
           </li>
         </ul>
       </nav>
@@ -102,51 +104,59 @@
     </section>
 
     <footer id="contact">
-      <!-- email address -->
+      <!-- feedback part  -->
+      <div class="feedback-div">
+        <!-- email address -->
 
-      <input
-        class="feedback"
-        type="email"
-        name="email"
-        id="email"
-        placeholder="yourmail@mail.com"
-      />
+        <input
+          class="feedback item1"
+          type="email"
+          name="email"
+          id="email"
+          placeholder="yourmail@mail.com"
+        />
 
-      <br />
+        <br />
 
-      <!-- textarea -->
+        <!-- textarea -->
 
-      <textarea
-        class="feedback"
-        name="message"
-        id="message"
-        cols="30"
-        rows="10"
-      ></textarea>
+        <textarea
+          class="feedback item2"
+          name="message"
+          id="message"
+          cols="30"
+          rows="10"
+        ></textarea>
 
-      <!-- feedback -->
+        <!-- feedback -->
 
-      <br />
+        <br />
 
-      <!-- submit -->
-      <button type="submit" class="feedback-btn">Feedback</button>
+        <!-- submit -->
+        <button type="submit item3" class="feedback-btn">Send Feedback</button>
+
+        <!-- feedback part ends here -->
+      </div>
 
       <!-- social lists -->
 
       <ul class="socials">
         <!-- social links -->
-        <li class="social-item">
-          <i class="fa fa-facebook-official" style="font-size: 36px"
-            ><a href="" class="social-link"></a
+        <li class="social-item hover-underline-animation">
+          <i class="fa fa-facebook-official" style="font-size: 24px"
+            ><a
+              href="https://www.facebook.com/owheyitsme"
+              class="social-link"
+            ></a
           ></i>
         </li>
-        <li class="social-item">
-          <i class="fa fa-instagram" style="font-size: 36px">
+        <li class="social-item hover-underline-animation">
+          <i class="fa fa-instagram" style="font-size: 24px">
             <a href="" class=""></a
           ></i>
         </li>
-        <li class="social-item">
-          <i class="fa fa-github" style="font-size: 36px"
+        <li class="social-item hover-underline-animation">
+          <i class="fa fa-github" style="font-size: 24px"
             ><a href="https://github.com/abantoo"></a
           ></i>
         </li>
