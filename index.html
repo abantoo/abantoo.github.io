@@ -7,6 +7,7 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/buttons.css" />
+    <link rel="stylesheet" href="./css/iframe.css" />
 
     <link
       rel="stylesheet"
@@ -108,32 +109,35 @@
       <div class="feedback-div">
         <!-- email address -->
 
-        <input
-          class="feedback item1"
-          type="email"
-          name="email"
-          id="email"
-          placeholder="yourmail@mail.com"
-        />
+        <form id="form" action="#all-feedbacks">
+          <input
+            class="feedback item1"
+            type="email"
+            name="email"
+            id="email"
+            placeholder="yourmail@mail.com"
+          />
 
-        <br />
+          <br />
 
-        <!-- textarea -->
+          <!-- textarea -->
 
-        <textarea
-          class="feedback item2"
-          name="message"
-          id="message"
-          cols="30"
-          rows="10"
-        ></textarea>
+          <textarea
+            class="feedback item2"
+            name="message"
+            id="message"
+            cols="30"
+            rows="10"
+            placeholder="Your Feedback"
+          ></textarea>
 
-        <!-- feedback -->
+          <!-- feedback -->
 
-        <br />
+          <br />
 
-        <!-- submit -->
-        <button type="submit item3" class="feedback-btn">Send Feedback</button>
+          <!-- submit -->
+          <button type="submit" class="feedback-btn">Send Feedback</button>
+        </form>
 
         <!-- feedback part ends here -->
       </div>

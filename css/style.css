@@ -195,7 +195,7 @@ body {
 }
 
 .about {
-  background-color: var(--color-dark);
+  background: linear-gradient(to right, #2b5876, #4e4376);
   color: var(--color-light);
   text-align: center;
 }
@@ -207,7 +207,20 @@ body {
 /* other */
 
 .other {
-  background-color: var(--color-background);
+  /* background: linear-gradient(to right, #ed4264, #ffedbc); */
+  /* background: linear-gradient(to right, #00467f, #a5cc82); */
+  background: #9796f0; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #fbc7d4,
+    #9796f0
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #fbc7d4,
+    #9796f0
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   color: var(--color-dark);
   text-align: center;
 }
