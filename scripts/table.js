@@ -1,5 +1,7 @@
 "use strict";
 
+const form = document.getElementById("form");
+
 var i = 1;
 
 const validateEmail = (email) => {
@@ -10,7 +12,8 @@ const validateEmail = (email) => {
     );
 };
 
-document.querySelector(".feedback-btn").addEventListener("click", () => {
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
   if (!validateEmail(document.querySelector("#email").value)) {
     alert("not a valid email format");
   } else if (document.querySelector("#message").value === "") {
