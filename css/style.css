@@ -195,6 +195,7 @@ body {
 }
 
 .about {
+  transform: translateY(85px);
   background: linear-gradient(to right, #2b5876, #4e4376);
   color: var(--color-light);
   text-align: center;
