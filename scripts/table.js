@@ -19,10 +19,12 @@ const sendToServer = (email, message) => {
 
   xhttp.open("POST", url, true);
 
-  //Send the proper header information along with the request
+  // Send the proper header information along with the request
   xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
   xhttp.send(`mail=${email}&feedback=${message}`);
 };
+
+let j = 1;
 
 const receieveFromServer = () => {
   const xhttp = new XMLHttpRequest();
@@ -31,18 +33,22 @@ const receieveFromServer = () => {
   xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
       let data;
+
       data = JSON.parse(xhttp.responseText);
 
       data.forEach((item, length) => {
-        var tbl = document.getElementById("myTable");
-        var row = tbl.insertRow(i);
-        var cell1 = row.insertCell(0);
-        var cell2 = row.insertCell(1);
+        let tbl = document.getElementById("myTable");
+        let row = tbl.insertRow(i);
+        let cell1 = row.insertCell(0);
+        let cell2 = row.insertCell(1);
 
         cell1.innerHTML = item.mail;
         cell2.innerHTML = item.feedback;
         i++;
       });
+
+      j++;
+      i = 1;
     }
   };
 
@@ -58,8 +64,12 @@ form.addEventListener("submit", (e) => {
   } else if (!message.trim()) {
     alert("Write something");
   } else {
-    sendToServer(email, message);
-    receieveFromServer();
+    const promise = new Promise((resolve, reject) => {
+      sendToServer(email, message);
+    })
+      .then(receieveFromServer())
+      .catch((error) => console.log(error));
+
     document.getElementById("email").value = "";
     document.getElementById("message").value = "";
   }
