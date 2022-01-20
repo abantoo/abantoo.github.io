@@ -3,9 +3,8 @@
 const form = document.getElementById("form");
 
 const url = "https://0c43-2401-ff80-1880-7e2a-fd19-2c2a-fad1-6019.ngrok.io";
-var storage;
 
-var i = 1;
+let i = 1;
 
 const validateEmail = (email) => {
   return String(email)
@@ -31,15 +30,10 @@ const receieveFromServer = () => {
   xhttp.open("GET", url, true);
   xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
-      var data;
-      //data.push(JSON.parse(xhttp.response));
-
+      let data;
       data = JSON.parse(xhttp.responseText);
 
       data.forEach((item, length) => {
-        console.log(i);
-        console.log(item);
-
         var tbl = document.getElementById("myTable");
         var row = tbl.insertRow(i);
         var cell1 = row.insertCell(0);
@@ -56,12 +50,12 @@ const receieveFromServer = () => {
 };
 
 form.addEventListener("submit", (e) => {
-  var email = document.querySelector("#email").value;
-  var message = document.querySelector("#message").value;
+  let email = document.querySelector("#email").value;
+  let message = document.querySelector("#message").value;
   e.preventDefault();
   if (!email) {
     alert("not a valid email format");
-  } else if (message === "") {
+  } else if (!message.trim()) {
     alert("Write something");
   } else {
     sendToServer(email, message);
