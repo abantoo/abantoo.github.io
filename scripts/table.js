@@ -1,11 +1,13 @@
 "use strict";
 
 const form = document.getElementById("form");
+const tbl = document.getElementById("myTable");
 
-const url = "https://0c43-2401-ff80-1880-7e2a-fd19-2c2a-fad1-6019.ngrok.io";
-var storage;
+const param = new URLSearchParams(window.location.search);
 
-var i = 1;
+const url = param.get("server");
+
+let i = 1;
 
 const validateEmail = (email) => {
   return String(email)
@@ -20,10 +22,12 @@ const sendToServer = (email, message) => {
 
   xhttp.open("POST", url, true);
 
-  //Send the proper header information along with the request
+  // Send the proper header information along with the request
   xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
   xhttp.send(`mail=${email}&feedback=${message}`);
 };
+
+let j = 1;
 
 const receieveFromServer = () => {
   const xhttp = new XMLHttpRequest();
@@ -31,42 +35,58 @@ const receieveFromServer = () => {
   xhttp.open("GET", url, true);
   xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
-      var data;
-      //data.push(JSON.parse(xhttp.response));
+      let data;
 
       data = JSON.parse(xhttp.responseText);
 
-      data.forEach((item, length) => {
-        console.log(i);
-        console.log(item);
+      for (let k = tbl.rows.length - 1; k > 0; k--) {
+        tbl.deleteRow(k);
+      }
 
-        var tbl = document.getElementById("myTable");
-        var row = tbl.insertRow(i);
-        var cell1 = row.insertCell(0);
-        var cell2 = row.insertCell(1);
+      data.forEach((item, length) => {
+        let row = tbl.insertRow(i);
+        let cell1 = row.insertCell(0);
+        let cell2 = row.insertCell(1);
 
         cell1.innerHTML = item.mail;
         cell2.innerHTML = item.feedback;
         i++;
       });
+
+      i = 1;
     }
   };
 
   xhttp.send();
 };
 
+let counterForNoParams = 1;
+
 form.addEventListener("submit", (e) => {
-  var email = document.querySelector("#email").value;
-  var message = document.querySelector("#message").value;
+  let email = document.querySelector("#email").value;
+  let message = document.querySelector("#message").value;
   e.preventDefault();
   if (!email) {
     alert("not a valid email format");
-  } else if (message === "") {
+  } else if (!message.trim()) {
     alert("Write something");
-  } else {
-    sendToServer(email, message);
-    receieveFromServer();
+  } else if (url) {
+    const promise = new Promise((resolve, reject) => {
+      sendToServer(email, message);
+    })
+      .then(receieveFromServer())
+      .catch((error) => console.log(error));
+
     document.getElementById("email").value = "";
     document.getElementById("message").value = "";
+  } else {
+    let row = tbl.insertRow(counterForNoParams);
+    let cell1 = row.insertCell(0);
+    let cell2 = row.insertCell(1);
+
+    cell1.innerHTML = email;
+    cell2.innerHTML = message;
+
+    counterForNoParams++;
   }
 });
