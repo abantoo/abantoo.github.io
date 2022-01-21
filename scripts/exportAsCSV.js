@@ -1,8 +1,9 @@
+"use strict";
 const exportIt = document.querySelector(".exportCSV");
 
 function download_csv(csv, filename) {
-  var csvFile;
-  var downloadLink;
+  let csvFile;
+  let downloadLink;
 
   // CSV FILE
   csvFile = new Blob([csv], { type: "text/csv" });
@@ -27,14 +28,14 @@ function download_csv(csv, filename) {
 }
 
 function export_table_to_csv(html, filename) {
-  var csv = [];
-  var rows = document.querySelectorAll("table tr");
+  let csv = [];
+  let rows = document.querySelectorAll("table tr");
 
-  for (var i = 0; i < rows.length; i++) {
-    var row = [],
+  for (let i = 0; i < rows.length; i++) {
+    let row = [],
       cols = rows[i].querySelectorAll("td, th");
 
-    for (var j = 0; j < cols.length; j++) row.push(cols[j].innerText);
+    for (let j = 0; j < cols.length; j++) row.push(cols[j].innerText);
 
     csv.push(row.join(","));
   }
@@ -44,6 +45,6 @@ function export_table_to_csv(html, filename) {
 }
 
 exportIt.addEventListener("click", () => {
-  var html = document.querySelector("table").outerHTML;
+  let html = document.querySelector("table").outerHTML;
   export_table_to_csv(html, "feedback.csv");
 });
