@@ -1,8 +1,11 @@
 "use strict";
 
 const form = document.getElementById("form");
+const tbl = document.getElementById("myTable");
 
-const url = "https://0c43-2401-ff80-1880-7e2a-fd19-2c2a-fad1-6019.ngrok.io";
+const param = new URLSearchParams(window.location.search);
+
+const url = param.get("server");
 
 let i = 1;
 
@@ -36,8 +39,11 @@ const receieveFromServer = () => {
 
       data = JSON.parse(xhttp.responseText);
 
+      for (let k = tbl.rows.length - 1; k > 0; k--) {
+        tbl.deleteRow(k);
+      }
+
       data.forEach((item, length) => {
-        let tbl = document.getElementById("myTable");
         let row = tbl.insertRow(i);
         let cell1 = row.insertCell(0);
         let cell2 = row.insertCell(1);
@@ -47,13 +53,14 @@ const receieveFromServer = () => {
         i++;
       });
 
-      j++;
       i = 1;
     }
   };
 
   xhttp.send();
 };
+
+let counterForNoParams = 1;
 
 form.addEventListener("submit", (e) => {
   let email = document.querySelector("#email").value;
@@ -63,7 +70,7 @@ form.addEventListener("submit", (e) => {
     alert("not a valid email format");
   } else if (!message.trim()) {
     alert("Write something");
-  } else {
+  } else if (url) {
     const promise = new Promise((resolve, reject) => {
       sendToServer(email, message);
     })
@@ -72,5 +79,14 @@ form.addEventListener("submit", (e) => {
 
     document.getElementById("email").value = "";
     document.getElementById("message").value = "";
+  } else {
+    let row = tbl.insertRow(counterForNoParams);
+    let cell1 = row.insertCell(0);
+    let cell2 = row.insertCell(1);
+
+    cell1.innerHTML = email;
+    cell2.innerHTML = message;
+
+    counterForNoParams++;
   }
 });
