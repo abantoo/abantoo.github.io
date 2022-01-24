@@ -1,6 +1,7 @@
 .card,
 .white-card,
 .black-card {
+  overflow: hidden;
   /* Change background color */
   /* background-color: white; */
   background-color: transparent;
@@ -12,8 +13,22 @@
   padding: 8px;
 
   border-radius: 12px;
+}
 
-  width: 25%;
+@media (min-width: 800px) {
+  .card,
+  .white-card,
+  .black-card {
+    width: 25%;
+  }
+}
+
+@media (max-width: 799px) {
+  .card,
+  .white-card,
+  .black-card {
+    width: 100%;
+  }
 }
 
 /* On mouse-over, add a deeper shadow */
