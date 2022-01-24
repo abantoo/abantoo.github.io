@@ -9,6 +9,12 @@ const url = param.get("server");
 
 let i = 1;
 
+window.onload = () => {
+  if (url) {
+    receieveFromServer();
+  }
+};
+
 const validateEmail = (email) => {
   return String(email)
     .toLowerCase()
