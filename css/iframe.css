@@ -2,31 +2,12 @@
   height: 800px;
 }
 
-#others-index {
-  margin-bottom: -200px;
-}
-
-#about-index {
-  height: 754px;
-  margin-bottom: 25px;
-}
-
-@media (max-width: 799px) {
-  #others-index,
-  #about-index {
-    height: 700px;
-  }
-}
-
 iframe {
   width: 100%;
+  overflow-y: none;
 }
 
 .iframe-gen-height {
   height: 100vh;
 }
 
-.iframe-footer {
-  height: 650px;
-  bottom: 0px;
-}

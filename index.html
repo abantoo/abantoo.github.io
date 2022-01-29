@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/buttons.css" />
     <link rel="stylesheet" href="./css/iframe.css" />
+    <link rel="stylesheet" href="./css/card.css">
 
     <link
       rel="stylesheet"
@@ -24,61 +25,147 @@
     <header>
       <nav class=".nav">
         <ul class="nav-list">
-          <li class="nav-item">
-            <a class="nav-link hover-underline-animation" href="#intro-index"
+          <li class="nav-item n1">
+            <a class="nav-link hover-underline-animation" href="#home"
               >Home</a
             >
           </li>
-          <li class="nav-item">
-            <a class="nav-link hover-underline-animation" href="#about-index"
+          <li class="nav-item n2">
+            <a class="nav-link hover-underline-animation" href="#about"
               >About Me</a
             >
           </li>
-          <li class="nav-item">
+          <li class="nav-item n3">
             <a
               class="nav-link hover-underline-animation"
               href="https://github.com/abantoo?tab=repositories"
               >Projects</a
             >
           </li>
-          <li class="nav-item">
+          <li class="nav-item n4">
             <a class="nav-link hover-underline-animation" href="#contact"
               >Contact</a
             >
           </li>
         </ul>
       </nav>
+
+      <div class="nav-img-div">
+        <img
+        class="nav-img"
+        src="../images/69858020_1518268088325699_8269558795114381312_n.jpg"
+        alt=""
+      />
+
+      </div>
     </header>
 
     <!-- introoo -->
 
-    <iframe
+    <!-- <iframe
       id="intro-index"
       class="iframe-intro iframe-gen-height"
       src="./views/intro.html"
       scrolling="no"
       frameborder="0"
-    ></iframe>
+    ></iframe> -->
+
+    <section class="home" id="home">
+      <div class="intro-ttlnimg">
+        <div >
+          <img
+          class="profile-img"
+          src="../images/69858020_1518268088325699_8269558795114381312_n.jpg"
+          alt=""
+        />
+        </div>
+        
+        <div class=>
+          <h1 class="h1-home h1-home-intro">
+            Hi <br />I'm <strong>Abanto</strong>
+          </h1>
+          
+        </div>
+      </div>
+
+      <div>
+        <p class="p-home p-home-intro">
+          I am currently a student of North South University. <br />
+          The guy on the picture is obviously not me. He is
+          <a href="https://en.wikipedia.org/wiki/Thanos">Thanos</a>, and he was
+          right.
+        </p>
+      </div>
+      
+    </section>
 
     <!-- about me -->
 
-    <iframe
-      id="about-index"
-      class="iframe-about-me iframe-gen-height"
-      src="./views/aboutMe.html"
-      scrolling="no"
-      frameborder="0"
-    ></iframe>
+    <section class="about" id="about">
+
+    
+      <div class="about-main">
+
+        <h3>My name is  <strong>Naimur Rahman Abanto</strong> <br> </h3>
+        <h3>I finished my graduation from <a href="http://www.northsouth.edu/">North South University </a> . I am currently doing an internship at <a href="https://www.nerddevs.com/"> nerddevs.</a> </h3>
+
+        <h3 class="aoi">My area of internests are: </h3>
+      <div class="interests">
+        <div class="interest black-card">
+          <h3 class="sub">Web development</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat hic, eius eum ipsum ratione cumque, culpa quae aliquam reiciendis eligendi vero aspernatur nostrum quisquam porro accusantium odio dolorem sint perferendis!</p>
+          
+        </div>
+
+        <div class="interest black-card">
+          <h3 class="sub">Game development</h3>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio, vero eligendi quas dolor quasi necessitatibus. Dignissimos quo dolores iusto unde veritatis voluptates exercitationem. Soluta voluptatum sequi explicabo quam, commodi aperiam!</p>
+
+        </div>
+
+        <div class="interest black-card">
+          <h3 class="sub">Machine learning</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero suscipit odit, non nulla iste molestiae mollitia doloremque unde. Similique repellat nam incidunt eaque saepe totam esse quas molestiae ad mollitia.</p>
+
+        </div>
+
+      </div>
+      </div>
+      
+  </section>
 
     <!-- others -->
 
-    <iframe
-      id="others-index"
-      class="iframe-others iframe-gen-height"
-      src="./views/others.html"
-      scrolling="no"
-      frameborder="0"
-    ></iframe>
+    <section class="other" id="other">
+      <div class="other-main">
+        <h2 class="other-activity">Other activities </h2>
+      <div class="activities">
+        <div class="activity card white-card">
+          <h3 class="sub">Drawing</h2>
+            <p>I love drawing sketches, cartoons, random stuffs around etc.</p>
+          
+        </div>
+
+        <div class="activity card white-card">
+          <h3 class="sub">Sports</h3>
+          <p>I usually play some indoor and outdoor games like table tennis, cricket, football. I am also a big fan of Esports.</p>
+
+        </div>
+
+        <div class="activity card white-card">
+          <h3 class="sub">Reading books</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae explicabo nobis cumque ullam magnam magni consequuntur soluta ducimus numquam exercitationem, error voluptates eius accusamus quaerat sapiente incidunt libero officiis expedita.
+          </p>
+
+        </div>
+
+      </div>
+
+      </div>
+    
+      
+      
+  </section>
 
     <!-- footer with feedback -->
     <!-- adds feedbacks from footer -->

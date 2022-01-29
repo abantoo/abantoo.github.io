@@ -94,5 +94,8 @@ form.addEventListener("submit", (e) => {
     cell2.innerHTML = message;
 
     counterForNoParams++;
+
+    document.getElementById("email").value = "";
+    document.getElementById("message").value = "";
   }
 });
