@@ -1,0 +1,83 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background: white;
+  color: var(--color-dark);
+
+  margin: 0;
+  padding: 0;
+  top: 0;
+  bottom: 0;
+  line-height: 1.5;
+
+  font-family: "Crimson Pro", serif;
+  font-family: "Outfit", sans-serif;
+
+  overflow-x: hidden;
+}
+
+section {
+  padding: 5em 2em;
+}
+
+footer {
+  background-color: black;
+  bottom: 0;
+}
+
+@media (min-width: 800px) {
+  header {
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    height: 100px;
+    overflow: hidden;
+    border-bottom: thin solid black;
+    color: black;
+  }
+  header a {
+    text-decoration: none;
+  }
+
+  header ul {
+    list-style: none;
+  }
+  nav {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 10em;
+  }
+
+  .nav-list {
+    display: flex;
+    justify-content: center;
+    align-items: right;
+    gap: 3em;
+  }
+
+  .nav-link {
+    padding: 0 1em;
+  }
+
+  .home {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+  }
+
+  .has-img {
+    width: 40%;
+  }
+
+  .svg-container {
+    width: 100%;
+  }
+}

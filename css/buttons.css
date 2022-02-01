@@ -42,7 +42,7 @@
 }
 
 .hover-underline-animation {
-  color: #fff;
+  color: black;
   text-transform: uppercase;
   text-decoration: none;
   display: inline-block;
@@ -57,7 +57,7 @@
   height: 2px;
   left: 50%;
   position: absolute;
-  background: #fff;
+  background: black;
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
 }
