@@ -11,14 +11,13 @@ body {
 
   margin: 0;
   padding: 0;
-  top: 0;
-  bottom: 0;
   line-height: 1.5;
 
   font-family: "Crimson Pro", serif;
   font-family: "Outfit", sans-serif;
 
   overflow-x: hidden;
+
 }
 
 
@@ -44,7 +43,7 @@ footer {
     justify-content: right;
     height: 100px;
     overflow: hidden;
-    border-bottom: thin solid black;
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
     color: black;
   }
 
@@ -78,12 +77,14 @@ footer {
     /* width: 3em; */
     height: 48px;
     width: auto;
+    margin: 1em;
+    float: left;
   }
 
   .logos {
     display: flex;
-    justify-content: space-evenly;
-    align-items: flex-start;
+
+
 
   }
 
@@ -138,6 +139,10 @@ footer {
 
   .section-title {
     font-size: 60px;
+  }
+
+  footer {
+    align-items: center;
   }
 
 
