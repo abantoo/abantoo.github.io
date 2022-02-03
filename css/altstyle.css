@@ -84,8 +84,6 @@ footer {
   .logos {
     display: flex;
 
-
-
   }
 
   .section-img {
@@ -95,11 +93,21 @@ footer {
 
   .home {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr; */
     margin-top: 7em;
     height: calc(100vh - 14em);
     margin-bottom: 7em;
   }
+
+  .home-intro {
+    width: 50%;
+
+    text-align: center;
+  }
+
+
 
   .about {
     margin-top: 7em;
@@ -141,9 +149,13 @@ footer {
     font-size: 60px;
   }
 
-  footer {
-    align-items: center;
-  }
+  footer {}
 
+
+
+  .social-item {
+    margin: .5em;
+
+  }
 
 }
