@@ -54,7 +54,7 @@ const receieveFromServer = () => {
         let cell1 = row.insertCell(0);
         let cell2 = row.insertCell(1);
 
-        cell1.innerHTML = item.mail;
+        cell1.innerHTML = item.email;
         cell2.innerHTML = item.feedback;
         i++;
       });

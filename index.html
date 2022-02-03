@@ -1,227 +1,307 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
-    <!-- <link rel="stylesheet" href="./css/style.css" /> -->
-    <link rel="stylesheet" href="./css/buttons.css" />
-    <link rel="stylesheet" href="./css/iframe.css" />
-    <link rel="stylesheet" href="./css/card.css">
-    <link rel="stylesheet" href="./css/table.css">
-    <link rel="stylesheet" href="./css/altstyle.css">
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Outfit:wght@200&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <!-- header -->
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <!-- <link rel="stylesheet" href="./css/style.css" /> -->
+  <link rel="stylesheet" href="./css/buttons.css" />
+  <link rel="stylesheet" href="./css/iframe.css" />
+  <link rel="stylesheet" href="./css/card.css">
+  <link rel="stylesheet" href="./css/table.css">
+  <link rel="stylesheet" href="./css/altstyle.css">
+  <link rel="stylesheet" href="./css/main.css">
 
-    <header>
-      <nav class=".nav">
-        <ul class="nav-list">
-          <li class="nav-item n1">
-            <a class="nav-link hover-underline-animation" href="#home"
-              >Home</a
-            >
-          </li>
-          <li class="nav-item n2">
-            <a class="nav-link hover-underline-animation" href="#about"
-              >About Me</a
-            >
-          </li>
-          <li class="nav-item n3">
-            <a
-              class="nav-link hover-underline-animation"
-              href="https://github.com/abantoo?tab=repositories"
-              >My Projects</a
-            >
-          </li>
-          <li class="nav-item n4">
-            <a class="nav-link hover-underline-animation" href="#contact"
-              >Contact Me</a
-            >
-          </li>
-        </ul>
-      </nav>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Outfit:wght@200&display=swap"
+    rel="stylesheet" />
 
-      
-    </header>
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+</head>
 
-    <!-- introoo -->
+<body>
+  <!-- header -->
 
-    
-
-    <section class="home" id="home">
-   
-        <div >
-          <h2 class="h1-home h1-home-intro">
-            Hi, <br />I'm 
-          </h2>
-
-          <h1>
-            Abanto
-          </h1>
-
-          <p>Programmer,Tech enthusiast </p>
-          
-        </div>
-        <div class="has-img">
-          <img
-          class="svg-container"
-          src="/svg/undraw_feeling_proud_qne1.svg"
-          alt=""
-        />
-        </div>
-    
-    </section>
-
-    <!-- about me -->
-
-    <section class="about" id="about">
-
-    
-      <div class="about-main">
-
-        <h3>My name is  <strong>Naimur Rahman Abanto</strong> <br> </h3>
-        <h3>I finished my graduation from <a href="http://www.northsouth.edu/">North South University </a> . I am currently doing an internship at <a href="https://www.nerddevs.com/"> nerddevs.</a> </h3>
-
-        <h3 class="aoi">My area of internests are: </h3>
-      <div class="interests">
-        <div class="interest black-card">
-          <h3 class="sub">Web development</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat hic, eius eum ipsum ratione cumque, culpa quae aliquam reiciendis eligendi vero aspernatur nostrum quisquam porro accusantium odio dolorem sint perferendis!</p>
-          
-        </div>
-
-        <div class="interest black-card">
-          <h3 class="sub">Game development</h3>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio, vero eligendi quas dolor quasi necessitatibus. Dignissimos quo dolores iusto unde veritatis voluptates exercitationem. Soluta voluptatum sequi explicabo quam, commodi aperiam!</p>
-
-        </div>
-
-        <div class="interest black-card">
-          <h3 class="sub">Machine learning</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero suscipit odit, non nulla iste molestiae mollitia doloremque unde. Similique repellat nam incidunt eaque saepe totam esse quas molestiae ad mollitia.</p>
-
-        </div>
-
-        <div class="interest black-card">
-          <h3 class="sub">Arts</h3>
-          <p>I love drawing sketches, cartoons, random stuffs around etc.</p>
-
-        </div>
-
-
-      </div>
-      </div>
-      
-  </section>
-
-    
-
-    <!-- footer with feedback -->
-    <!-- adds feedbacks from footer -->
-    <section id="all-feedbacks">
-      <h2 class="h2-feedback">Feedbacks</h2>
-      <div class="WEW" id="table-div">
-        <table id="myTable">
-          <thead>
-            <tr>
-              <th>Email</th>
-              <th>Feedback</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <tr></tr>
-            <tr class="active-row"></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <button class="exportIt" id="exportAs">Export Options</button>
-      <div id="export-options" class="export-options">
-        <button class="exportIt exportCSV" id="expCSV">CSV</button>
-        <button class="exportIt exportPDF" id="expPDF">PDF</button>
-      </div>
-    </section>
-
-    <footer id="contact">
-      <!-- feedback part  -->
-      <div class="feedback-div">
-        <!-- email address -->
-
-        <form id="form" action="#all-feedbacks">
-          <input
-            class="feedback item1"
-            type="email"
-            name="email"
-            id="email"
-            placeholder="yourmail@mail.com"
-          />
-
-          <br />
-
-          <!-- textarea -->
-
-          <textarea
-            class="feedback item2"
-            name="message"
-            id="message"
-            cols="30"
-            rows="10"
-            placeholder="Your Feedback"
-          ></textarea>
-
-          <!-- feedback -->
-
-          <br />
-
-          <!-- submit -->
-          <button type="submit" class="feedback-btn">Send Feedback</button>
-        </form>
-
-        <!-- feedback part ends here -->
-      </div>
-
-      <!-- social lists -->
-
-      <ul class="socials">
-        <!-- social links -->
-        <li class="social-item hover-underline-animation">
-          <i class="fa fa-facebook-official" style="font-size: 24px"
-            ><a
-              href="https://www.facebook.com/owheyitsme"
-              class="social-link"
-            ></a
-          ></i>
+  <header>
+    <nav class=".nav">
+      <ul class="nav-list">
+        <li class="nav-item n1">
+          <a class="nav-link hover-underline-animation" href="#home">Home</a>
         </li>
-        <li class="social-item hover-underline-animation">
-          <i class="fa fa-instagram" style="font-size: 24px">
-            <a href="" class=""></a
-          ></i>
+        <li class="nav-item n2">
+          <a class="nav-link hover-underline-animation" href="#about">About Me</a>
         </li>
-        <li class="social-item hover-underline-animation">
-          <i class="fa fa-github" style="font-size: 24px"
-            ><a href="https://github.com/abantoo"></a
-          ></i>
+        <li class="nav-item n3">
+          <a class="nav-link hover-underline-animation" href="https://github.com/abantoo?tab=repositories">My
+            Projects</a>
+        </li>
+        <li class="nav-item n4">
+          <a class="nav-link hover-underline-animation" href="#contact">Contact Me</a>
         </li>
       </ul>
-    </footer>
+    </nav>
 
-    <script src="../scripts/table.js"></script>
-    <script src="../scripts/export.js"></script>
-    <script src="../scripts/exportAsCSV.js"></script>
-    <script src="../scripts/exportAsPDF.js"></script>
 
-    <!-- scripts -->
-  </body>
+  </header>
+
+  <!-- introoo -->
+
+
+
+  <section class="home" id="home">
+
+    <div>
+      <h2 class="h1-home h1-home-intro">
+        Hi, <br />I'm
+      </h2>
+
+      <h1>
+        Abanto
+      </h1>
+
+      <p>Programmer,Tech enthusiast </p>
+
+    </div>
+    <div>
+      <img class="section-img" src="/svg/undraw_feeling_proud_qne1.svg" alt="" />
+    </div>
+
+  </section>
+
+  <!-- about me -->
+  <!-- 
+  <h3>My name is <strong>Naimur Rahman Abanto</strong> <br> </h3>
+  <h3>I finished my graduation from <a href="http://www.northsouth.edu/">North South University </a> . I am currently
+    doing an internship at <a href="https://www.nerddevs.com/"> nerddevs.</a> </h3> -->
+
+  <section class="about" id="about">
+
+    <h3 class="section-title">What I love to do</h3>
+
+    <!-- What I do -->
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+
+        <div class="swiper-slide">
+
+          <!-- Stuffs About Web Development -->
+
+          <div class="works">
+            <div class="img-container">
+              <img class="section-img" src="./svg/undraw_web_developer_re_h7ie.svg" alt="">
+            </div>
+
+            <div class="details-container">
+
+              <div>
+                <h3 class="title">Web Development</h3>
+                <div class="logo-container">
+                  <img class="logo" src="./svg/logos/html.svg" alt="">
+                  <img class="logo" src="./svg/logos/CSS3_logo.svg" alt="">
+                  <img class="logo" src="./svg/logos/Unofficial_JavaScript_logo_2.svg" alt="">
+                  <img class="logo" src="./svg/logos/Node.js_logo.svg" alt="">
+                  <img class="logo" src="./svg/logos/mongod.svg" alt="">
+
+                </div>
+
+                <p>
+                  Full stack web development with MERN stack.
+                </p>
+              </div>
+
+
+
+
+            </div>
+          </div>
+
+
+
+
+
+        </div>
+
+
+        <div class="swiper-slide">
+
+          <!-- Stuffs about machine learning -->
+
+          <div class="works ">
+
+            <div class="img-container">
+              <img class="section-img" src="./svg/undraw_sentiment_analysis_jp6w.svg" alt="">
+            </div>
+
+            <div class="details-container">
+
+              <div>
+                <h3 class="title">Machine learning</h3>
+                <img class="logo" src="./svg/logos/Tensorflow_logo.svg" alt="">
+                <p>Machine learning and neural network projects like Sentiment analysis, NLP</p>
+              </div>
+
+            </div>
+
+
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+
+          <!-- Stuffs about game development -->
+
+          <div class="works ">
+
+            <div class="img-container">
+              <img class="section-img" src="./svg/undraw_game_world_-0-o6q.svg" alt="">
+            </div>
+
+            <div class="details-container">
+              <div>
+                <h3 class="title">Game development</h3>
+                <div class="logos">
+                  <img class="logo" src="./svg/logos/Unreal_Engine_Logo.svg" alt="unreal">
+                  <img class="logo" src="./svg/logos//unity-seeklogo.com.svg" alt="unity">
+
+                </div>
+                <p>Made some 2d slider, 3d platforemer games using unity and unreal engine</p>
+              </div>
+
+            </div>
+
+
+
+
+          </div>
+
+
+        </div>
+
+        <div class="swiper-slide">
+
+          <!-- Stuffs about arts and stuffs  -->
+          <div class="works">
+
+            <div class="img-container">
+              <img class="section-img" src="./svg/undraw_monster_artist_2crm.svg" alt="">
+            </div>
+
+            <div class="details-container">
+              <div>
+                <h3 class="title">Arts</h3>
+                <img class="logo" src="./svg/logos/blender.svg" alt="blender">
+                <p>I love doing sketches, drawing cartoons, random digital arts.</p>
+              </div>
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+
+      <!-- If we need scrollbar -->
+      <div class="swiper-scrollbar"></div>
+    </div>
+  </section>
+
+
+
+
+
+
+  <!-- adds feedbacks from footer -->
+  <section id="all-feedbacks">
+    <h2 class="h2-feedback">Feedbacks</h2>
+    <div class="WEW" id="table-div">
+      <table id="myTable">
+        <thead>
+          <tr>
+            <th>Email</th>
+            <th>Feedback</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr></tr>
+          <tr class="active-row"></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <button class="exportIt" id="exportAs">Export Options</button>
+    <div id="export-options" class="export-options">
+      <button class="exportIt exportCSV" id="expCSV">CSV</button>
+      <button class="exportIt exportPDF" id="expPDF">PDF</button>
+    </div>
+  </section>
+
+
+  <!-- footer with feedback -->
+
+  <footer id="contact">
+    <!-- feedback part  -->
+    <div class="feedback-div">
+      <!-- email address -->
+
+      <form id="form" action="#all-feedbacks">
+        <input class="feedback item1" type="email" name="email" id="email" placeholder="yourmail@mail.com" />
+
+        <br />
+
+        <!-- textarea -->
+
+        <textarea class="feedback item2" name="message" id="message" cols="30" rows="10"
+          placeholder="Your Feedback"></textarea>
+
+        <!-- feedback -->
+
+        <br />
+
+        <!-- submit -->
+        <button type="submit" class="feedback-btn">Send Feedback</button>
+      </form>
+
+      <!-- feedback part ends here -->
+    </div>
+
+    <!-- social lists -->
+
+    <ul class="socials">
+      <!-- social links -->
+      <li class="social-item hover-underline-animation">
+        <i class="fa fa-facebook-official" style="font-size: 24px"><a href="https://www.facebook.com/owheyitsme"
+            class="social-link"></a></i>
+      </li>
+      <li class="social-item hover-underline-animation">
+        <i class="fa fa-instagram" style="font-size: 24px">
+          <a href="" class=""></a></i>
+      </li>
+      <li class="social-item hover-underline-animation">
+        <i class="fa fa-github" style="font-size: 24px"><a href="https://github.com/abantoo"></a></i>
+      </li>
+    </ul>
+  </footer>
+
+  <script src="../scripts/table.js"></script>
+  <script src="../scripts/export.js"></script>
+  <script src="../scripts/exportAsCSV.js"></script>
+  <script src="../scripts/exportAsPDF.js"></script>
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script src="./scripts/swiper.js"></script>
+
+  <!-- scripts -->
+</body>
+
 </html>
