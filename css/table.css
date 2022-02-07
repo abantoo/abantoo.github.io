@@ -1,20 +1,3 @@
-.feedback {
-  margin: 0.5em;
-  box-shadow: 2px solid var(--color-accent);
-}
-
-#all-feedbacks {
-  text-align: center;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.h2-feedback {
-  margin: 20px;
-}
-
 #myTable {
   border-collapse: collapse;
   margin: auto;

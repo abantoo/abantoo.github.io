@@ -1,14 +1,6 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 html,
 body {
   background: white;
-  color: var(--color-dark);
-
   margin: 0;
   padding: 0;
   line-height: 1.5;
@@ -20,18 +12,47 @@ body {
 
 }
 
-
-
 section {
-  padding: 5em 2em;
+
+  padding: 0 2em;
 }
 
 footer {
   background-color: black;
-  bottom: 0;
+  color: white;
+  text-align: center;
+  border: 2px solid black;
+
+}
+
+form {
+  margin: 1em;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  align-content: stretch;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.home,
+.about {
+  padding-top: 7em;
+  height: calc(100vh - 7em);
 }
 
 
+#all-feedbacks {
+  margin-top: 5em;
+  padding-top: 7em;
+  height: calc(100vh - 7em);
+}
+
+#contact {
+  margin-top: 6em;
+  height: calc(100vh - 7em);
+
+}
 
 @media (min-width: 800px) {
   header {
@@ -83,45 +104,45 @@ footer {
 
   .logos {
     display: flex;
-
   }
 
   .section-img {
     width: 45%;
-
   }
 
   .home {
+    /* display: flex;
+    justify-content: center; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .socials {
+    padding: 1em;
     display: flex;
-    justify-content: center;
-    /* display: grid;
-    grid-template-columns: 1fr 1fr; */
-    margin-top: 7em;
-    height: calc(100vh - 14em);
-    margin-bottom: 7em;
-  }
-
-  .home-intro {
-    width: 50%;
-
-    text-align: center;
+    justify-items: flex-start;
   }
 
 
+  .home-img {
+    width: 75%;
+  }
 
   .about {
-    margin-top: 7em;
-    margin-left: 5em;
-    margin-right: 5em;
+    background: linear-gradient(90deg,
+        rgb(252, 252, 252) 0%,
+        rgba(226, 226, 240, 1) 35%,
+        rgb(149, 151, 151) 100%);
+    padding-top: 7em;
   }
-
 
   .img-container {
     display: flex;
     justify-content: center;
     margin: none;
   }
-
 
   .details-container {
     display: flex;
@@ -146,16 +167,32 @@ footer {
   }
 
   .section-title {
-    font-size: 60px;
+    font-size: 50px;
   }
 
-  footer {}
-
-
+  .tlp {
+    display: flex;
+    flex-direction: column;
+  }
 
   .social-item {
     margin: .5em;
 
   }
 
+}
+
+.feedback-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+#all-feedbacks {
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }

@@ -8,7 +8,6 @@
   <title>Portfolio</title>
   <!-- <link rel="stylesheet" href="./css/style.css" /> -->
   <link rel="stylesheet" href="./css/buttons.css" />
-  <link rel="stylesheet" href="./css/iframe.css" />
   <link rel="stylesheet" href="./css/card.css">
   <link rel="stylesheet" href="./css/table.css">
   <link rel="stylesheet" href="./css/altstyle.css">
@@ -37,6 +36,10 @@
           <a class="nav-link hover-underline-animation" href="https://github.com/abantoo?tab=repositories">My
             Projects</a>
         </li>
+
+        <li class="nav-item n4">
+          <a class="nav-link hover-underline-animation" href="#all-feedbacks">All Feedbacks</a>
+        </li>
         <li class="nav-item n4">
           <a class="nav-link hover-underline-animation" href="#contact">Send Feedback</a>
         </li>
@@ -53,35 +56,55 @@
   <section class="home" id="home">
 
     <div class="home-intro">
-      <h2 class="h1-home h1-home-intro">
-        Hi, <br />I'm
+      <h2>
+        Hi, I'm Abanto
       </h2>
-
-      <h1>
-        Abanto
-      </h1>
 
       <p>Programmer,Tech enthusiast </p>
 
+      <div>
+        <div class="social-item hover-underline-animation">
+          <i class="fa fa-facebook-official" style="font-size: 48px"><a href="https://www.facebook.com/owheyitsme"
+              class="social-link"></a></i>
+        </div>
+
+        <div class="social-item hover-underline-animation">
+          <i class="fa fa-instagram" style="font-size: 48px">
+            <a href="" class=""></a></i>
+        </div>
+
+        <div class="social-item hover-underline-animation">
+          <i class="fa fa-github" style="font-size: 48px"><a href="https://github.com/abantoo"></a></i>
+        </div>
+
+
+
+      </div>
+
+      <!--  
       <ul class="socials">
-        <!-- social links -->
+        
         <li class="social-item hover-underline-animation">
-          <i class="fa fa-facebook-official" style="font-size: 24px"><a href="https://www.facebook.com/owheyitsme"
+          <i class="fa fa-facebook-official" style="font-size: 48px"><a href="https://www.facebook.com/owheyitsme"
               class="social-link"></a></i>
         </li>
         <li class="social-item hover-underline-animation">
-          <i class="fa fa-instagram" style="font-size: 24px">
+          <i class="fa fa-instagram" style="font-size: 48px">
             <a href="" class=""></a></i>
         </li>
         <li class="social-item hover-underline-animation">
-          <i class="fa fa-github" style="font-size: 24px"><a href="https://github.com/abantoo"></a></i>
+          <i class="fa fa-github" style="font-size: 48px"><a href="https://github.com/abantoo"></a></i>
         </li>
       </ul>
+    -->
+
+
+
 
     </div>
 
     <div class="home-img-container">
-      <img class="section-img" src="/svg/undraw_feeling_proud_qne1.svg" alt="" />
+      <img class="home-img" src="/svg/undraw_feeling_proud_qne1.svg" alt="" />
     </div>
 
   </section>
@@ -128,10 +151,6 @@
                   Full stack web development with MERN stack.
                 </p>
               </div>
-
-
-
-
             </div>
           </div>
 
@@ -154,12 +173,17 @@
 
             <div class="details-container">
 
-              <div>
-                <h3 class="title">Machine learning</h3>
-                <img class="logo" src="./svg/logos/Tensorflow_logo.svg" alt="">
+              <div class="tlp">
+                <div>
+                  <h3 class="title">Machine learning</h3>
+                  <img class="logo" src="./svg/logos/Tensorflow_logo.svg" alt="">
+
+                </div>
+                <p>Machine learning and neural network projects like Sentiment analysis, NLP</p>
 
               </div>
-              <p>Machine learning and neural network projects like Sentiment analysis, NLP</p>
+
+
 
             </div>
 
@@ -208,19 +232,19 @@
             </div>
 
             <div class="details-container">
-              <div>
+
+              <div class="tlp">
                 <h3 class="title">Arts</h3>
-                <img class="logo" src="./svg/logos/blender.svg" alt="blender">
+                <div class="logo-container">
 
+                  <img class="logo" src="./svg/logos/blender.svg" alt="blender"> <br>
 
+                </div>
+
+                <p>I love doing sketches, drawing cartoons, random digital arts.</p>
               </div>
-
-              <p>I love doing sketches, drawing cartoons, random digital arts.</p>
-
             </div>
-
           </div>
-
 
         </div>
 
@@ -271,34 +295,48 @@
 
   <!-- footer with feedback -->
 
-  <footer id="contact">
+  <section id="contact">
     <!-- feedback part  -->
     <div class="feedback-div">
-      <!-- email address -->
 
-      <form id="form" action="#all-feedbacks">
-        <input class="feedback item1" type="email" name="email" id="email" placeholder="yourmail@mail.com" />
 
-        <br />
+      <h3 class="section-title">Send me feedback</h3>
 
-        <!-- textarea -->
 
-        <textarea class="feedback item2" name="message" id="message" cols="30" rows="10"
-          placeholder="Your Feedback"></textarea>
 
-        <!-- feedback -->
+      <div class="card ">
 
-        <br />
+        <form id="form" action="#all-feedbacks">
 
-        <!-- submit -->
-        <button type="submit" class="feedback-btn">Send Feedback</button>
-      </form>
+          <!--inpur email address -->
+          <input class="feedback" type="email" name="email" id="email" placeholder="yourmail@mail.com" />
 
-      <!-- feedback part ends here -->
+          <br />
+
+          <!-- textarea for message body -->
+
+          <textarea class="feedback" name="message" id="message" cols="30" rows="10"
+            placeholder="Your Feedback"></textarea>
+
+          <br />
+          <!-- submit -->
+          <div>
+            <button type="submit" class="feedback-btn">Send Feedback</button>
+
+          </div>
+
+        </form>
+      </div>
     </div>
+  </section>
 
-    <!-- social lists -->
+  <!-- Send feedback part ends here -->
 
+  <!-- Short Footer -->
+  <footer>
+    <div>
+      <h3>Made with ❤ by Abanto</h3>
+    </div>
 
   </footer>
 

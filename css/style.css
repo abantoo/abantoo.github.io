@@ -8,12 +8,10 @@
   --fw-reg: 300;
   --fw-bold: 900;
 
-  --color-background: linear-gradient(
-    90deg,
-    rgba(173, 171, 195, 1) 0%,
-    rgba(226, 226, 240, 1) 35%,
-    rgba(232, 233, 233, 1) 100%
-  );
+  --color-background: linear-gradient(90deg,
+      rgb(235, 235, 235) 0%,
+      rgba(226, 226, 240, 1) 35%,
+      rgba(232, 233, 233, 1) 100%);
 
   --color-light: #dadad3;
   --color-dark: #263238;
@@ -51,9 +49,8 @@ body {
 body {
   margin-bottom: 0px;
 }
-section {
-  padding: 5em 2em;
-}
+
+
 
 /* img {
   display: block;
@@ -182,12 +179,14 @@ header {
     margin: 2em;
   }
 }
+
 /* intro  */
 
 @media (max-width: 799px) {
   .nav-img {
     display: none;
   }
+
   .nav-list {
     display: flex;
     justify-items: baseline;
@@ -202,6 +201,7 @@ header {
   .nav-item {
     margin: 1em;
   }
+
   .home {
     margin-top: 1.5em;
     display: grid;
@@ -237,6 +237,7 @@ header {
     font-size: 1.5em;
     font-weight: var(--fw-bold);
   }
+
   .profile-img {
     margin-left: auto;
     margin-right: auto;
@@ -247,6 +248,7 @@ header {
     border-radius: 50%;
     box-shadow: 0px 6px 6px #111;
   }
+
   .interests,
   .activities {
     display: grid;
@@ -262,6 +264,7 @@ header {
     border: 2px solid black;
   }
 }
+
 .about {
   /* background: linear-gradient(to right, #2b5876, #4e4376); */
   /* background-image: radial-gradient(
@@ -288,27 +291,28 @@ header {
   text-decoration: none;
   color: white;
 }
+
 .sub {
   text-decoration: underline;
   text-underline-offset: 0.3em;
 }
+
 /* other */
 
 .other {
   /* background: linear-gradient(to right, #ed4264, #ffedbc); */
   /* background: linear-gradient(to right, #00467f, #a5cc82); */
 
-  background: #9796f0; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #fbc7d4,
-    #9796f0
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #fbc7d4,
-    #9796f0
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #9796f0;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right,
+      #fbc7d4,
+      #9796f0);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right,
+      #fbc7d4,
+      #9796f0);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   color: var(--color-dark);
   text-align: center;
