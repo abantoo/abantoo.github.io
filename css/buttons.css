@@ -32,7 +32,6 @@
 }
 
 .fa-facebook-official:hover {
-
   color: #3c5898;
 }
 
@@ -77,18 +76,22 @@
 .feedback-btn,
 .exportIt {
   /* width: 350px; */
-  background: transparent;
+  /* background: black; */
+  background: #6c63ff;
   cursor: pointer;
   text-decoration: none;
-  color: grey;
+  color: white;
+
   font-family: sans-serif;
   font-size: 1.2rem;
-  border: 2px solid #04aa6d;
+  /* border: 2px solid #04aa6d; */
+  border: 2px solid grey;
   border-radius: 5px;
   padding: 10px 30px;
   position: relative;
   transition: all 1s;
   overflow: hidden;
+  /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); */
 }
 
 .feedback-btn:before,
@@ -109,6 +112,11 @@
 
 .feedback-btn:hover:hover,
 .exportIt:hover:hover {
-  background-color: #04aa6d;
-  color: white;
+  /* background-color: #04aa6d; */
+  background: transparent;
+
+  color: grey;
+  border: 2px solid #6c63ff;
+
+  box-shadow: none;
 }

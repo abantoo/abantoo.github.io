@@ -167,10 +167,13 @@ form {
 
 .feedback-div {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
+.feedback-section-img {
+  width: 60%;
+}
 #all-feedbacks {
   text-align: center;
   overflow: hidden;
