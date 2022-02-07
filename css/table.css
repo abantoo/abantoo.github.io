@@ -18,16 +18,12 @@ td {
   text-align: left;
 }
 
-#myTable tbody tr {
+th #myTable tbody tr {
   border-bottom: thin solid #dddddd;
 }
 
 tbody tr:nth-of-type(even) {
   background-color: #f3f3f3;
-}
-
-tbody tr:last-of-type {
-  border-bottom: 2px solid #009879;
 }
 
 tbody tr.active-row {

@@ -1,87 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <!-- <link rel="stylesheet" href="./css/style.css" /> -->
+    <link rel="stylesheet" href="./css/buttons.css" />
+    <link rel="stylesheet" href="./css/card.css" />
+    <link rel="stylesheet" href="./css/table.css" />
+    <link rel="stylesheet" href="./css/altstyle.css" />
+    <link rel="stylesheet" href="./css/main.css" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio</title>
-  <!-- <link rel="stylesheet" href="./css/style.css" /> -->
-  <link rel="stylesheet" href="./css/buttons.css" />
-  <link rel="stylesheet" href="./css/card.css">
-  <link rel="stylesheet" href="./css/table.css">
-  <link rel="stylesheet" href="./css/altstyle.css">
-  <link rel="stylesheet" href="./css/main.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Outfit:wght@200&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Outfit:wght@200&display=swap"
-    rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+  </head>
 
-  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-</head>
+  <body>
+    <!-- header -->
 
-<body>
-  <!-- header -->
+    <header>
+      <nav class=".nav">
+        <ul class="nav-list">
+          <li class="nav-item n1">
+            <a class="nav-link hover-underline-animation" href="#home">Home</a>
+          </li>
+          <li class="nav-item n2">
+            <a class="nav-link hover-underline-animation" href="#about"
+              >About Me</a
+            >
+          </li>
+          <li class="nav-item n3">
+            <a
+              class="nav-link hover-underline-animation"
+              href="https://github.com/abantoo?tab=repositories"
+              >My Projects</a
+            >
+          </li>
 
-  <header>
-    <nav class=".nav">
-      <ul class="nav-list">
-        <li class="nav-item n1">
-          <a class="nav-link hover-underline-animation" href="#home">Home</a>
-        </li>
-        <li class="nav-item n2">
-          <a class="nav-link hover-underline-animation" href="#about">About Me</a>
-        </li>
-        <li class="nav-item n3">
-          <a class="nav-link hover-underline-animation" href="https://github.com/abantoo?tab=repositories">My
-            Projects</a>
-        </li>
+          <li class="nav-item n4">
+            <a class="nav-link hover-underline-animation" href="#all-feedbacks"
+              >All Feedbacks</a
+            >
+          </li>
+          <li class="nav-item n4">
+            <a class="nav-link hover-underline-animation" href="#contact"
+              >Send Feedback</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-        <li class="nav-item n4">
-          <a class="nav-link hover-underline-animation" href="#all-feedbacks">All Feedbacks</a>
-        </li>
-        <li class="nav-item n4">
-          <a class="nav-link hover-underline-animation" href="#contact">Send Feedback</a>
-        </li>
-      </ul>
-    </nav>
+    <!-- introoo -->
 
+    <section class="home" id="home">
+      <div class="home-intro">
+        <h2>Hi, I'm Abanto</h2>
 
-  </header>
+        <p>Programmer,Tech enthusiast</p>
 
-  <!-- introoo -->
+        <h3>Contact me:</h3>
 
+        <div class="contact-me-container">
+          <div class="social-item hover-underline-animation">
+            <i class="fa fa-facebook-official" style="font-size: 36px"
+              ><a
+                href="https://www.facebook.com/owheyitsme"
+                class="social-link"
+              ></a
+            ></i>
+          </div>
 
+          <div class="social-item hover-underline-animation">
+            <i class="fa fa-instagram" style="font-size: 36px">
+              <a href="" class=""></a
+            ></i>
+          </div>
 
-  <section class="home" id="home">
-
-    <div class="home-intro">
-      <h2>
-        Hi, I'm Abanto
-      </h2>
-
-      <p>Programmer,Tech enthusiast </p>
-
-      <div>
-        <div class="social-item hover-underline-animation">
-          <i class="fa fa-facebook-official" style="font-size: 48px"><a href="https://www.facebook.com/owheyitsme"
-              class="social-link"></a></i>
+          <div class="social-item hover-underline-animation">
+            <i class="fa fa-github" style="font-size: 36px"
+              ><a href="https://github.com/abantoo"></a
+            ></i>
+          </div>
         </div>
 
-        <div class="social-item hover-underline-animation">
-          <i class="fa fa-instagram" style="font-size: 48px">
-            <a href="" class=""></a></i>
-        </div>
-
-        <div class="social-item hover-underline-animation">
-          <i class="fa fa-github" style="font-size: 48px"><a href="https://github.com/abantoo"></a></i>
-        </div>
-
-
-
-      </div>
-
-      <!--  
+        <!--  
       <ul class="socials">
         
         <li class="social-item hover-underline-animation">
@@ -97,258 +112,259 @@
         </li>
       </ul>
     -->
+      </div>
 
+      <div class="home-img-container">
+        <img class="home-img" src="/svg/undraw_feeling_proud_qne1.svg" alt="" />
+      </div>
+    </section>
 
-
-
-    </div>
-
-    <div class="home-img-container">
-      <img class="home-img" src="/svg/undraw_feeling_proud_qne1.svg" alt="" />
-    </div>
-
-  </section>
-
-  <!-- about me -->
-  <!-- 
+    <!-- about me -->
+    <!-- 
   <h3>My name is <strong>Naimur Rahman Abanto</strong> <br> </h3>
   <h3>I finished my graduation from <a href="http://www.northsouth.edu/">North South University </a> . I am currently
     doing an internship at <a href="https://www.nerddevs.com/"> nerddevs.</a> </h3> -->
 
-  <section class="about" id="about">
+    <section class="about" id="about">
+      <h3 class="section-title">What I love to do</h3>
 
-    <h3 class="section-title">What I love to do</h3>
+      <!-- What I do -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
 
-    <!-- What I do -->
-    <div class="swiper">
-      <!-- Additional required wrapper -->
-      <div class="swiper-wrapper">
-        <!-- Slides -->
+          <div class="swiper-slide">
+            <!-- Stuffs About Web Development -->
 
-        <div class="swiper-slide">
-
-          <!-- Stuffs About Web Development -->
-
-          <div class="works">
-            <div class="img-container">
-              <img class="section-img" src="./svg/undraw_web_developer_re_h7ie.svg" alt="">
-            </div>
-
-            <div class="details-container">
-
-              <div>
-                <h3 class="title">Web Development</h3>
-                <div class="logo-container">
-                  <img class="logo" src="./svg/logos/html.svg" alt="">
-                  <img class="logo" src="./svg/logos/CSS3_logo.svg" alt="">
-                  <img class="logo" src="./svg/logos/Unofficial_JavaScript_logo_2.svg" alt="">
-                  <img class="logo" src="./svg/logos/Node.js_logo.svg" alt="">
-                  <img class="logo" src="./svg/logos/mongod.svg" alt="">
-
-                </div>
-
-                <p>
-                  Full stack web development with MERN stack.
-                </p>
+            <div class="works">
+              <div class="img-container">
+                <img
+                  class="section-img"
+                  src="./svg/undraw_web_developer_re_h7ie.svg"
+                  alt=""
+                />
               </div>
-            </div>
-          </div>
 
-
-
-
-
-        </div>
-
-
-        <div class="swiper-slide">
-
-          <!-- Stuffs about machine learning -->
-
-          <div class="works ">
-
-            <div class="img-container">
-              <img class="section-img" src="./svg/undraw_sentiment_analysis_jp6w.svg" alt="">
-            </div>
-
-            <div class="details-container">
-
-              <div class="tlp">
+              <div class="details-container">
                 <div>
-                  <h3 class="title">Machine learning</h3>
-                  <img class="logo" src="./svg/logos/Tensorflow_logo.svg" alt="">
+                  <h3 class="title">Web Development</h3>
+                  <div class="logo-container">
+                    <img class="logo" src="./svg/logos/html.svg" alt="" />
+                    <img class="logo" src="./svg/logos/CSS3_logo.svg" alt="" />
+                    <img
+                      class="logo"
+                      src="./svg/logos/Unofficial_JavaScript_logo_2.svg"
+                      alt=""
+                    />
+                    <img
+                      class="logo"
+                      src="./svg/logos/Node.js_logo.svg"
+                      alt=""
+                    />
+                    <img class="logo" src="./svg/logos/mongod.svg" alt="" />
+                  </div>
 
+                  <p>Full stack web development with MERN stack.</p>
                 </div>
-                <p>Machine learning and neural network projects like Sentiment analysis, NLP</p>
-
-              </div>
-
-
-
-            </div>
-
-
-          </div>
-        </div>
-
-        <div class="swiper-slide">
-
-          <!-- Stuffs about game development -->
-
-          <div class="works ">
-
-            <div class="img-container">
-              <img class="section-img" src="./svg/undraw_game_world_-0-o6q.svg" alt="">
-            </div>
-
-            <div class="details-container">
-              <div>
-                <h3 class="title">Game development</h3>
-                <div class="logos">
-                  <img class="logo" src="./svg/logos/Unreal_Engine_Logo.svg" alt="unreal">
-                  <img class="logo" src="./svg/logos//unity-seeklogo.com.svg" alt="unity">
-
-                </div>
-                <p>Made some 2d slider, 3d platforemer games using unity and unreal engine</p>
-              </div>
-
-            </div>
-
-
-
-
-          </div>
-
-
-        </div>
-
-        <div class="swiper-slide">
-
-          <!-- Stuffs about arts and stuffs  -->
-          <div class="works">
-
-            <div class="img-container">
-              <img class="section-img" src="./svg/undraw_monster_artist_2crm.svg" alt="">
-            </div>
-
-            <div class="details-container">
-
-              <div class="tlp">
-                <h3 class="title">Arts</h3>
-                <div class="logo-container">
-
-                  <img class="logo" src="./svg/logos/blender.svg" alt="blender"> <br>
-
-                </div>
-
-                <p>I love doing sketches, drawing cartoons, random digital arts.</p>
               </div>
             </div>
           </div>
 
-        </div>
+          <div class="swiper-slide">
+            <!-- Stuffs about machine learning -->
 
+            <div class="works">
+              <div class="img-container">
+                <img
+                  class="section-img"
+                  src="./svg/undraw_sentiment_analysis_jp6w.svg"
+                  alt=""
+                />
+              </div>
+
+              <div class="details-container">
+                <div class="tlp">
+                  <div>
+                    <h3 class="title">Machine learning</h3>
+                    <img
+                      class="logo"
+                      src="./svg/logos/Tensorflow_logo.svg"
+                      alt=""
+                    />
+                  </div>
+                  <p>
+                    Machine learning and neural network projects like Sentiment
+                    analysis, NLP
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <!-- Stuffs about game development -->
+
+            <div class="works">
+              <div class="img-container">
+                <img
+                  class="section-img"
+                  src="./svg/undraw_game_world_-0-o6q.svg"
+                  alt=""
+                />
+              </div>
+
+              <div class="details-container">
+                <div>
+                  <h3 class="title">Game development</h3>
+                  <div class="logos">
+                    <img
+                      class="logo"
+                      src="./svg/logos/Unreal_Engine_Logo.svg"
+                      alt="unreal"
+                    />
+                    <img
+                      class="logo"
+                      src="./svg/logos//unity-seeklogo.com.svg"
+                      alt="unity"
+                    />
+                  </div>
+                  <p>
+                    Made some 2d slider, 3d platforemer games using unity and
+                    unreal engine
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <!-- Stuffs about arts and stuffs  -->
+            <div class="works">
+              <div class="img-container">
+                <img
+                  class="section-img"
+                  src="./svg/undraw_monster_artist_2crm.svg"
+                  alt=""
+                />
+              </div>
+
+              <div class="details-container">
+                <div class="tlp">
+                  <h3 class="title">Arts</h3>
+                  <div class="logo-container">
+                    <img
+                      class="logo"
+                      src="./svg/logos/blender.svg"
+                      alt="blender"
+                    />
+                    <br />
+                  </div>
+
+                  <p>
+                    I love doing sketches, drawing cartoons, random digital
+                    arts.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
       </div>
-      <!-- If we need pagination -->
-      <div class="swiper-pagination"></div>
+    </section>
 
-      <!-- If we need navigation buttons -->
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
+    <!-- adds feedbacks from footer -->
+    <section id="all-feedbacks">
+      <h3 class="section-title">Feedbacks</h3>
+      <div class="WEW" id="table-div">
+        <table id="myTable">
+          <thead>
+            <tr>
+              <th>Email</th>
+              <th>Feedback</th>
+            </tr>
+          </thead>
 
-      <!-- If we need scrollbar -->
-
-    </div>
-  </section>
-
-
-
-
-
-
-  <!-- adds feedbacks from footer -->
-  <section id="all-feedbacks">
-    <h3 class="section-title">Feedbacks</h3>
-    <div class="WEW" id="table-div">
-      <table id="myTable">
-        <thead>
-          <tr>
-            <th>Email</th>
-            <th>Feedback</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <tr></tr>
-          <tr class="active-row"></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <button class="exportIt" id="exportAs">Export Options</button>
-    <div id="export-options" class="export-options">
-      <button class="exportIt exportCSV" id="expCSV">CSV</button>
-      <button class="exportIt exportPDF" id="expPDF">PDF</button>
-    </div>
-  </section>
-
-
-  <!-- footer with feedback -->
-
-  <section id="contact">
-    <!-- feedback part  -->
-    <div class="feedback-div">
-
-
-      <h3 class="section-title">Send me feedback</h3>
-
-
-
-      <div class="card ">
-
-        <form id="form" action="#all-feedbacks">
-
-          <!--inpur email address -->
-          <input class="feedback" type="email" name="email" id="email" placeholder="yourmail@mail.com" />
-
-          <br />
-
-          <!-- textarea for message body -->
-
-          <textarea class="feedback" name="message" id="message" cols="30" rows="10"
-            placeholder="Your Feedback"></textarea>
-
-          <br />
-          <!-- submit -->
-          <div>
-            <button type="submit" class="feedback-btn">Send Feedback</button>
-
-          </div>
-
-        </form>
+          <tbody>
+            <tr></tr>
+            <tr class="active-row"></tr>
+          </tbody>
+        </table>
       </div>
-    </div>
-  </section>
 
-  <!-- Send feedback part ends here -->
+      <button class="exportIt" id="exportAs">Export Options</button>
+      <div id="export-options" class="export-options">
+        <button class="exportIt exportCSV" id="expCSV">CSV</button>
+        <button class="exportIt exportPDF" id="expPDF">PDF</button>
+      </div>
+    </section>
 
-  <!-- Short Footer -->
-  <footer>
-    <div>
-      <h3>Made with ❤ by Abanto</h3>
-    </div>
+    <!-- footer with feedback -->
 
-  </footer>
+    <section id="contact">
+      <!-- feedback part  -->
+      <div class="feedback-div">
+        <h3 class="section-title">Send me feedback</h3>
 
-  <script src="../scripts/table.js"></script>
-  <script src="../scripts/export.js"></script>
-  <script src="../scripts/exportAsCSV.js"></script>
-  <script src="../scripts/exportAsPDF.js"></script>
-  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-  <script src="./scripts/swiper.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+        <div class="card">
+          <form id="form" action="#all-feedbacks">
+            <!--inpur email address -->
+            <input
+              class="feedback"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="yourmail@mail.com"
+            />
 
-  <!-- scripts -->
-</body>
+            <br />
 
+            <!-- textarea for message body -->
+
+            <textarea
+              class="feedback"
+              name="message"
+              id="message"
+              cols="30"
+              rows="10"
+              placeholder="Your Feedback"
+            ></textarea>
+
+            <br />
+            <!-- submit -->
+            <div>
+              <button type="submit" class="feedback-btn">Send Feedback</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Send feedback part ends here -->
+
+    <!-- Short Footer -->
+    <footer>
+      <div>
+        <h3>Made with ❤ by Abanto</h3>
+      </div>
+    </footer>
+
+    <script src="../scripts/table.js"></script>
+    <script src="../scripts/export.js"></script>
+    <script src="../scripts/exportAsCSV.js"></script>
+    <script src="../scripts/exportAsPDF.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./scripts/swiper.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+
+    <!-- scripts -->
+  </body>
 </html>

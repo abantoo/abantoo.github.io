@@ -9,11 +9,9 @@ body {
   font-family: "Outfit", sans-serif;
 
   overflow-x: hidden;
-
 }
 
 section {
-
   padding: 0 2em;
 }
 
@@ -22,7 +20,6 @@ footer {
   color: white;
   text-align: center;
   border: 2px solid black;
-
 }
 
 form {
@@ -41,7 +38,6 @@ form {
   height: calc(100vh - 7em);
 }
 
-
 #all-feedbacks {
   margin-top: 5em;
   padding-top: 7em;
@@ -49,9 +45,8 @@ form {
 }
 
 #contact {
-  margin-top: 6em;
-  height: calc(100vh - 7em);
-
+  margin-top: 7em;
+  height: calc(100vh - 14em);
 }
 
 @media (min-width: 800px) {
@@ -61,7 +56,7 @@ form {
     top: 0;
     width: 100%;
     display: flex;
-    justify-content: right;
+    justify-content: center;
     height: 100px;
     overflow: hidden;
     box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
@@ -78,20 +73,12 @@ form {
   }
 
   nav {
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-right: 10em;
+    margin: auto 0;
   }
 
   .nav-list {
     display: flex;
-    justify-content: center;
-    align-items: right;
     gap: 2em;
-  }
-
-  .nav-link {
-    padding: 0 1em;
   }
 
   .logo {
@@ -119,22 +106,27 @@ form {
     align-items: center;
   }
 
-  .socials {
+  /* .socials {
     padding: 1em;
     display: flex;
     justify-items: flex-start;
-  }
-
+  } */
 
   .home-img {
     width: 75%;
   }
+  .contact-me-container {
+    display: flex;
+    gap: 0.5em;
+  }
 
   .about {
-    background: linear-gradient(90deg,
-        rgb(252, 252, 252) 0%,
-        rgba(226, 226, 240, 1) 35%,
-        rgb(149, 151, 151) 100%);
+    background: linear-gradient(
+      90deg,
+      rgb(252, 252, 252) 0%,
+      rgba(226, 226, 240, 1) 35%,
+      rgb(149, 151, 151) 100%
+    );
     padding-top: 7em;
   }
 
@@ -150,16 +142,13 @@ form {
     align-items: center;
   }
 
-
   .svg-container {
     width: 100%;
   }
 
-
   .works {
     display: grid;
     grid-template-columns: auto auto;
-
   }
 
   .title {
@@ -174,19 +163,12 @@ form {
     display: flex;
     flex-direction: column;
   }
-
-  .social-item {
-    margin: .5em;
-
-  }
-
 }
 
 .feedback-div {
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
 
 #all-feedbacks {

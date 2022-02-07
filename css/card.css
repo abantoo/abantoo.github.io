@@ -5,12 +5,11 @@
   /* background-color: transparent; */
 
   /* Add border */
-  border: 2px solid #bacdd8;
+  border: thin solid #bacdd8;
   /* Add space between the border and the content */
   padding: 8px;
   border-radius: 15px;
 }
-
 
 #message,
 #email {
@@ -18,14 +17,12 @@
 }
 
 @media (min-width: 800px) {
-
   .card {
     width: min-content;
   }
 }
 
 @media (max-width: 799px) {
-
   .card {
     width: 100%;
   }
@@ -34,6 +31,5 @@
 /* On mouse-over, add a deeper shadow */
 .card:hover {
   /* box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.2); */
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
-    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
