@@ -1,0 +1,9 @@
+.swiper {
+  width: 100%;
+  padding-top: 24px !important;
+  padding-bottom: 24px !important;
+  border-radius: 24px;
+  -webkit-box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+          box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+}
+/*# sourceMappingURL=main.css.map */

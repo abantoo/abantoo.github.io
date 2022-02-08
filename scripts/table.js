@@ -31,13 +31,13 @@ const sendToServer = (email, message) => {
   // Send the proper header information along with the request
   xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
   xhttp.send(`mail=${email}&feedback=${message}`);
+  location.reload();
 };
 
 let j = 1;
 
 const receieveFromServer = () => {
   const xhttp = new XMLHttpRequest();
-
   xhttp.open("GET", url, true);
   xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
@@ -45,21 +45,18 @@ const receieveFromServer = () => {
 
       data = JSON.parse(xhttp.responseText);
 
-      for (let k = tbl.rows.length - 1; k > 0; k--) {
-        tbl.deleteRow(k);
-      }
-
       data.forEach((item, length) => {
-        let row = tbl.insertRow(i);
+        let row = tbl.insertRow(j);
         let cell1 = row.insertCell(0);
         let cell2 = row.insertCell(1);
 
-        cell1.innerHTML = item.mail;
+        cell1.innerHTML = item.email;
         cell2.innerHTML = item.feedback;
-        i++;
+
+        j++;
       });
 
-      i = 1;
+      //i = 1;
     }
   };
 
@@ -94,5 +91,8 @@ form.addEventListener("submit", (e) => {
     cell2.innerHTML = message;
 
     counterForNoParams++;
+
+    document.getElementById("email").value = "";
+    document.getElementById("message").value = "";
   }
 });
