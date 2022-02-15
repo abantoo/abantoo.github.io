@@ -8,6 +8,8 @@ body {
   font-family: "Crimson Pro", serif;
   font-family: "Outfit", sans-serif;
 
+  /* font-family: Arial, Helvetica, sans-serif; */
+
   overflow-x: hidden;
 }
 
@@ -115,18 +117,17 @@ form {
   .home-img {
     width: 75%;
   }
+
   .contact-me-container {
     display: flex;
     gap: 0.5em;
   }
 
   .about {
-    background: linear-gradient(
-      90deg,
-      rgb(252, 252, 252) 0%,
-      rgba(226, 226, 240, 1) 35%,
-      rgb(149, 151, 151) 100%
-    );
+    background: linear-gradient(90deg,
+        rgb(252, 252, 252) 0%,
+        rgba(226, 226, 240, 1) 35%,
+        rgb(149, 151, 151) 100%);
     padding-top: 7em;
   }
 
@@ -174,6 +175,7 @@ form {
 .feedback-section-img {
   width: 60%;
 }
+
 #all-feedbacks {
   text-align: center;
   overflow: hidden;

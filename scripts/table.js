@@ -75,8 +75,8 @@ form.addEventListener("submit", (e) => {
     alert("Write something");
   } else if (url) {
     const promise = new Promise((resolve, reject) => {
-      sendToServer(email, message);
-    })
+        sendToServer(email, message);
+      })
       .then(receieveFromServer())
       .catch((error) => console.log(error));
 
