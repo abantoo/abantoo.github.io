@@ -10,8 +10,22 @@ const url = param.get("server");
 let i = 1;
 
 window.onload = () => {
+
+
   if (url) {
     receieveFromServer();
+
+    //TODO: hides tables creates div instead with horizontal scrolling
+    // const tableDiv = document.getElementById("table-div");
+    // tableDiv.style.display = "none";
+
+    // let fbDiv = document.createElement("div").classLis;
+
+
+    // const fbc = document.getElementById("feedback-container")
+
+
+
   }
 };
 
@@ -25,13 +39,11 @@ const validateEmail = (email) => {
 
 const sendToServer = (email, message) => {
   const xhttp = new XMLHttpRequest();
-
   xhttp.open("POST", url, true);
-
   // Send the proper header information along with the request
   xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-  xhttp.send(`mail=${email}&feedback=${message}`);
-  location.reload();
+  xhttp.send(`email=${email}&feedback=${message}`);
+  //location.reload();
 };
 
 let j = 1;
