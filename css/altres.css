@@ -1,14 +1,46 @@
 @media (max-width: 799px) {
 
+    .home-intro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2em;
+    }
+
+    .contact-me-container {
+        display: flex;
+        gap: 1em;
+    }
+
     .section-img,
-    .logo-container {
+    .home-img {
+
+        display: none;
+
+    }
+
+    .logo {
+        width: 40px;
+    }
+
+    .tlp {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feedback-section-img {
         display: none;
     }
 
-    section {
-        height: 100vh;
-        overflow-y: hidden;
+    .feedback-div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
+}
 
-
+section {
+    height: 100vh;
+    overflow-y: hidden;
 }

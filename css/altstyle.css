@@ -40,18 +40,20 @@ form {
   height: calc(100vh);
 }
 
-#all-feedbacks {
-  margin-top: 5em;
-  padding-top: 7em;
-  height: calc(100vh - 7em);
-}
 
-#contact {
-  margin-top: 7em;
-  height: calc(100vh - 14em);
-}
 
 @media (min-width: 768px) {
+
+  #all-feedbacks {
+    margin-top: 5em;
+    padding-top: 7em;
+    height: calc(100vh - 7em);
+  }
+
+  #contact {
+    margin-top: 7em;
+    height: calc(100vh - 14em);
+  }
 
 
   header {
@@ -132,6 +134,8 @@ form {
 
   .details-container {
     display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
     justify-content: left;
     align-items: center;
   }
