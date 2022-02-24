@@ -37,7 +37,7 @@ form {
 .home,
 .about {
   padding-top: 7em;
-  height: calc(100vh - 7em);
+  height: calc(100vh);
 }
 
 #all-feedbacks {
@@ -52,6 +52,8 @@ form {
 }
 
 @media (min-width: 800px) {
+
+
   header {
     background-color: transparent;
     position: fixed;

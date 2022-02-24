@@ -108,3 +108,10 @@ form.addEventListener("submit", (e) => {
     document.getElementById("message").value = "";
   }
 });
+
+const navLinks = document.getElementById("myLinks");
+if (navLinks.style.display === "block") {
+  navLinks.style.display = "none";
+} else {
+  navLinks.style.display = "block";
+}

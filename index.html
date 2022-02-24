@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="./css/altstyle.css" />
   <link rel="stylesheet" href="./css/main.css" />
 
+  <link rel="stylesheet" href="./css/altres.css">
+
   <link rel="stylesheet" href="./css/hover.css">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -20,34 +22,89 @@
     rel="stylesheet" />
 
   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 
 <body>
   <!-- header -->
 
   <header>
-    <nav class=".nav">
-      <ul class="nav-list">
-        <li class="nav-item n1">
-          <a class="nav-link hover-underline-animation hvr-bubble-float-top" href="#home">Home</a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link hover-underline-animation hvr-bob" href="#about">About Me</a>
-        </li>
+    <!-- 
+    <nav class="nav topnav">
 
-        </li>
-        <li class="nav-item n3">
-          <a class="nav-link hover-underline-animation" href="https://github.com/abantoo?tab=repositories">My
-            Projects</a>
-        </li>
+      <div class="myLinks">
+        <ul class="nav-list">
+          <li class="nav-item n1">
+            <a class="nav-link hover-underline-animation hvr-bubble-float-top" href="#home">Home</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link hover-underline-animation hvr-bob" href="#about">About Me</a>
+          </li>
 
-        <li class="nav-item n4">
-          <a class="nav-link hover-underline-animation" href="#all-feedbacks">All Feedbacks</a>
-        </li>
-        <li class="nav-item n4">
-          <a class="nav-link hover-underline-animation" href="#contact">Send Feedback</a>
-        </li>
-      </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link hover-underline-animation" href="https://github.com/abantoo?tab=repositories">My
+              Projects</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link hover-underline-animation" href="#all-feedbacks">All Feedbacks</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link hover-underline-animation" href="#contact">Send Feedback</a>
+          </li>
+        </ul>
+
+      </div>
+
+    </nav>
+     -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+          aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <!--           
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Disabled</a>
+            </li>
+          </ul> -->
+
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a class="nav-link hover-underline-animation hvr-bob" href="#home">Home</a>
+            </li>
+            <li class="">
+              <a class="nav-link hover-underline-animation hvr-bob" href="#about">About Me</a>
+            </li>
+
+            </li>
+            <li class="nav-item">
+              <a class="nav-link hover-underline-animation hvr-bob"
+                href="https://github.com/abantoo?tab=repositories">My
+                Projects</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link hover-underline-animation hvr-bob" href="#all-feedbacks">All Feedbacks</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link hover-underline-animation hvr-bob" href="#contact">Send Feedback</a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
     </nav>
   </header>
 
@@ -75,22 +132,7 @@
         </div>
       </div>
 
-      <!--  
-      <ul class="socials">
-        
-        <li class="social-item hover-underline-animation">
-          <i class="fa fa-facebook-official" style="font-size: 48px"><a href="https://www.facebook.com/owheyitsme"
-              class="social-link"></a></i>
-        </li>
-        <li class="social-item hover-underline-animation">
-          <i class="fa fa-instagram" style="font-size: 48px">
-            <a href="" class=""></a></i>
-        </li>
-        <li class="social-item hover-underline-animation">
-          <i class="fa fa-github" style="font-size: 48px"><a href="https://github.com/abantoo"></a></i>
-        </li>
-      </ul>
-    -->
+
     </div>
 
     <div class="home-img-container">
@@ -150,7 +192,11 @@
               <div class="tlp">
                 <div>
                   <h3 class="title">Machine learning</h3>
-                  <img class="logo" src="./svg/logos/Tensorflow_logo.svg" alt="" />
+                  <div class="logo-container">
+                    <img class="logo" src="./svg/logos/Tensorflow_logo.svg" alt="" />
+
+                  </div>
+
                 </div>
                 <p>
                   Machine learning and neural network projects like Sentiment
@@ -172,7 +218,7 @@
             <div class="details-container">
               <div>
                 <h3 class="title">Game development</h3>
-                <div class="logos">
+                <div class="logo-container">
                   <img class="logo" src="./svg/logos/Unreal_Engine_Logo.svg" alt="unreal" />
                   <img class="logo" src="./svg/logos//unity-seeklogo.com.svg" alt="unity" />
                 </div>
@@ -299,6 +345,9 @@
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   <script src="./scripts/swiper.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+  </script>
 
   <!-- scripts -->
 </body>
