@@ -3,14 +3,30 @@
 const form = document.getElementById("form");
 const tbl = document.getElementById("myTable");
 
+const intro_p = document.getElementById("intro-p");
+
 const param = new URLSearchParams(window.location.search);
 
+const intro_arr = ["tech enthusiast", "programmer", "web developer"]
+
+
 const url = param.get("server");
+
+const reviews = [];
+
+const img = document.getElementById("person-img-feedback");
+const author = document.getElementById("author-feedback");
+const job = document.getElementById("job-feedback");
+const info = document.getElementById("info-feedback");
+
+const prevBtn = document.querySelector(".prev-btn-feedback");
+const nextBtn = document.querySelector(".next-btn-feedback");
 
 let i = 1;
 
 window.onload = () => {
 
+  setInterval(intro_p_f, 2000)
 
   if (url) {
     receieveFromServer();
@@ -18,16 +34,18 @@ window.onload = () => {
     //TODO: hides tables creates div instead with horizontal scrolling
     // const tableDiv = document.getElementById("table-div");
     // tableDiv.style.display = "none";
-
     // let fbDiv = document.createElement("div").classLis;
-
-
     // const fbc = document.getElementById("feedback-container")
-
-
 
   }
 };
+
+const intro_p_f = () => {
+  for (let tag in intro_arr) {
+    intro_p.innerHTML = intro_arr[tag];
+  }
+
+}
 
 const validateEmail = (email) => {
   return String(email)
@@ -36,6 +54,33 @@ const validateEmail = (email) => {
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
     );
 };
+
+const showPerson = (person) => {
+  const item = reviews[person];
+  // img.src = item.img;
+  // author.textContent = item.name;
+  // job.textContent = item.job;
+  // info.textContent = item.text;
+  author.textContent = item.email;
+  info.textContent = item.feedback
+}
+
+// show next person
+nextBtn.addEventListener("click", function () {
+  currentItem++;
+  if (currentItem > reviews.length - 1) {
+    currentItem = 0;
+  }
+  showPerson(currentItem);
+});
+// show prev person
+prevBtn.addEventListener("click", function () {
+  currentItem--;
+  if (currentItem < 0) {
+    currentItem = reviews.length - 1;
+  }
+  showPerson(currentItem);
+});
 
 const sendToServer = (email, message) => {
   const xhttp = new XMLHttpRequest();
@@ -48,25 +93,42 @@ const sendToServer = (email, message) => {
 
 let j = 1;
 
+// select items
+
+// set starting item
+
 const receieveFromServer = () => {
   const xhttp = new XMLHttpRequest();
   xhttp.open("GET", url, true);
   xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
+      reviews = JSON.parse(xhttp.responseText);
+
       let data;
+      let currentItem = 0;
 
       data = JSON.parse(xhttp.responseText);
 
-      data.forEach((item, length) => {
-        let row = tbl.insertRow(j);
-        let cell1 = row.insertCell(0);
-        let cell2 = row.insertCell(1);
+      const item = data[currentItem];
+      author.textContent = item.email;
+      info.textContent = item.feedback
 
-        cell1.innerHTML = item.email;
-        cell2.innerHTML = item.feedback;
 
-        j++;
-      });
+
+      // let data;
+
+      // data = JSON.parse(xhttp.responseText);
+
+      // data.forEach((item, length) => {
+      //   let row = tbl.insertRow(j);
+      //   let cell1 = row.insertCell(0);
+      //   let cell2 = row.insertCell(1);
+
+      //   cell1.innerHTML = item.email;
+      //   cell2.innerHTML = item.feedback;
+
+      //   j++;
+      // });
 
       //i = 1;
     }
@@ -108,10 +170,3 @@ form.addEventListener("submit", (e) => {
     document.getElementById("message").value = "";
   }
 });
-
-const navLinks = document.getElementById("myLinks");
-if (navLinks.style.display === "block") {
-  navLinks.style.display = "none";
-} else {
-  navLinks.style.display = "block";
-}
