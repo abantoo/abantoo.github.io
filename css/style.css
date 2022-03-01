@@ -4,7 +4,6 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.5;
-
   font-family: "Crimson Pro", serif !important;
   font-family: "Outfit", sans-serif !important;
 
@@ -13,15 +12,21 @@ body {
   overflow-x: hidden;
 }
 
+
+
 section {
   padding: 0 2em;
 }
 
 footer {
   background-color: black;
-  color: white;
+  color: aliceblue;
+  border: 0;
+  /* color: white; */
+  padding-top: 8px;
+  padding-bottom: 8px;
   text-align: center;
-  border: 2px solid black;
+  top: 0;
 }
 
 form {
@@ -84,6 +89,7 @@ form {
 
   .navbar {
     display: flex;
+    margin-top: 1rem;
 
   }
 
@@ -187,15 +193,21 @@ form {
 
 #all-feedbacks {
   text-align: center;
-  overflow: hidden;
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+}
+
+#feedback-container {
+  height: 40vh;
+  overflow-y: scroll;
 }
 
 
 .fb-div {
-  background-color: red;
+
   height: 20px;
   width: 1005;
 }
