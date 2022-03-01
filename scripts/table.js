@@ -3,6 +3,8 @@
 const form = document.getElementById("form");
 const tbl = document.getElementById("myTable");
 
+const intro_p = document.getElementById("intro-p");
+
 const param = new URLSearchParams(window.location.search);
 
 const url = param.get("server");
@@ -10,10 +12,23 @@ const url = param.get("server");
 let i = 1;
 
 window.onload = () => {
+
+
   if (url) {
     receieveFromServer();
+
+    //TODO: hides tables creates div instead with horizontal scrolling
+
+
   }
 };
+
+const intro_p_f = () => {
+  for (let tag in intro_arr) {
+    intro_p.innerHTML = intro_arr[tag];
+  }
+
+}
 
 const validateEmail = (email) => {
   return String(email)
@@ -23,18 +38,29 @@ const validateEmail = (email) => {
     );
 };
 
+const showPerson = (person) => {
+  const item = reviews[person];
+  // img.src = item.img;
+  // author.textContent = item.name;
+  // job.textContent = item.job;
+  // info.textContent = item.text;
+  author.textContent = item.email;
+  info.textContent = item.feedback
+}
+
+
+
 const sendToServer = (email, message) => {
   const xhttp = new XMLHttpRequest();
-
   xhttp.open("POST", url, true);
-
   // Send the proper header information along with the request
   xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-  xhttp.send(`mail=${email}&feedback=${message}`);
-  location.reload();
+  xhttp.send(`email=${email}&feedback=${message}`);
+  //location.reload();
 };
 
 let j = 1;
+
 
 const receieveFromServer = () => {
   const xhttp = new XMLHttpRequest();
@@ -56,7 +82,7 @@ const receieveFromServer = () => {
         j++;
       });
 
-      //i = 1;
+      i = 1;
     }
   };
 
@@ -75,8 +101,8 @@ form.addEventListener("submit", (e) => {
     alert("Write something");
   } else if (url) {
     const promise = new Promise((resolve, reject) => {
-      sendToServer(email, message);
-    })
+        sendToServer(email, message);
+      })
       .then(receieveFromServer())
       .catch((error) => console.log(error));
 

@@ -25,21 +25,23 @@
   padding-top: 40px;
 }
 
-.fa-github,
-.fa-facebook-official,
-.fa-instagram {
+.bi-github,
+.bi-facebook,
+.bi-instagram {
   cursor: pointer;
+  color: black;
+  font-size: 36px;
 }
 
-.fa-facebook-official:hover {
+.bi-facebook:hover {
   color: #3c5898;
 }
 
-.fa-github:hover {
+.bi-github:hover {
   color: #616161;
 }
 
-.fa-instagram:hover {
+.bi-instagram:hover {
   color: #6a1b9a;
 }
 
