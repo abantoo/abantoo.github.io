@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+    <link rel="stylesheet" href="main.css" />
   </head>
 
   <body class="relative">
-    <header
-      class="fixed top-0 left-0 right-0 shadow-sm shadow-slate-400 h-[56px]"
-    >
+    <header class="fixed top-0 left-0 right-0 h-[56px]">
       <div class="h-2 bg-gradient-to-r from-amber-400 to-red-700"></div>
-      <nav class="bg-violet-100 h-full">
+      <nav class="bg-violet-100/75">
         <ul class="list-none flex justify-center py-3 text-xl">
           <li class="px-2 hover:border-b-2 hover:border-black">
             <a href="#home">Home</a>
@@ -31,21 +31,64 @@
       </nav>
     </header>
     <main>
-      <section id="home" class="min-h-screen pt-14 bg-red-500">
+      <div class="classic h-screen fixed top-0 left-0 right-0 -z-10"></div>
+      <section id="home" class="min-h-screen pt-16 #FBBF24">
+        <div class="border-2 flex">
+          <box-icon
+            name="hot"
+            type="solid"
+            animation="flashing"
+            color="#ea580c"
+          ></box-icon>
+          <box-icon
+            name="joystick"
+            type="solid"
+            animation="tada"
+            color="#6d28d9"
+          ></box-icon>
+          <box-icon
+            name="heart"
+            type="solid"
+            animation="flashing"
+            color="#d9282b"
+          ></box-icon>
+        </div>
         <div>
           <h1 class="text-9xl font-bold">
             Hi <br />I'm <br />
             Abanto
           </h1>
         </div>
+        <div class="flex font-bold text-lg p-1">
+          <div class="p-2">
+            <h1>Problem Solver</h1>
+          </div>
+          <div class="p-2">
+            <box-icon
+              name="code-alt"
+              animation="flashing"
+              rotate="0"
+            ></box-icon>
+            <h1>Coder</h1>
+          </div>
+          <div class="p-2">
+            <box-icon
+              name="game"
+              type="solid"
+              animation="tada"
+              rotate="90"
+            ></box-icon>
+            <h1>Gamer</h1>
+          </div>
+        </div>
       </section>
-      <section id="me" class="min-h-screen pt-14 bg-violet-500">
+      <section id="me" class="min-h-screen pt-16 bg-violet-500">
         <h1>About me</h1>
       </section>
-      <section id="projects" class="min-h-screen pt-14 bg-yellow-600">
+      <section id="projects" class="min-h-screen pt-16 bg-amber-400">
         <h1>Projects</h1>
       </section>
-      <section id="feedback" class="min-h-screen pt-14 bg-rose-500">
+      <section id="feedback" class="min-h-screen pt-16 bg-rose-500">
         <h1>Feedback</h1>
       </section>
     </main>
