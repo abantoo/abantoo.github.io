@@ -32,7 +32,80 @@
     </header>
     <main>
       <div class="classic h-screen fixed top-0 left-0 right-0 -z-10"></div>
-      <section id="home" class="min-h-screen pt-16 #FBBF24">
+      <section id="home" class="min-h-screen pt-16 bg-[#FBBF24]">
+        <div class="grid grid-cols-2">
+          <div>
+            <div>
+              <h1 class="text-6xl md:text-8xl font-bold">
+                Hi <br />I'm <br />
+                Abanto
+              </h1>
+            </div>
+            <div class="flex font-semibold gap-4 text-lg p-1">
+              <div class="p-2 flex border-violet-600 border-2">
+                <h1>Problem Solver</h1>
+                <img
+                  class="animate-pulse py-1 hidden"
+                  src="./svg/icons8-idea (1).svg"
+                  alt=""
+                />
+                <box-icon
+                  name="brain"
+                  type="solid"
+                  animation="burst"
+                ></box-icon>
+              </div>
+              <div
+                class="pl-2 pr-4 flex items-center border-2 border-violet-600 w-22"
+              >
+                <h1 class="pr-2">Coder</h1>
+                <box-icon
+                  name="code-alt"
+                  animation="flashing"
+                  rotate="0"
+                ></box-icon>
+              </div>
+              <div class="p-2 flex border-2 border-violet-600">
+                <h1 class="pr-2">Gamer</h1>
+                <box-icon
+                  class="p-"
+                  name="invader"
+                  type="solid"
+                  animation="fade-right"
+                  color="#041008"
+                ></box-icon>
+              </div>
+            </div>
+            <div class="flex gap-2">
+              <a href=""><img src="./svg/icons8-facebook.svg" alt="" /></a>
+              <a href=""><img src="./svg/icons8-linkedin.svg" alt="" /></a>
+              <a href=""><img src="./svg/icons8-instagram.svg" alt="" /></a>
+              <a href=""><img src="./svg/icons8-github.svg" alt="" /></a>
+              <a href=""><img src="./svg/icons8-discord.svg" alt="" /></a>
+              <a href=""><img src="./svg/icons8-reddit.svg" alt="" /></a>
+            </div>
+          </div>
+          <div class="flex items-center justify-center min-h-screen">
+            <div class="md:block hidden w-[600px] h-full">
+              <div
+                class="px-5 pt-4 h-1/3 shadow-lg text-gray-100 text-sm font-mono subpixel-antialiased bg-gray-800 pb-6 pt-4 rounded-lg leading-normal overflow-hidden"
+              >
+                <div class="top mb-2 flex">
+                  <div class="h-3 w-3 bg-red-500 rounded-full"></div>
+                  <div class="ml-2 h-3 w-3 bg-orange-300 rounded-full"></div>
+                  <div class="ml-2 h-3 w-3 bg-green-500 rounded-full"></div>
+                </div>
+                <div class="mt-4 flex">
+                  <span class="text-green-400">computer:~$</span>
+                  <p class="flex-1 typing items-center pl-2">
+                    apt-get hire me
+                    <br />
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="border-2 flex hidden">
           <box-icon
             name="hot"
@@ -78,54 +151,12 @@
           <box-icon name="tired" type="solid"></box-icon>
           <box-icon name="laugh" type="solid"></box-icon>
         </div>
-        <div>
-          <h1 class="text-9xl font-bold">
-            Hi <br />I'm <br />
-            Abanto
-          </h1>
-        </div>
-
-        <div class="flex gap-2">
-          <a href=""><img src="./svg/icons8-facebook.svg" alt="" /></a>
-          <a href=""><img src="./svg/icons8-linkedin.svg" alt="" /></a>
-          <a href=""><img src="./svg/icons8-instagram.svg" alt="" /></a>
-          <a href=""><img src="./svg/icons8-github.svg" alt="" /></a>
-          <a href=""><img src="./svg/icons8-discord.svg" alt="" /></a>
-          <a href=""><img src="./svg/icons8-reddit.svg" alt="" /></a>
-        </div>
-        <div class="flex font-bold text-lg p-1">
-          <div class="p-2">
-            <img
-              class="animate-pulse py-1"
-              src="./svg/icons8-idea (1).svg"
-              alt=""
-            />
-            <h1>Problem Solver</h1>
-          </div>
-          <div class="p-2">
-            <box-icon
-              name="code-alt"
-              animation="flashing"
-              rotate="0"
-            ></box-icon>
-            <h1>Coder</h1>
-          </div>
-          <div class="p-2">
-            <box-icon
-              name="invader"
-              type="solid"
-              animation="fade-right"
-              color="#041008"
-            ></box-icon>
-            <h1>Gamer</h1>
-          </div>
-        </div>
       </section>
       <section id="me" class="min-h-screen pt-16 bg-violet-500">
         <h1>About me</h1>
         <div>
           <h1>My Tech Stacks</h1>
-          <div class="h-22 hidden">
+          <div class="hidden">
             <box-icon type="logo" name="html5"></box-icon>
             <box-icon name="css3" type="logo"></box-icon>
             <box-icon name="tailwind-css" type="logo"></box-icon>
