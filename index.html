@@ -33,7 +33,7 @@
     <main>
       <div class="classic h-screen fixed top-0 left-0 right-0 -z-10"></div>
       <section id="home" class="min-h-screen pt-16 #FBBF24">
-        <div class="border-2 flex">
+        <div class="border-2 flex hidden">
           <box-icon
             name="hot"
             type="solid"
@@ -52,12 +52,46 @@
             animation="flashing"
             color="#d9282b"
           ></box-icon>
+          <box-icon
+            name="music"
+            type="solid"
+            animation="flashing"
+            color="#0e7490"
+          ></box-icon>
+          <box-icon
+            name="tennis-ball"
+            type="solid"
+            animation="spin"
+            color="#0cad40"
+          ></box-icon>
+          <box-icon
+            name="ghost"
+            animation="fade-right"
+            color="#041008"
+          ></box-icon>
+        </div>
+
+        <div class="hidden">
+          <box-icon type="solid" name="happy-heart-eyes"></box-icon>
+          <box-icon name="dizzy" type="solid"></box-icon>
+          <box-icon name="wink-smile" type="solid"></box-icon>
+          <box-icon name="tired" type="solid"></box-icon>
+          <box-icon name="laugh" type="solid"></box-icon>
         </div>
         <div>
           <h1 class="text-9xl font-bold">
             Hi <br />I'm <br />
             Abanto
           </h1>
+        </div>
+
+        <div class="flex gap-2">
+          <a href=""><img src="./svg/icons8-facebook.svg" alt="" /></a>
+          <a href=""><img src="./svg/icons8-linkedin.svg" alt="" /></a>
+          <a href=""><img src="./svg/icons8-instagram.svg" alt="" /></a>
+          <a href=""><img src="./svg/icons8-github.svg" alt="" /></a>
+          <a href=""><img src="./svg/icons8-discord.svg" alt="" /></a>
+          <a href=""><img src="./svg/icons8-reddit.svg" alt="" /></a>
         </div>
         <div class="flex font-bold text-lg p-1">
           <div class="p-2">
@@ -73,10 +107,10 @@
           </div>
           <div class="p-2">
             <box-icon
-              name="game"
+              name="invader"
               type="solid"
-              animation="tada"
-              rotate="90"
+              animation="fade-right"
+              color="#041008"
             ></box-icon>
             <h1>Gamer</h1>
           </div>
@@ -84,17 +118,39 @@
       </section>
       <section id="me" class="min-h-screen pt-16 bg-violet-500">
         <h1>About me</h1>
+        <div>
+          <h1>My Tech Stacks</h1>
+          <div class="h-22 hidden">
+            <box-icon type="logo" name="html5"></box-icon>
+            <box-icon name="css3" type="logo"></box-icon>
+            <box-icon name="tailwind-css" type="logo"></box-icon>
+            <box-icon type="logo" name="bootstrap"></box-icon>
+            <box-icon name="javascript" type="logo"></box-icon>
+            <box-icon name="nodejs" type="logo"></box-icon>
+            <box-icon name="vuejs" type="logo"></box-icon>
+            <box-icon name="react" type="logo"></box-icon>
+            <box-icon name="mongodb" type="logo"></box-icon>
+            <box-icon name="python" type="logo"></box-icon>
+            <box-icon name="django" type="logo"></box-icon>
+            <box-icon name="flask" type="logo"></box-icon>
+            <box-icon name="c-plus-plus" type="logo"></box-icon>
+          </div>
+        </div>
       </section>
       <section id="projects" class="min-h-screen pt-16 bg-amber-400">
         <h1>Projects</h1>
       </section>
-      <section id="feedback" class="min-h-screen pt-16 bg-rose-500">
-        <h1>Feedback</h1>
-      </section>
     </main>
 
     <footer>
-      <h1>Made with ❤ by Abanto</h1>
+      <section id="feedback" class="pt-16 bg-rose-500">
+        <h1>Feedback</h1>
+      </section>
+      <div class="flex items-center py-2 justify-center text-2xl font-semibold">
+        <h1>Made with</h1>
+        <span class="px-1 hover:animate-spin hover:cursor-crosshair"> ❤ </span>
+        <h1>by Abanto</h1>
+      </div>
     </footer>
   </body>
 </html>
