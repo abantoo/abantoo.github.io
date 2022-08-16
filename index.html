@@ -7,6 +7,7 @@
     <title>Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
     <link rel="stylesheet" href="main.css" />
   </head>
 
@@ -34,7 +35,9 @@
       <div class="classic h-screen fixed top-0 left-0 right-0 -z-10"></div>
       <section id="home" class="min-h-screen pt-16 bg-[#FBBF24]">
         <div class="grid grid-cols-2">
-          <div>
+          <div
+            class="flex flex-col bg-red-300 justify-center h-[calc(100vh-44px)]"
+          >
             <div>
               <h1 class="text-6xl md:text-8xl font-bold">
                 Hi <br />I'm <br />
@@ -42,22 +45,16 @@
               </h1>
             </div>
             <div class="flex font-semibold gap-4 text-lg p-1">
-              <div class="p-2 flex border-violet-600 border-2">
+              <div class="p-2 flex">
                 <h1>Problem Solver</h1>
                 <img
                   class="animate-pulse py-1 hidden"
                   src="./svg/icons8-idea (1).svg"
                   alt=""
                 />
-                <box-icon
-                  name="brain"
-                  type="solid"
-                  animation="burst"
-                ></box-icon>
+                <box-icon name="brain" animation="flashing"></box-icon>
               </div>
-              <div
-                class="pl-2 pr-4 flex items-center border-2 border-violet-600 w-22"
-              >
+              <div class="pl-2 pr-4 flex items-center w-22">
                 <h1 class="pr-2">Coder</h1>
                 <box-icon
                   name="code-alt"
@@ -65,7 +62,7 @@
                   rotate="0"
                 ></box-icon>
               </div>
-              <div class="p-2 flex border-2 border-violet-600">
+              <div class="p-2 flex">
                 <h1 class="pr-2">Gamer</h1>
                 <box-icon
                   class="p-"
@@ -178,6 +175,16 @@
       <section id="projects" class="min-h-screen pt-16 bg-amber-400">
         <h1>Projects</h1>
       </section>
+      <h1>
+        <a
+          href=""
+          class="typewrite"
+          data-period="2000"
+          data-type='[ "Hi, Im Abanto", "I am coder </>", "I am gamer 🎮", "I Love to Develop 💻", " 🟥🟧🟡🟢🟦🟪"]'
+        >
+          <span class="wrap"></span>
+        </a>
+      </h1>
     </main>
 
     <footer>
@@ -192,3 +199,64 @@
     </footer>
   </body>
 </html>
+
+<script>
+  var TxtType = function (el, toRotate, period) {
+    this.toRotate = toRotate;
+    this.el = el;
+    this.loopNum = 0;
+    this.period = parseInt(period, 10) || 2000;
+    this.txt = "";
+    this.tick();
+    this.isDeleting = false;
+  };
+
+  TxtType.prototype.tick = function () {
+    var i = this.loopNum % this.toRotate.length;
+    var fullTxt = this.toRotate[i];
+
+    if (this.isDeleting) {
+      this.txt = fullTxt.substring(0, this.txt.length - 1);
+    } else {
+      this.txt = fullTxt.substring(0, this.txt.length + 1);
+    }
+
+    this.el.innerHTML = '<span class="wrap">' + this.txt + "</span>";
+
+    var that = this;
+    var delta = 200 - Math.random() * 100;
+
+    if (this.isDeleting) {
+      delta /= 2;
+    }
+
+    if (!this.isDeleting && this.txt === fullTxt) {
+      delta = this.period;
+      this.isDeleting = true;
+    } else if (this.isDeleting && this.txt === "") {
+      this.isDeleting = false;
+      this.loopNum++;
+      delta = 500;
+    }
+
+    setTimeout(function () {
+      that.tick();
+    }, delta);
+  };
+
+  window.onload = function () {
+    var elements = document.getElementsByClassName("typewrite");
+    for (var i = 0; i < elements.length; i++) {
+      var toRotate = elements[i].getAttribute("data-type");
+      var period = elements[i].getAttribute("data-period");
+      if (toRotate) {
+        new TxtType(elements[i], JSON.parse(toRotate), period);
+      }
+    }
+    // INJECT CSS
+    var css = document.createElement("style");
+    css.type = "text/css";
+    css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+    document.body.appendChild(css);
+  };
+</script>
