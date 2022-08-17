@@ -8,14 +8,20 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
     <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="./scripts/main.js"></script>
     <link rel="stylesheet" href="main.css" />
   </head>
 
-  <body class="relative">
+  <body class="relative" id="body-id">
     <header class="fixed md:top-0 bottom-1 left-0 right-0 h-[56px]">
       <div
         class="hidden md:block md:h-2 md:bg-gradient-to-r md:from-amber-400 md:to-red-700"
       ></div>
+      <div class="md:hidden bottom-0">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" />
+      </svg>
+      </div>
       <nav class="bg-violet-100/75">
         <ul class="list-none flex md:justify-center justify-center py-3 text-xl">
           <li class="px-2 hover:border-b-2 hover:border-black">
@@ -28,7 +34,7 @@
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
-                  stroke-width="2"
+                  stroke-width="1"
                 >
                   <path
                     stroke-linecap="round"
@@ -49,7 +55,7 @@
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
-                  stroke-width="2"
+                  stroke-width="1"
                 >
                   <path
                     stroke-linecap="round"
@@ -70,7 +76,7 @@
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
-                  stroke-width="2"
+                  stroke-width="1"
                 >
                   <path
                     stroke-linecap="round"
@@ -91,7 +97,7 @@
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
-                  stroke-width="2"
+                  stroke-width="1"
                 >
                   <path
                     stroke-linecap="round"
@@ -113,7 +119,7 @@
       <section id="home" class="min-h-screen pt-16 bg-[#FBBF24]">
         <div class="md:grid md:grid-cols-2">
           <div
-            class="flex flex-col bg-red-300 justify-center h-[calc(100vh-44px)]"
+            class="flex flex-col bg-red-300 justify-center items-center h-[calc(100vh-44px)]"
           >
             <div>
               <h1 class="text-6xl md:text-8xl font-bold">
@@ -121,16 +127,7 @@
                 Abanto
               </h1>
             </div>
-            <div class="flex font-semibold gap-4 text-lg p-1">
-              <div class="p-2 flex">
-                <h1>Problem Solver</h1>
-                <img
-                  class="animate-pulse py-1 hidden"
-                  src="./svg/icons8-idea (1).svg"
-                  alt=""
-                />
-                <box-icon name="brain" animation="flashing"></box-icon>
-              </div>
+            <div class="flex font-semibold gap-4 text-lg p-1"> 
               <div class="pl-2 pr-4 flex items-center w-22">
                 <h1 class="pr-2">Coder</h1>
                 <box-icon
@@ -174,7 +171,7 @@
                 <div class="mt-4 flex">
                   <span class="text-green-400">computer:~$</span>
                   <p class="flex-1 typing items-center pl-2">
-                    apt-get hire me
+                    apt-get hire-me && 
                     <br />
                   </p>
                 </div>
@@ -220,7 +217,7 @@
           ></box-icon>
         </div>
 
-        <div class="hidden">
+        <div id="initial-loading" class="hidden">
           <box-icon type="solid" name="happy-heart-eyes"></box-icon>
           <box-icon name="dizzy" type="solid"></box-icon>
           <box-icon name="wink-smile" type="solid"></box-icon>
@@ -234,16 +231,6 @@
       <section id="projects" class="min-h-screen pt-16 bg-amber-400">
         <h1>Projects</h1>
       </section>
-      <!-- <h1 class="min-h-[96px] max-h-[96px]">
-        <a
-          href=""
-          class="typewrite"
-          data-period="2000"
-          data-type='[ "Hi, Im Abanto", "I am coder </>", "I am gamer 🎮", "I Love to Develop 💻", " 🟥🟧🟡🟢🟦🟪"]'
-        >
-          <span class="wrap"></span>
-        </a>
-      </h1> -->
     </main>
 
     <footer>
@@ -258,64 +245,3 @@
     </footer>
   </body>
 </html>
-
-<script>
-  var TxtType = function (el, toRotate, period) {
-    this.toRotate = toRotate;
-    this.el = el;
-    this.loopNum = 0;
-    this.period = parseInt(period, 10) || 2000;
-    this.txt = "";
-    this.tick();
-    this.isDeleting = false;
-  };
-
-  TxtType.prototype.tick = function () {
-    var i = this.loopNum % this.toRotate.length;
-    var fullTxt = this.toRotate[i];
-
-    if (this.isDeleting) {
-      this.txt = fullTxt.substring(0, this.txt.length - 1);
-    } else {
-      this.txt = fullTxt.substring(0, this.txt.length + 1);
-    }
-
-    this.el.innerHTML = '<span class="wrap">' + this.txt + "</span>";
-
-    var that = this;
-    var delta = 200 - Math.random() * 100;
-
-    if (this.isDeleting) {
-      delta /= 2;
-    }
-
-    if (!this.isDeleting && this.txt === fullTxt) {
-      delta = this.period;
-      this.isDeleting = true;
-    } else if (this.isDeleting && this.txt === "") {
-      this.isDeleting = false;
-      this.loopNum++;
-      delta = 500;
-    }
-
-    setTimeout(function () {
-      that.tick();
-    }, delta);
-  };
-
-  window.onload = function () {
-    var elements = document.getElementsByClassName("typewrite");
-    for (var i = 0; i < elements.length; i++) {
-      var toRotate = elements[i].getAttribute("data-type");
-      var period = elements[i].getAttribute("data-period");
-      if (toRotate) {
-        new TxtType(elements[i], JSON.parse(toRotate), period);
-      }
-    }
-    // INJECT CSS
-    var css = document.createElement("style");
-    css.type = "text/css";
-    css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
-    document.body.appendChild(css);
-  };
-</script>
