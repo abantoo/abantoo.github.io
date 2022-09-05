@@ -228,13 +228,13 @@
       </section>
     </main>
 
-    <div id="sticker" x-data="{ open: false }" class="fixed left-0 top-[86vh] flex text-xl">
+    <div id="sticker" x-data="{ open: false }" class="hidden md:fixed md:left-0 md:top-[86vh] md:flex md:text-xl">
       <button class="text-white bg-black py-1 shadow-black shadow-sm z-10" @click="open = !open">
-        <span class="px-2 z-10"> Find me </span>  
+        <div class="animate-pulse pl-4 pr-2">Find me</div>
       </button>
       <div class="arrow-right-b z-10 hover:cursor-pointer" @click="open = !open">
       </div>
-      <div x-show="open" class="flex h-fit bg-purple-300 h-[60px] py-3 px-4 pl-12 -translate-x-10 -z-20 shadow-md shadow-purple-400">
+      <div x-show="open" class="flex h-fit bg-purple-300 h-[48px] py-2 px-4 pl-12 -translate-x-10 -z-20 shadow-md shadow-purple-400">
         <a href=""><img class="px-1 hover:border-b-2 hover:border-black" src="./svg/icons8-facebook.svg" alt="" /></a>
         <a href=""><img class="px-1 hover:border-b-2 hover:border-black" src="./svg/icons8-linkedin.svg" alt="" /></a>
         <a href=""><img class="px-1 hover:border-b-2 hover:border-black" src="./svg/icons8-instagram.svg" alt="" /></a>

@@ -6,15 +6,15 @@
 .arrow-right-b {
   width: 0;
   height: 0;
-  border-top: 30px solid transparent;
-  border-bottom: 30px solid transparent;
-  border-left: 30px solid black;
+  border-top: 24px solid transparent;
+  border-bottom: 24px solid transparent;
+  border-left: 24px solid black;
 }
 
 .arrow-right-p {
   width: 0;
   height: 0;
-  border-top: 30px solid transparent;
-  border-bottom: 30px solid transparent;
-  border-left: 30px solid #d8b4fe;
+  border-top: 24px solid transparent;
+  border-bottom: 24px solid transparent;
+  border-left: 24px solid #d8b4fe;
 }
