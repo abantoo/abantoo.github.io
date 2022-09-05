@@ -229,21 +229,19 @@
     </main>
 
     <div id="sticker" x-data="{ open: false }" class="fixed left-0 top-[86vh] flex text-xl">
-      <button class="text-white bg-black py-1" @click="open = ! open">
-        <span class="px-2"> Find me </span>  
-        <span x-show="!open" class="text-3xl font-bold animate-pulse hover:font-bold hover:pr-4 hover:transition-all hover:font-thin">
-          >
-        </span>
-        <span x-show="open" class="text-3xl font-bold animate-pulse hover:font-bold hover:pr-4 hover:transition-all hover:font-thin">
-          <
-        </span>
+      <button class="text-white bg-black py-1 shadow-black shadow-sm z-10" @click="open = !open">
+        <span class="px-2 z-10"> Find me </span>  
       </button>
-      <div x-show="open" class="flex h-fit bg-slate-200 py-1 px-4">
+      <div class="arrow-right-b z-10 hover:cursor-pointer" @click="open = !open">
+      </div>
+      <div x-show="open" class="flex h-fit bg-purple-300 h-[60px] py-3 px-4 pl-12 -translate-x-10 -z-20 shadow-md shadow-purple-400">
         <a href=""><img class="px-1 hover:border-b-2 hover:border-black" src="./svg/icons8-facebook.svg" alt="" /></a>
         <a href=""><img class="px-1 hover:border-b-2 hover:border-black" src="./svg/icons8-linkedin.svg" alt="" /></a>
         <a href=""><img class="px-1 hover:border-b-2 hover:border-black" src="./svg/icons8-instagram.svg" alt="" /></a>
         <a href=""><img class="px-1 hover:border-b-2 hover:border-black" src="./svg/icons8-github.svg" alt="" /></a>
         <a href=""><img class="px-1 hover:border-b-2 hover:border-black" src="./svg/icons8-discord.svg" alt="" /></a>
+      </div>
+      <div class="arrow-right-p z-10 -translate-x-10 -z-20">
       </div>
     </div>
 
