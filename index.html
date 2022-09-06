@@ -23,6 +23,24 @@
       </svg>
       </div>
       <nav class="bg-violet-100/75">
+        <div class="w-full" x-data="{items: [
+                            {
+                              title: 'coder',
+                              id: 1,
+                            },
+                            {
+                              title: 'problem solver',
+                              id: 2,
+                            },
+                            {
+                              title: 'gamer',
+                              id: 3,
+                            }
+                            ]}">
+          <template x-for="item in items" :key="item.id">
+            <div x-text="item.title"></div>
+          </template>
+        </div>
         <ul class="list-none flex md:justify-center justify-center py-3 text-xl">
           <li class="px-2 hover:border-b-2 hover:border-black">
             <a href="#home">
