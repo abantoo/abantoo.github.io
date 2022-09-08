@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="./scripts/main.js"></script>
     <link rel="stylesheet" href="main.css" />
@@ -23,7 +22,7 @@
       </svg>
       </div>
       <nav class="bg-violet-100/75">
-        <div class="w-full" x-data="{items: [
+        <div class="w-fit" x-data="{items: [
                             {
                               title: 'coder',
                               id: 1,
@@ -172,22 +171,23 @@
           <div
             class="flex items-center justify-center min-h-[calc(100vh-4rem)] bg-blue-500"
           >
-            <div class="md:block hidden w-[600px] h-1/2">
+            <div x-data="{command : ''}" class="md:block hidden w-[600px] h-1/2">
               <div
-                class="px-5 pt-4 h-1/2 shadow-lg text-gray-100 text-sm font-mono subpixel-antialiased bg-gray-800 pb-6 pt-4 rounded-lg leading-normal overflow-hidden"
+                x-data="{resultText: {data:'', status: false} }" class="px-5 pt-4 h-1/2 shadow-lg text-gray-100 text-sm font-mono subpixel-antialiased bg-gray-800 pb-6 pt-4 rounded-lg leading-normal overflow-hidden"
               >
                 <div class="top mb-2 flex">
                   <div class="h-3 w-3 bg-red-500 rounded-full"></div>
                   <div class="ml-2 h-3 w-3 bg-orange-300 rounded-full"></div>
                   <div class="ml-2 h-3 w-3 bg-green-500 rounded-full"></div>
                 </div>
-                <div class="mt-4 flex">
-                  <span class="text-green-400">computer:~$</span>
+                <div class="mt-4 flex text-gray-400">
+                  <span class="text-green-400">terminal:~$</span>
                   <p class="flex-1 typing items-center pl-2">
-                    apt-get hire-me && 
-                    <br />
+                    <input type="text" x-model="command" placeholder="//hint: --help for help " @keyup.enter="resultText = executeCommand(command)" class="bg-transparent w-full outline-none break-all overflow-hidden resize-none text-white">
                   </p>
                 </div>
+                <p x-text="resultText.data" :class="resultText.status ? 'text-green-500' : 'text-red-500'">
+                </p>
               </div>
             </div>
           </div>
@@ -252,14 +252,18 @@
       </button>
       <div class="arrow-right-b z-10 hover:cursor-pointer" @click="open = !open">
       </div>
-      <div x-show="open" class="flex h-fit bg-purple-300 h-[48px] py-2 px-4 pl-12 -translate-x-10 -z-20 shadow-md shadow-purple-400">
+      <div x-show="open"
+        x-transition:enter="transition ease-out duration-300"
+        x-transition:enter-start="opacity-0 scale-90"
+        x-transition:enter-end="opacity-100 scale-100"
+        x-transition:leave="transition ease-in duration-300"
+        x-transition:leave-start="opacity-100 scale-100"
+        x-transition:leave-end="opacity-0 scale-90" class="flex h-fit bg-purple-300 h-[48px] py-2 px-4 pl-12 -translate-x-10 -z-20 shadow-md shadow-purple-400">
         <a href=""><img class="px-1 hover:border-b-2 hover:border-black" src="./svg/icons8-facebook.svg" alt="" /></a>
         <a href=""><img class="px-1 hover:border-b-2 hover:border-black" src="./svg/icons8-linkedin.svg" alt="" /></a>
         <a href=""><img class="px-1 hover:border-b-2 hover:border-black" src="./svg/icons8-instagram.svg" alt="" /></a>
         <a href=""><img class="px-1 hover:border-b-2 hover:border-black" src="./svg/icons8-github.svg" alt="" /></a>
         <a href=""><img class="px-1 hover:border-b-2 hover:border-black" src="./svg/icons8-discord.svg" alt="" /></a>
-      </div>
-      <div class="arrow-right-p z-10 -translate-x-10 -z-20">
       </div>
     </div>
 
