@@ -22,24 +22,6 @@
       </svg>
       </div>
       <nav class="bg-violet-100/75">
-        <div class="w-fit" x-data="{items: [
-                            {
-                              title: 'coder',
-                              id: 1,
-                            },
-                            {
-                              title: 'problem solver',
-                              id: 2,
-                            },
-                            {
-                              title: 'gamer',
-                              id: 3,
-                            }
-                            ]}">
-          <template x-for="item in items" :key="item.id">
-            <div x-text="item.title"></div>
-          </template>
-        </div>
         <ul class="list-none flex md:justify-center justify-center py-3 text-xl">
           <li class="px-2 hover:border-b-2 hover:border-black">
             <a href="#home">
@@ -172,14 +154,19 @@
             class="flex items-center justify-center min-h-[calc(100vh-4rem)] bg-blue-500"
           >
             <div x-data="{command : ''}" class="md:block hidden w-[600px] h-1/2">
+              <button class="fixed right-0 bottom-12 animate-bounce hover:animate-none rounded shadow-sm shadow-black h-fit" id="miniTerminal" @click="onOpenTerminal">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-8 h-8  hover:fill-blue-900 z-50" viewBox="0 0 16 16">
+                  <path d="M0 3a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3zm9.5 5.5h-3a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1zm-6.354-.354a.5.5 0 1 0 .708.708l2-2a.5.5 0 0 0 0-.708l-2-2a.5.5 0 1 0-.708.708L4.793 6.5 3.146 8.146z"/>
+                </svg>
+              </button>
               <div
-                x-data="{resultText: {data:'', status: false, hint: false} }" class="px-5 pt-4 h-1/2 shadow-lg text-gray-100 text-sm font-mono subpixel-antialiased bg-gray-800 pb-6 pt-4 rounded-lg leading-normal overflow-hidden"
+                x-data="{resultText: {data:'', status: false, hint: false} }" id="terminal" class="fixed hidden bottom-12 right-8 px-5 pt-4 w-1/3 h-1/3 shadow-lg text-gray-100 text-sm font-mono subpixel-antialiased bg-gray-800 pb-6 rounded-lg leading-normal overflow-hidden"
               >
                 <div class="mb-2 flex justify-between">
                   <div class="mb-2 flex">
-                    <button class="h-3 w-3 bg-red-500 rounded-full"></button>
-                    <button class="ml-2 h-3 w-3 bg-orange-300 rounded-full"></button>
-                    <button class="ml-2 h-3 w-3 bg-green-500 rounded-full"></button>
+                    <button class="h-3 w-3 bg-red-500 rounded-full" @click="onCloseTerminal"></button>
+                    <button class="ml-2 h-3 w-3 bg-orange-300 rounded-full" @click="onMinimizeTerminal"></button>
+                    <button class="ml-2 h-3 w-3 bg-green-500 rounded-full" @click="onFullScreenTerminal"></button>
                   </div>
                   <div x-show="resultText.hint" class="flex items-start right-0 gap-4 -translate-y-1">
                     <h2 class="bg-[#ff0000] bg-opacity-75 px-2 rounded">help</h2>

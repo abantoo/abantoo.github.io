@@ -8,6 +8,32 @@
 // TODO: terminal minimize on bottom right
 const PAGE_SECTIONS = ["home", "projects", "about", "feedback"];
 
+const onOpenTerminal = () => {
+  const terminal = document.getElementById("terminal");
+  const mini_terminal = document.getElementById("miniTerminal");
+  mini_terminal.classList.add("hidden");
+  terminal.classList.remove("hidden");
+};
+
+const onCloseTerminal = () => {
+  const terminal = document.getElementById("terminal");
+  const mini_terminal = document.getElementById("miniTerminal");
+  terminal.classList.add("hidden");
+  mini_terminal.classList.remove("hidden");
+};
+
+const onMinimizeTerminal = () => {
+  const terminal = document.getElementById("terminal");
+  terminal.classList.remove("w-1/3", "h-1/3");
+  terminal.classList.add("w-1/4", "h-1/6");
+};
+
+const onFullScreenTerminal = () => {
+  const terminal = document.getElementById("terminal");
+  terminal.classList.remove("w-1/4", "h-1/6");
+  terminal.classList.add("w-1/3", "h-1/3");
+};
+
 const executeCommand = (command) => {
   let newCommand = command.replace(/[^a-zA-Z ]/g, "").toLowerCase();
   if (newCommand) {
