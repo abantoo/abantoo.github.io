@@ -63,7 +63,7 @@
             </a>
           </li>
           <li class="px-2 hover:border-b-2 hover:border-black">
-            <a href="#me">
+            <a href="#about">
               <span class="hidden md:block">About me</span>
               <span class="md:hidden">
                 <svg
@@ -173,12 +173,21 @@
           >
             <div x-data="{command : ''}" class="md:block hidden w-[600px] h-1/2">
               <div
-                x-data="{resultText: {data:'', status: false} }" class="px-5 pt-4 h-1/2 shadow-lg text-gray-100 text-sm font-mono subpixel-antialiased bg-gray-800 pb-6 pt-4 rounded-lg leading-normal overflow-hidden"
+                x-data="{resultText: {data:'', status: false, hint: false} }" class="px-5 pt-4 h-1/2 shadow-lg text-gray-100 text-sm font-mono subpixel-antialiased bg-gray-800 pb-6 pt-4 rounded-lg leading-normal overflow-hidden"
               >
-                <div class="top mb-2 flex">
-                  <div class="h-3 w-3 bg-red-500 rounded-full"></div>
-                  <div class="ml-2 h-3 w-3 bg-orange-300 rounded-full"></div>
-                  <div class="ml-2 h-3 w-3 bg-green-500 rounded-full"></div>
+                <div class="mb-2 flex justify-between">
+                  <div class="mb-2 flex">
+                    <button class="h-3 w-3 bg-red-500 rounded-full"></button>
+                    <button class="ml-2 h-3 w-3 bg-orange-300 rounded-full"></button>
+                    <button class="ml-2 h-3 w-3 bg-green-500 rounded-full"></button>
+                  </div>
+                  <div x-show="resultText.hint" class="flex items-start right-0 gap-4 -translate-y-1">
+                    <h2 class="bg-[#ff0000] bg-opacity-75 px-2 rounded">help</h2>
+                    <h2 class="bg-red-400 bg-opacity-50 px-2 rounded">home</h2>
+                    <h2 class="bg-purple-400 bg-opacity-50 px-2 rounded">about</h2>
+                    <h2 class="bg-yellow-400 bg-opacity-50 px-2 rounded">projects</h2>
+                    <h2 class="bg-blue-400 bg-opacity-50 px-2 rounded">feedback</h2>
+                  </div>
                 </div>
                 <div class="mt-4 flex text-gray-400">
                   <span class="text-green-400">terminal:~$</span>
@@ -238,7 +247,7 @@
           <box-icon name="laugh" type="solid"></box-icon>
         </div>
       </section>
-      <section id="me" class="min-h-screen pt-16 bg-violet-500">
+      <section id="about" class="min-h-screen pt-16 bg-violet-500">
         <h1>About me</h1>
       </section>
       <section id="projects" class="min-h-screen pt-16 bg-amber-400">
