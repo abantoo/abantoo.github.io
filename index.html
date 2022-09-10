@@ -265,11 +265,11 @@
 
     <footer>
       <section id="message" class="pt-16 flex justify-center bg-white">
-        <div class="w-fit border-red-400 border-2 pr-12">
-          <div class="absolute bg-white translate-y-9 w-1 h-2"></div>
-          <div class="flex flex-col items-center justify-center">
-            <h1 class="font-semibold text-4xl text-blue-700 border-2 border-blue-700 text-right px-4 py-4">Send me a message</h1>
-            <div class="absolute bg-red-500 w-1 h-2"></div>
+        <div class="w-fit pr-12">
+          <div class="absolute bg-white translate-y-9 w-1 h-3"></div>
+          <div class="flex flex-col items-end justify-center">
+            <h1 class="xl:font-semibold font-normal xl:text-4xl lg:text-2xl text-normal text-blue-700 border-2 w-full border-blue-700 text-right px-2 py-4">Send me a message</h1>
+            <div class="absolute bg-white w-1 h-3"></div>
           </div>
         </div>
         <div class="w-1/2 flex justify-between">
@@ -280,6 +280,17 @@
             <textarea name="message" id="messageTextarea" placeholder="Write whatever you want to write, send me a feedback or give me a hi.." class="m-3 bg-blue-200 bg-opacity-50 border-2 p-2 rounded-2xl border-blue-600 w-full placeholder-blue-500 focus:border-blue-600 h-[10vh]"></textarea>
             <button class="rounded-full text-xl bg-blue-600 text-blue-100 hover:bg-blue-200 hover:text-blue-600 border-2 border-blue-200 hover:border-blue-600 px-4 py-2 w-full m-3">Send</button>
           </form>
+          <div class="w-fit flex items-end">
+            <div class="flex items-end justify-center">
+              <div class="flex flex-col items-end w-4 h-4">
+                <div class="absolute bg-white z-50 w-2 -translate-y-6 translate-x-1 h-3"></div>
+              </div>
+              <h1 class="xl:font-semibold shadow-sm shadow-blue-300 transition-all hover:shadow-inner hover:shadow-blue-900 font-normal xl:text-4xl lg:text-2xl text-normal text-blue-700 border-2 w-full border-blue-700 text-right px-2 py-4  hover:bg-blue-600 hover:text-white hover:cursor-pointer hover:border-4 transform hover:border-white">See all messages</h1>
+              <div class="flex w-4 h-4">
+                <div class="absolute bg-white -translate-x-1 -translate-y-6 w-2 h-3"></div>
+              </div>      
+          </div>
+        </div>
         </div>
       </section>
       <div class="flex items-center pt-12 pb-2 justify-center text-2xl font-semibold bg-white">
