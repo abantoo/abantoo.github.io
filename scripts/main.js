@@ -6,7 +6,7 @@
 
 // TODO: add regex check to filter commands example: ABout/about/aBout should take to about and abt should suggest about
 // TODO: terminal minimize on bottom right
-const PAGE_SECTIONS = ["home", "projects", "about", "feedback"];
+const PAGE_SECTIONS = ["home", "projects", "about", "message"];
 
 const onOpenTerminal = () => {
   const terminal = document.getElementById("terminal");
