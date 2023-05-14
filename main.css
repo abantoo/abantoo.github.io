@@ -19,9 +19,11 @@
   border-left: 24px solid #d8b4fe;
 }
 
-.ar {
+.arrow-right {
   clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
-  color: aqua;
-  background-color: red;
+}
+
+.arrow-right-2 {
+  clip-path: polygon(0% 0%, 80% 0%, 100% 50%, 80% 100%, 0% 100%);
 }
 
