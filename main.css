@@ -18,3 +18,10 @@
   border-bottom: 24px solid transparent;
   border-left: 24px solid #d8b4fe;
 }
+
+.ar {
+  clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+  color: aqua;
+  background-color: red;
+}
+
