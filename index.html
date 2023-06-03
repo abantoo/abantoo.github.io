@@ -8,11 +8,22 @@
   <title>Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800;900&display=swap" rel="stylesheet">
   <script src="./scripts/main.js"></script>
   <link rel="stylesheet" href="main.css" />
 </head>
 
-<body class="relative" id="body-id">
+
+<!-- alt font font-family: 'Montserrat', 'Poppins', sans-serif  -->
+<body 
+  class="relative" 
+  id="body-id" 
+  style="font-family: 'Montserrat', sans-serif;"
+  >
+  
   <header class="fixed md:top-0 bottom-1 left-0 right-0 h-[56px]">
     <div class="hidden md:block md:h-2 md:bg-gradient-to-r md:from-amber-400
         md:to-red-700"></div>
@@ -52,7 +63,7 @@
             </span>
           </a>
         </li>
-        <li class="px-2 hover:border-b-2 hover:border-black">
+        <!-- <li class="px-2 hover:border-b-2 hover:border-black">
           <a href="#projects"></a>
           <span class="hidden md:block"> Projects </span>
           <span class="md:hidden">
@@ -63,51 +74,31 @@
             </svg>
           </span>
           </a>
-        </li>
-        <li class="px-2 hover:border-b-2 hover:border-black">
-          <a href="#message">
-            <span class="hidden md:block">message</span>
-            <span class="md:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none"
-                viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0
-                          01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2
-                          2h-5l-5 5v-5z" />
-              </svg>
-            </span>
-          </a>
-        </li>
+        </li> -->
       </ul>
     </nav>
     <div class="md:hidden h-2 bg-gradient-to-r from-amber-400
                 to-red-700"></div>
   </header>
   <main>
-    <div class="h-screen fixed top-0 left-0 right-0 -z-10 bg-slate-950"></div>
-    <section id="home" class="min-h-screen pt-16">
-      <div class="md:grid md:grid-cols-2">
-        <div class="flex flex-col justify-center items-center
-                    h-[calc(100vh-44px)]">
-          <div>
-            <h2 class="text-white  text-2xl font-bold">The <span class="text-cyan-400">Fo</span><span  class="text-cyan-400">rce</span> is  <span class="text-[#fc1f15]">strong</span> with my code</h2>
-            <h1 class="text-7xl md:text-9xl font-bold h-1/2 tracking-wide">
-              <span class="text-white">
-                Hi
-              </span>  <br /> <span class="text-cyan-400">I'm</span> <br />
-              <span class="text-white">Ab<span class="text-red-400"><span class="text-[#D30026]">a</span><span class="text-[#9D152C]">n</span><span class="bg-white text-black px-1">t</span></span><span>o</span> </span>
-            </h1>
-          </div>
-          <div class="flex font-semibold gap-4 text-lg p-1">
-            <div class="pl-2 pr-4 flex items-center w-22">
-              <h1 class="pr-2">Coder</h1>
-              <box-icon name="code-alt" animation="flashing" rotate="0"></box-icon>
-            </div>
-            <div class="p-2 flex">
-              <h1 class="pr-2">Gamer</h1>
-              <box-icon class="p-" name="invader" type="solid" animation="fade-right" color="#041008"></box-icon>
+    <div class="h-screen fixed top-0 left-0 right-0 -z-10 bg-slate-800 text-white"></div>
+    <section id="home" class="h-screen pt-16">
+      <div class="h-full">
+          <div class="flex justify-center items-center text-violet-100 h-full">
+            <div class="flex flex-col px-auto w-4/5 sm:w-2/3 md:w-1/2 gap-8">
+              <h1 class="text-5xl text-center md:text-8xl font-[600]">
+                Hi, I'm <span class="text-slate-100">Abanto</span>
+              </h1>
+              <h2 class="text-3xl md:text-5xl text-violet-200 text-center">
+                A full-stack developer
+              </h2>
+              <p class="text-center">
+                I am a full stack developer with experience in developing web applications, games, and mobile applications.
+                I am a highly motivated and results-oriented individual with a passion for creating innovative and
+                user-friendly software applications. I am always looking for new challenges and opportunities to learn and grow.
+              </p>
             </div>
           </div>
-          <div class="flex gap-2">
-
           </div>
         </div>
         <div class="flex items-center justify-center
@@ -168,80 +159,68 @@
           </div>
         </div>
       </div>
-      <div class="border-2 flex hidden">
-        <box-icon name="hot" type="solid" animation="flashing" color="#ea580c"></box-icon>
-        <box-icon name="joystick" type="solid" animation="tada" color="#6d28d9"></box-icon>
-        <box-icon name="heart" type="solid" animation="flashing" color="#d9282b"></box-icon>
-        <box-icon name="music" type="solid" animation="flashing" color="#0e7490"></box-icon>
-        <box-icon name="tennis-ball" type="solid" animation="spin" color="#0cad40"></box-icon>
-        <box-icon name="ghost" animation="fade-right" color="#041008"></box-icon>
+    </section>
+    <section id="about" class="min-h-screen pt-16 md:px-48 text-white">
+      <div class="flex items-center justify-center">
+        <div class="flex flex-col w-1/2">
+          <h1 class="text-3xl font-[600] text-center">About me</h1>
+          <div class="flex items-center justify-center pt-16">
+            <p>
+              I have worked on a variety of projects, including games, web, mobile, deep learing. I am
+              proficient in a variety of programming languages and technologies, including 
+              HTML, CSS, JavaScript, TypeScript, Python, Dart , C++, SQL, NoSQL and more. 
+              I am also experienced in using various development tools and frameworks such as 
+              Node.js, Express, NestJS, React, Vue, Flask, FastAPI, Flutter etc.
+            </p>
+          </div>
+        </div>
       </div>
-
-      <div id="initial-loading" class="hidden">
-        <box-icon type="solid" name="happy-heart-eyes"></box-icon>
-        <box-icon name="dizzy" type="solid"></box-icon>
-        <box-icon name="wink-smile" type="solid"></box-icon>
-        <box-icon name="tired" type="solid"></box-icon>
-        <box-icon name="laugh" type="solid"></box-icon>
+      
+      <div class="pt-16">
+        <h2 class="text-center text-3xl font-[600] ">My Stack</h2>
+        <div class="flex items-center justify-center pt-16 gap-8">
+          <div class="grid grid-cols-6 md:grid-cols-9 gap-4">
+            <div class="w-8"><img src="./svg/stacks/html5.svg" alt=""></div>
+            <div class="w-8"><img src="./svg/stacks/css3.svg" alt=""></div>
+            <div class="w-8"><img src="./svg/stacks/tailwind.svg" alt=""></div>
+            <div class="w-8"><img src="./svg/stacks/js.svg" alt=""></div>
+            <div class="w-8"><img src="./svg/stacks/ts.svg" alt=""></div>
+            <div class="w-8"><img src="./svg/stacks/node.svg" alt=""></div>
+            <div class="w-8"><img src="./svg/stacks/nest.svg" alt=""></div>
+            <div class="w-8"><img src="./svg/stacks/react.svg" alt=""></div>
+            <div class="w-8"><img src="./svg/stacks/redux.svg" alt=""></div>
+            <div class="w-8"><img src="./svg/stacks/next.svg" alt=""></div>
+            <div class="w-8"><img src="./svg/stacks/vue.svg" alt=""></div>
+            <div class="w-8"><img src="./svg/stacks/nuxt.svg" alt=""></div>
+            <div class="w-8"><img src="./svg/stacks/backbone.svg" alt=""></div>
+            <div class="w-8"><img src="./svg/stacks/c++.svg" alt=""></div>
+            <div class="w-8"><img src="./svg/stacks/py.svg" alt=""></div>
+            <div class="w-8"><img src="./svg/stacks/flask.svg" alt=""></div>
+            <div class="w-8"><img src="./svg/stacks/Tensorflow_logo.svg" alt=""></div>
+            <div class="w-8"><img src="./svg/stacks/pytorch-svgrepo-com.svg" alt=""></div>
+            <div class="w-8"><img src="./svg/stacks/flutter.svg" alt=""></div>
+            <div class="w-8"><img src="./svg/stacks/mysql.svg" alt=""></div>
+            <div class="w-8"><img src="./svg/stacks/postgre.svg" alt=""></div>
+            <div class="w-5"><img src="./svg/stacks/mongo.svg" alt=""></div>
+            <div class="w-8"><img src="./svg/stacks/git.svg" alt=""></div>
+          </div>
+        </div>
       </div>
     </section>
-    <section id="about" class="min-h-screen pt-16">
-      <h1>About me</h1>
-      <div>
-        <span>My stack</span>
-        <h2>Backend</h2>
-        <li class="list-none flex items-center justify-center">
-          <ul>NodeJs</ul>
-          <ul>Express</ul>
-          <ul>Django</ul>
-          <ul>FastAPI</ul>
-          <ul>Deno</ul>
-          <ul>Bun</ul>
-          <ul>Backbone.js</ul>
-        </li>
-        <h2>Frontend</h2>
-        <li>
-          <ul>React Js</ul>
-          <ul>Vue Js</ul>
-        </li>
-      </div>
-    </section>
-    <section id="projects" class="min-h-screen pt-16 bg-amber-400">
+    <!-- <section id="projects" class="min-h-screen pt-16">
       <h1>Projects</h1>
-    </section>
+      <a href="https://play.google.com/store/apps/details?id=com.aimate.app&hl=en_US&gl=US">Aimate</a>
+      <a href="https://motivation-khojo.netlify.app/">Motivation Khojo</a>
+    </section> -->
   </main>
-
-  <!-- <div class="hidden md:fixed md:left-0 md:top-[86vh] md:flex
-                md:text-xl" x-data="{ open: false }">
-    <button class="arrow-right pl-4 pr-8 py-3 shadow-black shadow-xl
-                  z-10 bg-slate-800 text-white" @click="open= !open">
-      Find Me
-    </button>
-    <div x-show="open" x-transition:enter="transition ease-out
-                  duration-300" x-transition:enter-start="opacity-0 scale-90"
-      x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-300"
-      x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90" class="flex bg-purple-300 py-2 px-4 pl-12 pr-8 -translate-x-10
-                  shadow-md shadow-purple-400 h-13 arrow-right-2">
-      <a href=""><img class="px-1 hover:border-b-2
-                      hover:border-black w-10" src="./svg/icons8-facebook.svg" alt="" /></a>
-      <a href=""><img class="px-1 hover:border-b-2
-                      hover:border-black w-10" src="./svg/icons8-linkedin.svg" alt="" /></a>
-      <a href=""><img class="px-1 hover:border-b-2
-                      hover:border-black w-10" src="./svg/icons8-instagram.svg" alt="" /></a>
-      <a href=""><img class="px-1 hover:border-b-2
-                      hover:border-black w-10" src="./svg/icons8-github.svg" alt="" /></a>
-      <a href=""><img class="px-1 hover:border-b-2
-                      hover:border-black w-10" src="./svg/icons8-discord.svg" alt="" /></a>
-    </div>
-  </div> -->
 
   <footer>
     <div class="flex items-center pt-12 pb-2 justify-center text-2xl
-                  font-semibold bg-white">
+                  font-semibold text-white">
       <h1>Made with</h1>
       <span class="px-1 hover:animate-spin hover:cursor-crosshair">
-        ❤ </span>
-      <h1>by Abanto</h1>
+        ❤️ </span>
+      <h1 class="glitch layers">by Abanto</h1>
     </div>
   </footer>
 </body>
