@@ -11,21 +11,28 @@
   clip-path: polygon(0% 0%, 80% 0%, 100% 50%, 80% 100%, 0% 100%);
 }
 
-.bottom-border {
-  display: inline-block;
-  color: #000;
-  text-decoration: none;
+.underline {
+  display: inline;
+  position: relative;
+  overflow: hidden;
 }
 
-.bottom-border::after {
-  content: '';
-  display: block;
-  width: 0;
-  height: 2px;
-  background: #000;
-  transition: width .3s;
+.underline:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 100%;
+  bottom: -5px;
+  background: #fff;
+  height: 4px;
+  transition-property: left right;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
 }
 
-.bottom-border::after {
-  width: 100%;
+.underline:hover:after,
+.underline:focus:after,
+.underline:active:after {
+  right: 0;
 }
