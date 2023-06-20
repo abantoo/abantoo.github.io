@@ -58,8 +58,17 @@
   background: whitesmoke;
 }
 
-.css-selector {
+.css-selector-dark {
   background: linear-gradient(270deg, #030712, #1e293b);
+  background-size: 400% 400%;
+
+  -webkit-animation: AnimationName 9s ease infinite;
+  -moz-animation: AnimationName 9s ease infinite;
+  animation: AnimationName 9s ease infinite;
+}
+
+.css-selector-light {
+  background: linear-gradient(270deg, #ffffff, #e4eeff);
   background-size: 400% 400%;
 
   -webkit-animation: AnimationName 9s ease infinite;
