@@ -140,19 +140,22 @@
               <div class="flex items-center justify-center gap-8">
                 <h2 class="text-xl md:text-2xl">Find Me</h2>
                 <div class="flex items-center gap-4 md:gap-8">
-                  <div class="w-6 md:w-8 lg:w-10 h-6 md:h-8 lg:h-10 hover:border-b-2 hover:border-white">
+                  <div class="w-6 md:w-8 lg:w-10 h-6 md:h-8 lg:h-10 hover:border-b-2  " :class="light ? 'hover:border-black' : 'hover:border-white'" >
                       <a class="hvr-float" href="https://www.linkedin.com/in/naimur-rahman-807669133/">
-                        <img src="./svg/logos/LinkedIn - Negative.svg" alt="linkedin">
+                        <img x-show="!light" src="./svg/logos/LinkedIn - Negative.svg" alt="linkedin">
+                        <img x-show="light" src="./svg/logos/LinkedIn - Original.svg" alt="linkedin">
                       </a>
                   </div>
-                  <div class="w-6 md:w-8 lg:w-10 h-6 md:h-8 lg:h-10 hover:border-b-2 hover:border-white">
+                  <div class="w-6 md:w-8 lg:w-10 h-6 md:h-8 lg:h-10 hover:border-b-2" :class="light ? 'hover:border-black' : 'hover:border-white'">
                       <a class="hvr-float" href="https://github.com/abantoo">
-                        <img src="./svg/logos/Github - Negative.svg" alt="github">
+                        <img x-show="!light" src="./svg/logos/Github - Negative.svg" alt="github">
+                        <img x-show="light" src="./svg/logos/Github - Original.svg" alt="github">
                       </a>
                   </div>
-                  <div class="w-6 md:w-8 lg:w-10 h-6 md:h-8 lg:h-10 hover:border-b-2 hover:border-white">
+                  <div class="w-6 md:w-8 lg:w-10 h-6 md:h-8 lg:h-10 hover:border-b-2" :class="light ? 'hover:border-black' : 'hover:border-white'">
                       <a class="hover-undeline-animation hvr-float" href="https://www.facebook.com/owheyitsme/">
-                        <img src="./svg/logos/Facebook - Negative.svg" alt="facebook">
+                        <img x-show="!light" src="./svg/logos/Facebook - Negative.svg" alt="facebook">
+                        <img x-show="light" src="./svg/logos/Facebook - Original.svg" alt="facebook">
                       </a>
                   </div>
                 </div>
