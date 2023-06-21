@@ -3,15 +3,17 @@
   font-weight: 700;
   text-transform: uppercase;
   position: relative;
+  color: #4973F2;
 
   text-shadow: 0.05em 0 0 rgba(184, 134, 11, 0.75),
     -0.025em -0.05em 0 rgba(255, 255, 0, 0.75),
     0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
 
-  animation: glitch 500ms infinite;
+  animation: glitch 700ms infinite;
 }
 
 .glitch span {
+  color: #52B5F2;
   position: absolute;
   top: 0;
   left: 0;
@@ -21,13 +23,15 @@
   animation: glitch 650ms infinite;
   clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
   transform: translate(-0.025em, -0.0125em);
+  /* color: #FFFEFF; */
   opacity: 0.8;
 }
 
 .glitch span:last-child {
-  animation: glitch 375ms infinite;
+  animation: glitch 875ms infinite;
   clip-path: polygon(0 80%, 100% 20%, 100% 100%, 0 100%);
   transform: translate(0.0125em, 0.025em);
+  color: #52B5F2;
   opacity: 0.8;
 }
 
