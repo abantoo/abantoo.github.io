@@ -297,16 +297,16 @@
       </div>
       
     </section>
-    <section id="projects" class="min-h-screen w-screen pt-8 md:pt-24 md:px-48 text-white snap-start flex flex-col justify-between">
+    <section id="projects" class="min-h-screen pt-8 md:pt-24 md:px-16 text-white snap-start flex flex-col justify-between w-full">
       
       <div class="flex items-center justify-center">
         <div class="flex flex-col md:w-1/2 w-4/5 items-center justify-center">
-          <h1 class="text-3xl font-[600] text-center">Projects</h1>
+          <h1 class="text-3xl font-[600] text-center" :class="light ? 'text-gray-900' : 'text-violet-100'">Projects</h1>
         </div>
       </div>
 
-      <div class="ag-format-container">
-        <div class="ag-projects_box">
+      <div class="w-full">
+        <div class="ag-projects_box grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 px-0">
           <div class="ag-projects_item">
             <a href="https://dailystocks.info/" class="ag-projects-item_link">
               <div class="ag-projects-item_bg"></div>
