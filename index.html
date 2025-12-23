@@ -1,331 +1,481 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio</title>
-  <!-- <link rel="stylesheet" href="./css/style.css" /> -->
-  <link rel="stylesheet" href="./css/buttons.css" />
-  <link rel="stylesheet" href="./css/card.css" />
-  <link rel="stylesheet" href="./css/table.css" />
-  <link rel="stylesheet" href="./css/style.css" />
-  <link rel="stylesheet" href="./css/main.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abanto | Full Stack Developer</title>
 
-  <link rel="stylesheet" href="./css/altStyle.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
 
-  <link rel="stylesheet" href="./css/hover.css">
+    <!-- Tailwind Configuration -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        display: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#6366f1',
+                    },
+                    animation: {
+                        'slideDown': 'slideDown 0.5s ease-out forwards',
+                    },
+                    keyframes: {
+                        slideDown: {
+                            '0%': { transform: 'translateY(-100%)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- Alpine.js -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
-  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Outfit:wght@200&display=swap"
-    rel="stylesheet" />
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
-
-  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/glitch.css" />
+    <link rel="stylesheet" href="./css/hover.css" />
+    <script src="./scripts/main.js" defer></script>
 </head>
 
-<body>
-  <!-- header -->
+<!-- Alpine Data for Theme Toggle -->
 
-  <header>
-    <nav class="navbar fixed-top navbar-expand-md navbar-light bg-transparent">
-      <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
-          aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse nav-container" id="navbarTogglerDemo01">
-          <ul class="nav-list">
-            <li class="nav-item">
-              <a class="nav-link hover-underline-animation hvr-bob" href="#home">Home</a>
-            </li>
-            <li class="">
-              <a class="nav-link hover-underline-animation hvr-bob" href="#about">About Me</a>
-            </li>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link hover-underline-animation hvr-bob"
-                href="https://github.com/abantoo?tab=repositories">My
-                Projects</a>
-            </li>
+<body
+    class="antialiased transition-colors duration-300 relative cursor-crosshair selection:bg-indigo-500 selection:text-white"
+    x-data="{ light: localStorage.getItem('theme') === 'light' }"
+    x-init="$watch('light', val => localStorage.setItem('theme', val ? 'light' : 'dark'))"
+    :class="light ? 'bg-slate-50 text-slate-900' : 'dark bg-[#0f172a] text-slate-200'">
 
-            <li class="nav-item">
-              <a class="nav-link hover-underline-animation hvr-bob" href="#all-feedbacks">All Feedbacks</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link hover-underline-animation hvr-bob" href="#contact">Send Feedback</a>
-            </li>
-          </ul>
+    <!-- Navbar -->
+    <nav class="fixed top-6 inset-x-0 z-50 transition-all duration-300 backdrop-blur-xl border border-white/20 dark:border-slate-700/50 shadow-xl rounded-full max-w-4xl mx-auto animate-slideDown"
+        :class="light ? 'bg-white/60' : 'bg-slate-900/60'">
+        <div class="px-6 md:px-8">
+            <div class="flex items-center justify-between h-14">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="#" class="group">
+                        <h1 class="font-display font-bold text-2xl tracking-tighter"
+                            :class="light ? 'text-slate-900' : 'text-white'">
+                            &lt;A/&gt;
+                            <span
+                                class="inline-block w-2 h-2 rounded-full bg-indigo-500 ml-1 mb-1 group-hover:animate-ping"></span>
+                        </h1>
+                    </a>
+                </div>
 
+                <!-- Desktop Menu -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-6">
+                        <a href="#home"
+                            class="hover:text-indigo-500 hover:bg-white/50 dark:hover:bg-slate-800/50 transition-all px-3 py-2 rounded-full text-sm font-medium">Home</a>
+                        <a href="#about"
+                            class="hover:text-indigo-500 hover:bg-white/50 dark:hover:bg-slate-800/50 transition-all px-3 py-2 rounded-full text-sm font-medium">About</a>
+                        <a href="#projects"
+                            class="hover:text-indigo-500 hover:bg-white/50 dark:hover:bg-slate-800/50 transition-all px-3 py-2 rounded-full text-sm font-medium">Projects</a>
+
+                        <!-- Theme Toggle -->
+                        <button @click="light = !light"
+                            class="p-2 rounded-full hover:bg-white/50 dark:hover:bg-white/10 transition-colors ml-2">
+                            <!-- Sun -->
+                            <svg x-show="light" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-amber-500"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                            </svg>
+                            <!-- Moon -->
+                            <svg x-show="!light" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-400"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu Button (Simplified for now) -->
+                <div class="md:hidden flex items-center">
+                    <button @click="light = !light" class="p-2 ml-4">
+                        <svg x-show="light" class="h-5 w-5 text-amber-500" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                        </svg>
+                        <svg x-show="!light" class="h-5 w-5 text-indigo-400" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
         </div>
-      </div>
     </nav>
-  </header>
 
-  <!-- introoo -->
+    <!-- Main Content -->
+    <main class="relative pt-16">
 
-  <section class="home" id="home">
-    <div class="home-intro">
-      <h2>Hi, <br> I'm Abanto</h2>
-      <p> Programmer, tech enthusiast 💻 </p>
-      <h3>Contact Me:</h3>
-
-
-      <div class="contact-me-container">
-
-
-        <div class="hover-underline-animation hvr-bob">
-          <a href="https://www.facebook.com/owheyitsme" class=""><i class="bi bi-facebook"></i></a>
-        </div>
-
-        <div class="hover-underline-animation hvr-bob">
-          <a href="" class="">
-            <i class="bi bi-instagram">
-            </i>
-          </a>
-        </div>
-
-        <div class="hover-underline-animation hvr-bob">
-          <a href="https://github.com/abantoo"><i class="bi bi-github"></i></a>
-        </div>
-      </div>
-
-
-    </div>
-
-    <div class="home-img-container">
-      <img class="home-img" src="/svg/undraw_feeling_proud_qne1.svg" alt="" />
-    </div>
-  </section>
-
-  <!-- about me -->
-  <!-- 
-  <h3>My name is <strong>Naimur Rahman Abanto</strong> <br> </h3>
-  <h3>I finished my graduation from <a href="http://www.northsouth.edu/">North South University </a> . I am currently
-    doing an internship at <a href="https://www.nerddevs.com/"> nerddevs.</a> </h3> -->
-
-  <section class="about" id="about">
-    <h3 class="section-title">What I love to do</h3>
-
-    <!-- What I do -->
-    <div class="swiper">
-      <!-- Additional required wrapper -->
-      <div class="swiper-wrapper">
-        <!-- Slides -->
-
-        <div class="swiper-slide">
-          <!-- Stuffs About Web Development -->
-
-          <div class="works">
-            <div class="img-container">
-              <img class="section-img" src="./svg/undraw_web_developer_re_h7ie.svg" alt="" />
+        <!-- Hero Section -->
+        <section id="home" class="min-h-[calc(100vh-4rem)] flex flex-col justify-center relative overflow-hidden">
+            <!-- Background Elements -->
+            <div
+                class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-indigo-500/20 blur-[120px] rounded-full -z-10 dark:opacity-40 pointer-events-none">
             </div>
 
-            <div class="details-container">
-              <div class="tlp">
-                <div>
-                  <h3 class="title">Web Development</h3>
-                  <div class="logo-container">
-                    <img class="logo" src="./svg/logos/html.svg" alt="" />
-                    <img class="logo" src="./svg/logos/CSS3_logo.svg" alt="" />
-                    <img class="logo" src="./svg/logos/Unofficial_JavaScript_logo_2.svg" alt="" />
-                    <img class="logo" src="./svg/logos/Node.js_logo.svg" alt="" />
-                    <img class="logo" src="./svg/logos/mongod.svg" alt="" />
-                  </div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full grid md:grid-cols-2 gap-12 items-center">
+
+                <!-- Text Content -->
+                <div class="text-center md:text-left z-10">
+                    <p class="text-indigo-500 font-semibold mb-4 tracking-wide uppercase text-sm">Hello, I am</p>
+                    <h1 class="font-display font-bold text-5xl md:text-7xl mb-6 leading-tight">
+                        Abanto
+                    </h1>
+                    <h2 class="text-2xl md:text-4xl font-light text-slate-500 dark:text-slate-400 mb-8">
+                        Full Stack <span
+                            class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-cyan-400 font-medium">Developer</span>
+                    </h2>
+                    <p
+                        class="text-lg text-slate-600 dark:text-slate-300 mb-10 max-w-lg mx-auto md:mx-0 leading-relaxed">
+                        Crafting digital experiences with a passion for web, mobile, and game development. I turn
+                        complex problems into elegant solutions.
+                    </p>
+
+                    <div class="flex items-center justify-center md:justify-start gap-6">
+                        <!-- Socials -->
+                        <a href="https://github.com/abantoo" target="_blank"
+                            class="transform hover:scale-110 transition-transform">
+                            <img src="./svg/logos/Github - Original.svg" class="w-8 h-8 dark:invert transition-all"
+                                alt="GitHub">
+                        </a>
+                        <a href="https://www.linkedin.com/in/naimur-rahman-807669133/" target="_blank"
+                            class="transform hover:scale-110 transition-transform">
+                            <img src="./svg/logos/LinkedIn - Original.svg" class="w-8 h-8" alt="LinkedIn">
+                        </a>
+                        <a href="https://www.facebook.com/owheyitsme/" target="_blank"
+                            class="transform hover:scale-110 transition-transform">
+                            <img src="./svg/logos/Facebook - Original.svg" class="w-8 h-8" alt="Facebook">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Terminal -->
+                <div class="relative hidden md:block"
+                    x-data="{ command: '', resultText: {data:'', status: false, hint: false} }">
+                    <!-- Mini Terminal Button -->
+                    <button id="miniTerminal" @click="onOpenTerminal"
+                        class="fixed right-8 bottom-8 z-50 p-4 bg-slate-800 text-white rounded-full shadow-lg hover:scale-110 transition-transform hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                    </button>
+
+                    <!-- Terminal Window -->
+                    <div id="terminal"
+                        class="bg-[#1e1e1e] rounded-xl shadow-2xl border border-slate-700/50 w-full max-w-lg mx-auto overflow-hidden font-mono text-sm relative">
+                        <!-- Header -->
+                        <div class="bg-[#2d2d2d] px-4 py-2 flex items-center justify-between">
+                            <div class="flex space-x-2">
+                                <div class="w-3 h-3 rounded-full bg-red-500 cursor-pointer" @click="onCloseTerminal">
+                                </div>
+                                <div class="w-3 h-3 rounded-full bg-yellow-500 cursor-pointer"
+                                    @click="onMinimizeTerminal"></div>
+                                <div class="w-3 h-3 rounded-full bg-green-500 cursor-pointer"
+                                    @click="onFullScreenTerminal"></div>
+                            </div>
+                            <div class="text-gray-400 text-xs text-center flex-1">bash — 80x24</div>
+                        </div>
+
+                        <!-- Body -->
+                        <div class="p-6 h-[300px] overflow-y-auto text-gray-300 space-y-2">
+                            <div class="flex items-center gap-2 mb-4">
+                                <span class="text-green-400">➜</span>
+                                <span class="text-blue-400">~</span>
+                                <span class="text-gray-400">Welcome to Abanto's Portfolio v2.0</span>
+                            </div>
+
+                            <!-- Result Area -->
+                            <div x-show="resultText.data" class="mb-4">
+                                <p :class="resultText.status ? 'text-green-400' : 'text-red-400'"
+                                    x-text="resultText.data"></p>
+                            </div>
+
+                            <!-- Hints -->
+                            <div x-show="resultText.hint" class="flex flex-wrap gap-2 text-xs mb-4">
+                                <span class="px-2 py-1 bg-gray-700 rounded text-gray-300">help</span>
+                                <span class="px-2 py-1 bg-gray-700 rounded text-gray-300">home</span>
+                                <span class="px-2 py-1 bg-gray-700 rounded text-gray-300">about</span>
+                                <span class="px-2 py-1 bg-gray-700 rounded text-gray-300">projects</span>
+                            </div>
+
+                            <!-- Input Line -->
+                            <div class="flex items-center gap-2">
+                                <span class="text-green-400">terminal:~$</span>
+                                <input type="text" x-model="command"
+                                    @keyup.enter="resultText = executeCommand(command); command = ''"
+                                    class="bg-transparent border-none outline-none flex-1 text-white focus:ring-0 p-0"
+                                    placeholder="type 'help'" autofocus>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Scroll Down Indicator -->
+            <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce dark:text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 opacity-50" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-24 px-4 sm:px-6 lg:px-8 relative">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold font-display mb-4">About Me</h2>
+                    <div class="w-16 h-1 bg-indigo-500 mx-auto rounded-full"></div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-12 items-start">
+                    <!-- Bio -->
+                    <div
+                        class="bg-white dark:bg-slate-800/50 p-8 rounded-2xl shadow-lg border border-gray-100 dark:border-slate-700 backdrop-blur-sm">
+                        <p class="text-lg leading-relaxed text-slate-600 dark:text-slate-300 mb-6">
+                            I'm a versatile developer with a knack for building robust applications. From
+                            conceptualizing game mechanics to architecting scalable backend systems, I thrive on variety
+                            and challenge.
+                        </p>
+                        <ul class="space-y-3 text-slate-600 dark:text-slate-300">
+                            <li class="flex items-center gap-3">
+                                <span class="w-2 h-2 bg-indigo-500 rounded-full"></span>
+                                Fluent in JavaScript/TypeScript & Python ecosystem
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-2 h-2 bg-indigo-500 rounded-full"></span>
+                                Mobile development with Flutter
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-2 h-2 bg-indigo-500 rounded-full"></span>
+                                Machine Learning enthusiast (TensorFlow/PyTorch)
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Tech Stack Grid -->
+                    <div>
+                        <h3 class="text-xl font-semibold mb-6 flex items-center gap-2">
+                            <span class="text-indigo-500">#</span> My Arsenal
+                        </h3>
+                        <div class="grid grid-cols-5 gap-4">
+                            <!-- Helper to render stack items -->
+                            <template x-for="icon in [
+                                'html5.svg', 'css3.svg', 'js.svg', 'ts.svg', 'python.svg', 
+                                'react.svg', 'vue.svg', 'node.svg', 'express.svg', 'mongo.svg',
+                                'tailwind.svg', 'flutter.svg', 'dart.svg', 'git.svg', 'firebase.svg'
+                             ]">
+                                <div
+                                    class="aspect-square bg-gray-50 dark:bg-slate-800 rounded-lg flex items-center justify-center p-3 hover:bg-indigo-50 dark:hover:bg-slate-700 transition-colors cursor-help group border border-gray-100 dark:border-slate-700">
+                                    <!-- Using a generic image path, assuming file structure exists. We kept the old svg folder interactions. -->
+                                    <!-- Logic to map filename to path broadly -->
+                                    <img :src="`./svg/stacks/${icon.includes('python') ? 'py.svg' : icon}`"
+                                        class="w-8 h-8 filter grayscale group-hover:grayscale-0 transition-all duration-300 opacity-70 group-hover:opacity-100"
+                                        alt="tech" onerror="this.style.display='none'">
+                                </div>
+                            </template>
+                        </div>
+                        <div class="mt-6 text-xs text-slate-400 text-center">
+                            * Hover to see colors
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-slate-900/50">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold font-display mb-4">Featured Projects</h2>
+                    <p class="text-slate-500 max-w-xl mx-auto">A selection of my recent work across web, mobile, and AI.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- Project Card 1: Daily Stocks -->
+                    <div
+                        class="bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group border border-gray-100 dark:border-slate-700">
+                        <div
+                            class="h-48 bg-gradient-to-br from-purple-600 to-indigo-600 flex items-center justify-center p-6 relative overflow-hidden">
+                            <!-- Decorative Circle -->
+                            <div
+                                class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-10 -mt-10 blur-xl">
+                            </div>
+                            <h3 class="text-white text-3xl font-bold z-10">Daily Stocks</h3>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold mb-2 group-hover:text-indigo-500 transition-colors">Daily
+                                Stocks</h4>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm mb-4 line-clamp-3">Financial viewing
+                                application.</p>
+
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span
+                                    class="px-2 py-1 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 text-xs rounded-md">Vue.js</span>
+                                <span
+                                    class="px-2 py-1 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 text-xs rounded-md">TypeScript</span>
+                                <span
+                                    class="px-2 py-1 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 text-xs rounded-md">MEVN</span>
+                            </div>
+
+                            <a href="https://dailystocks.info/" target="_blank"
+                                class="inline-flex items-center text-sm font-semibold text-indigo-500 hover:text-indigo-600">
+                                View Project <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 2: Motivation Khojo -->
+                    <div
+                        class="bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group border border-gray-100 dark:border-slate-700">
+                        <div
+                            class="h-48 bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center p-6 relative overflow-hidden">
+                            <div
+                                class="absolute bottom-0 left-0 w-32 h-32 bg-white/10 rounded-full -ml-10 -mb-10 blur-xl">
+                            </div>
+                            <h3 class="text-white text-2xl font-bold z-10 text-center">Motivation Khojo</h3>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold mb-2 group-hover:text-amber-500 transition-colors">Motivation
+                                Khojo</h4>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm mb-4">Find your daily dose of
+                                motivation.</p>
+
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span
+                                    class="px-2 py-1 bg-amber-50 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400 text-xs rounded-md">React</span>
+                                <span
+                                    class="px-2 py-1 bg-amber-50 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400 text-xs rounded-md">MERN</span>
+                                <span
+                                    class="px-2 py-1 bg-amber-50 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400 text-xs rounded-md">TypeScript</span>
+                            </div>
+
+                            <a href="https://motivation-khojo.netlify.app/" target="_blank"
+                                class="inline-flex items-center text-sm font-semibold text-amber-500 hover:text-amber-600">
+                                View Project <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 3: AI Mate -->
+                    <div
+                        class="bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group border border-gray-100 dark:border-slate-700">
+                        <div
+                            class="h-48 bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center p-6 relative overflow-hidden">
+                            <h3 class="text-white text-3xl font-bold z-10">AI Mate</h3>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold mb-2 group-hover:text-cyan-500 transition-colors">AI Mate</h4>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm mb-4">Smart companion app powered by
+                                Flutter.</p>
+
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span
+                                    class="px-2 py-1 bg-cyan-50 dark:bg-cyan-900/30 text-cyan-600 dark:text-cyan-400 text-xs rounded-md">Flutter</span>
+                                <span
+                                    class="px-2 py-1 bg-cyan-50 dark:bg-cyan-900/30 text-cyan-600 dark:text-cyan-400 text-xs rounded-md">Dart</span>
+                                <span
+                                    class="px-2 py-1 bg-cyan-50 dark:bg-cyan-900/30 text-cyan-600 dark:text-cyan-400 text-xs rounded-md">Node.js</span>
+                            </div>
+
+                            <a href="https://play.google.com/store/apps/details?id=com.aimate.app" target="_blank"
+                                class="inline-flex items-center text-sm font-semibold text-cyan-500 hover:text-cyan-600">
+                                View Project <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 4: Boi-Koi -->
+                    <div
+                        class="bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group border border-gray-100 dark:border-slate-700">
+                        <div
+                            class="h-48 bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center p-6 relative overflow-hidden">
+                            <h3 class="text-white text-3xl font-bold z-10">Boi-Koi</h3>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold mb-2 group-hover:text-emerald-500 transition-colors">Boi-Koi
+                            </h4>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm mb-4">Book exchange platform.</p>
+
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span
+                                    class="px-2 py-1 bg-emerald-50 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs rounded-md">Node.js</span>
+                                <span
+                                    class="px-2 py-1 bg-emerald-50 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs rounded-md">EJS</span>
+                                <span
+                                    class="px-2 py-1 bg-emerald-50 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs rounded-md">MongoDB</span>
+                            </div>
+
+                            <a href="https://github.com/abantoo/Boi-Koi" target="_blank"
+                                class="inline-flex items-center text-sm font-semibold text-emerald-500 hover:text-emerald-600">
+                                View Project <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
 
                 </div>
-                <p>Full stack web development with MERN stack.</p>
-              </div>
             </div>
-          </div>
-        </div>
+        </section>
 
-        <div class="swiper-slide">
-          <!-- Stuffs about machine learning -->
-
-          <div class="works">
-            <div class="img-container">
-              <img class="section-img" src="./svg/undraw_sentiment_analysis_jp6w.svg" alt="" />
-            </div>
-
-            <div class="details-container">
-              <div class="tlp">
-                <div>
-                  <h3 class="title">Machine learning</h3>
-                  <div class="logo-container">
-                    <img class="logo" src="./svg/logos/Tensorflow_logo.svg" alt="" />
-
-                  </div>
-
-                </div>
-                <p>
-                  Machine learning and neural network projects like Sentiment
-                  analysis, NLP
+        <!-- Footer -->
+        <footer class="py-8 bg-slate-900 border-t border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 flex flex-col items-center justify-center text-slate-400">
+                <p class="text-sm">
+                    Made with <span
+                        class="text-red-500 hover:scale-125 inline-block transition-transform mx-1 cursor-heart">❤️</span>
+                    by Abanto
                 </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="swiper-slide">
-          <!-- Stuffs about game development -->
-
-          <div class="works">
-            <div class="img-container">
-              <img class="section-img" src="./svg/undraw_game_world_-0-o6q.svg" alt="" />
-            </div>
-
-            <div class="details-container">
-              <div class="tlp">
-                <h3 class="title">Game development</h3>
-                <div class="logo-container">
-                  <img class="logo" src="./svg/logos/Unreal_Engine_Logo.svg" alt="unreal" />
-                  <img class="logo" src="./svg/logos//unity-seeklogo.com.svg" alt="unity" />
+                <div class="mt-4 text-xs opacity-50">
+                    © 2025 All Rights Reserved.
                 </div>
-                <p>
-                  Made some 2d slider, 3d platforemer games using unity and
-                  unreal engine
-                </p>
-              </div>
             </div>
-          </div>
-        </div>
+        </footer>
+    </main>
 
-        <div class="swiper-slide">
-          <!-- Stuffs about arts and stuffs  -->
-          <div class="works">
-            <div class="img-container">
-              <img class="section-img" src="./svg/undraw_monster_artist_2crm.svg" alt="" />
-            </div>
-
-            <div class="details-container">
-              <div class="tlp">
-                <h3 class="title">Arts</h3>
-                <div class="logo-container">
-                  <img class="logo" src="./svg/logos/blender.svg" alt="blender" />
-                  <br />
-                </div>
-
-                <p>
-                  I love doing sketches, drawing cartoons, random digital
-                  arts.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- If we need pagination -->
-      <div class="swiper-pagination"></div>
-
-      <!-- If we need navigation buttons -->
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
-
-      <!-- If we need scrollbar -->
-    </div>
-  </section>
-
-
-
-
-  <!-- feedbacks -->
-
-
-  <section id="all-feedbacks">
-    <div>
-      <h3 class="section-title">Feedbacks</h3>
-    </div>
-
-
-    <div id="feedback-container">
-      <div class="WEW" id="table-div">
-        <table id="myTable">
-          <thead>
-            <tr>
-              <th>Email</th>
-              <th>Feedback</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <tr></tr>
-            <tr class="active-row"></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <button class="exportIt" id="exportAs">Export Options</button>
-      <div id="export-options" class="export-options">
-        <button class="exportIt exportCSV" id="expCSV">CSV</button>
-        <button class="exportIt exportPDF" id="expPDF">PDF</button>
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- footer with feedback -->
-
-  <section id="contact">
-    <!-- feedback part  -->
-    <div class="feedback-div">
-      <div>
-        <h3 class="section-title">Send me feedback</h3>
-
-        <img class="feedback-section-img" src="./svg/undraw_feedback.svg" alt="" />
-      </div>
-
-      <div class="card">
-        <form id="form" action="#all-feedbacks">
-          <!--inpur email address -->
-          <input class="feedback" type="email" name="email" id="email" placeholder="yourmail@mail.com" />
-
-          <br />
-
-          <!-- textarea for message body -->
-
-          <textarea class="feedback" name="message" id="message" cols="30" rows="10"
-            placeholder="Your Feedback"></textarea>
-
-          <br />
-          <!-- submit -->
-          <div>
-            <button type="submit" class="feedback-btn">Send Feedback</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- Send feedback part ends here -->
-
-  <!-- Short Footer -->
-  <footer>
-    <div>
-      <h3>Made with ❤ by Abanto</h3>
-    </div>
-  </footer>
-
-  <script src="../scripts/table.js"></script>
-  <script src="../scripts/export.js"></script>
-  <script src="../scripts/exportAsCSV.js"></script>
-  <script src="../scripts/exportAsPDF.js"></script>
-  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-  <script src="./scripts/swiper.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
-  </script>
-
-  <!-- scripts -->
 </body>
 
 </html>
